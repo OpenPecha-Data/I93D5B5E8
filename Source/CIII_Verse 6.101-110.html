@@ -1,0 +1,617 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Bibliotheca Polyglotta</title>
+<link rel='stylesheet' type='text/css' href='css/bp.css'>
+<link rel='stylesheet' type='text/css' href='css/diac_doc.css'>
+
+<link rel='stylesheet' type='text/css' href='css/imageGallery.css'>
+<link rel='stylesheet' type='text/css' href='css/ss.css'>
+	      <link rel='stylesheet' type='text/css' href='css/tree_menu.css'>
+<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+<!--  <script type="text/javascript" src="js/jqModal.js"></script>-->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/tree_menu.js"></script>
+<!-- <script src="js/analytics_tracking.js" type="text/javascript"></script> -->
+
+
+<!-- <script type="text/javascript" src="js/popupDivhandling.js"></script> -->
+<!--  <script type="text/javascript" src="jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-imagegallery.js"></script>-->
+</head>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//vrtx.uio.no/js/analytics/v2/analytics.js','ga');
+
+ga('create', 'UA-86407471-1', 'auto');
+ga(function(tracker) {
+
+	// Modifies sendHitTask to hit ipproxy instead of http://www.google-analytics.com directly
+	tracker.set('sendHitTask', function(model) {
+		payload = model.get('hitPayload');
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', '//w3prod-ipproxy.uio.no/collect' +'?' + payload, true);
+		xhr.send();
+	});
+		ga('send', 'pageview');
+});
+</script>
+<body><div class='banner'></div><!-- banner --><div class='uiologo'>
+<a href='http://www.hf.uio.no/'><img src='https://www2.hf.uio.no/polyglotta/hfe.png' border='0'></a></div><!-- uiologo --><div class='clear'></div>
+<div class='smule_tittel'>
+<div class='brodsmuleboks'>You are here: <a href='/polyglotta/index.php' accesskey='1'> BP HOME</a> >  <a href='/polyglotta/index.php?page=library&amp;bid=2' accesskey='1'>TLB</a> > <a href='/polyglotta/index.php
+	?page=volume&amp;vid=1113' accesskey='1'>Candrakīrti: Madhyamakāvatāra</a> > fulltext</div><div class='clear'></div>
+<div class='headline'>Candrakīrti: Madhyamakāvatāra<div class='clear'></div></div><!-- headline -->
+</div><!-- smule_tittel -->
+<!--<div>-->
+
+<h2 class="trigger" id="tr_lang"><a  href="#">Choose languages</a></h2>
+<h2 class="trigger" id="tr_img"><a  href="#">Choose images, etc.</a></h2>
+
+
+<div id="toggle_container_lan">
+
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_lan.php" method="POST">
+
+<div style="float:left; width:auto; text-align:left; margin-left:20px;">
+<h5>Choose languages</h5>
+<ul>
+<input value="Choose all" type="button" onClick="markAll('tr')"><input value="Uncheck all" type="button" onClick="markNone('tr')">
+
+	<li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1113[5542]" value="5542" id="lancheckbox"   >Sanskrit: San: Li Xuezhu (2015)</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1113[5543]" value="5543" id="lancheckbox" checked >Tibetan: Tib: Tg, dbu ma, ’a</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1113[5544]" value="5544" id="lancheckbox" checked >English: Eng: Liland (2019)</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1113[5549]" value="5549" id="lancheckbox" checked >Tibetan: Tib: Tg, dbu ma, ’a</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1113[5550]" value="5550" id="lancheckbox" checked >English: Eng: Liland (2019)</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1113[5547]" value="5547" id="lancheckbox"   >Tibetan: Tib ṭīkā (Jayānanda): Tg, dbu ma, ra</label></li><div style="clear:both"></div>
+<input type='submit' name='set_cookie' value='Save view'>
+<div style="clear:both"></div>
+
+</ul>
+<input type="hidden" name="vid" value="1113">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+</div>
+
+<div id="toggle_container_img">
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_img.php" method="POST">
+
+<div style="float:left; width:auto; text-align: left;">
+<h5>Choose display</h5>
+<ul>
+		
+	<li> 
+		<input type='checkbox' name='bilder' checked="checked" > Enable images
+	</li>
+	<li> 
+	<input type='checkbox' onclick="onOffCheckbox();" name='fotnoter' checked="checked"> Enable footnotes
+	<div id="pff" style="display:block" >
+	<ul>
+	<li><input type='radio' name='fotnote_valg'  value='show_a' checked> Show all footnotes</li>
+	<li><input type='radio' name='fotnote_valg'  value='show_h'  > Minimize footnotes</li>
+	</ul>
+	</li>
+	
+	</div>
+	<div style="float:left; width:20em; text-align: left; margin-left:120px ">
+	<div style="clear:both"></div>
+	<input type='submit' name='set_cookie' value='Save view'>
+	<div style="clear:both"></div>
+	</div>
+	
+</ul>
+<input type="hidden" name="vid" value="1113">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+	
+
+
+
+</div>
+</div>
+
+<div class='sok'><form name='Sok' id='FormBlock' action='/polyglotta/index.php' method='get'>
+<input type='hidden' name='page' value='search'>
+<input type='hidden' name='bid' value='2'>
+<input type='hidden' name='vid' value='1113'>
+<div class='sokeboks'>
+<input name='sokefelt' id='sokeboks' type='text' size='30' value=''>
+<input type='submit' name='Sok' value='Search' id='nsubmit'>
+<div class='clear'></div><a class="diacbutton" id="diacbutton" href="#">Diacritica</a><a id="diac2button" class="diac2button"  href="#">Diacritica-help</a><a class="s2button" href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation:SearchHelp">Search-help</a><div class='diacritical' id='diacritical_sign'><div style="text-align: left; ">
+<table class = 'diacritica' width="200" border="1" cellpadding="1" cellspacing="1" id="diacritical">
+    <tbody>
+        <tr>
+            <td style="text-align: center; ">ā</td>
+            <td style="text-align: center; ">ī</td>
+            <td style="text-align: center; ">ū</td>
+            <td style="text-align: center; ">ṛ</td>
+            <td style="text-align: center; ">ṝ</td>
+            <td style="text-align: center; ">ḷ</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ḹ</td>
+            <td style="text-align: center; ">&rsquo;</td>
+            <td style="text-align: center; ">ṃ</td>
+            <td style="text-align: center; ">ḥ</td>
+            <td style="text-align: center; ">ṅ</td>
+            <td style="text-align: center; ">&ntilde;</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ṭ</td>
+            <td style="text-align: center; ">ḍ</td>
+            <td style="text-align: center; ">ṇ</td>
+            <td style="text-align: center; ">ṣ</td>
+            <td style="text-align: center; ">ś</td>
+            <td style="text-align: center; ">ź</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">&scaron;</td>
+            <td style="text-align: center; ">č</td>
+            <td style="text-align: center; ">ǰ</td>
+            <td style="text-align: center; ">&gamma;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+</div></div><!-- diacritical --><div id="ex3a" class="jqmDialog"><div>
+	<span style="font-size:12px;">Note on the transliteration:</span></div>
+<div>
+	<span style="font-size:12px;">The transliteration system of the BP/TLB is based on the Unicode/UTF-8 system. However, there may be difficulties with some of the letters &ndash; particularly on PC/Windows-based systems, but not so much on the Mac. We have chosen the most accepted older and traditional systems of transliteration against, e.g, Wylie for Tibetan, since with Unicode it is possible, in Sanskrit and Tibetan, etc., to represent one sound with one letter in almost all the cases (excepting Sanskrit and Tibetan aspirated letters, and Tibetan tsa, tsha, dza). We thus do not use the Wylie system which widely employs two letters for one sound (ng, ny, sh, zh etc.).</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">Important:</span></div>
+<div>
+	<span style="font-size:12px;">We ask you in particular to note the use of the &rsquo; apostrophe and not the &#39; representing the avagrāha in Sanskrit, and most important the &rsquo;a-chuṅ in Tibetan. On the Mac the &rsquo; is Alt-M.</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">If you cannot find the letters on your key-board, you may click on the link &quot;Diacritica&quot; to access it for your search.</span></div>
+</div><!-- diacritical_doc --><div class='clear'></div><select name='searchmode'><option selected value='phrase'>Search for exact phrase</option>
+<option  value='phraseregex'>Search for exact phrase (regex)</option>
+<option  value='word'>Search for every word in one record</option>
+<option  value='free'>Search for every word fragment in one record</option>
+</select>
+<select name='context'>
+<option ($_GET[context]=="a" ? "selected" : "") value="a"> Search in all libraries</option><option selected value="bTLB">Search in TLB</option><option selected value="v1113">Search in Candrakīrti: Madhyamakāvatāra</option></select><div class='clear'></div><a class='sbutton' href='/polyglotta/index.php?page=asearch&amp;bid=2&amp;vid=1113'>Choose specific texts..</a><div class='clear'></div></div></form></div><!-- sok --><div class='clear'></div><!-- clear --><div id='dcr' class='divControlRead'><div class='venstrefulltekstfelt'><div class='bverknavn'><a href='/polyglotta/index.php?page=volume&amp;vid=1113'>Candrakīrti: Madhyamakāvatāra</a></div><table class="tlvl2">
+					<tr>
+						<td bgcolor="#ffffff"> &nbsp; &nbsp;
+						<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_7627.Verses41-58" border=0 hspace=2>
+						<a href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1113" class="ajax_tree0">Complete text</a>
+						</td>
+					</tr>
+				  </table><input type="hidden" name="tree_top_options" id="tree_top_options" value="122651.Title|122652.Preface|122653.Chapter1:Pramuditā|122658.Chapter2:Vimalā|122659.Chapter3:Prabhākarī|122662.Chapter4:Arciṣmatī|122663.Chapter5:Sudurjayā|122664.Chapter6:Abhimukhī|122703.Chapter7:Dūraṃgamā|122704.Chapter8:Acalā|122705.Chapter9:Sādhumatī|122706.Chapter10:Dharmameghā|122707.Chapter11:buddhabhūmi|">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122651.Title" border=0 hspace=2><a id="href_122651.Title" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927089&level=1&cid=828167" class="ajax_tree0">Title
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122652.Preface" border=0 hspace=2><a id="href_122652.Preface" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927090&level=1&cid=828168" class="ajax_tree0">Preface
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('122653.Chapter1:Pramuditā','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122653.Chapter1:Pramuditā" border=0 hspace=2><a id="href_122653.Chapter1:Pramuditā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927091&level=1&cid=828169" class="ajax_tree0">Chapter 1: Pramuditā
+</td></tr></table>
+<div style="display:none;"  id="div_122653.Chapter1:Pramuditā">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <a href="javascript:;" onclick="Expand('122654.Thepraises')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122654.Thepraises" border=0 hspace=2><a id="href_122654.Thepraises" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927092&level=2&cid=828170" class="ajax_tree1">The praises
+</td></tr></table>
+<div style="display:none;"  id="div_122654.Thepraises">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122655.Verse1.1-10" border=0 hspace=2><a id="href_122655.Verse1.1-10" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927092&level=3&cid=828170" class="ajax_tree2">Verse 1.1-10
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <a href="javascript:;" onclick="Expand('122656.Thefirstresolve')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122656.Thefirstresolve" border=0 hspace=2><a id="href_122656.Thefirstresolve" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927108&level=2&cid=828186" class="ajax_tree1">The first resolve
+</td></tr></table>
+<div style="display:none;"  id="div_122656.Thefirstresolve">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122657.Verse1.11-17" border=0 hspace=2><a id="href_122657.Verse1.11-17" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927125&level=3&cid=828203" class="ajax_tree2">Verse 1.11-17
+</td></tr></table>
+</div>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122658.Chapter2:Vimalā" border=0 hspace=2><a id="href_122658.Chapter2:Vimalā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927135&level=1&cid=828213" class="ajax_tree0">Chapter 2: Vimalā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('122659.Chapter3:Prabhākarī','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122659.Chapter3:Prabhākarī" border=0 hspace=2><a id="href_122659.Chapter3:Prabhākarī" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927151&level=1&cid=828229" class="ajax_tree0">Chapter 3: Prabhākarī
+</td></tr></table>
+<div style="display:none;"  id="div_122659.Chapter3:Prabhākarī">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122660.Verse3.1-10" border=0 hspace=2><a id="href_122660.Verse3.1-10" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927152&level=2&cid=828230" class="ajax_tree1">Verse 3.1-10
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122661.Verse3.11-13" border=0 hspace=2><a id="href_122661.Verse3.11-13" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927162&level=2&cid=828240" class="ajax_tree1">Verse 3.11-13
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122662.Chapter4:Arciṣmatī" border=0 hspace=2><a id="href_122662.Chapter4:Arciṣmatī" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927175&level=1&cid=828253" class="ajax_tree0">Chapter 4: Arciṣmatī
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122663.Chapter5:Sudurjayā" border=0 hspace=2><a id="href_122663.Chapter5:Sudurjayā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927184&level=1&cid=828262" class="ajax_tree0">Chapter 5: Sudurjayā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('122664.Chapter6:Abhimukhī','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122664.Chapter6:Abhimukhī" border=0 hspace=2><a id="href_122664.Chapter6:Abhimukhī" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927191&level=1&cid=828269" class="ajax_tree0">Chapter 6: Abhimukhī
+</td></tr></table>
+<div style="display:none;"  id="div_122664.Chapter6:Abhimukhī">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <a href="javascript:;" onclick="Expand('122665.Introduction')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122665.Introduction" border=0 hspace=2><a id="href_122665.Introduction" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927192&level=2&cid=828270" class="ajax_tree1">Introduction
+</td></tr></table>
+<div style="display:none;"  id="div_122665.Introduction">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122666.Verse6.1-10" border=0 hspace=2><a id="href_122666.Verse6.1-10" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927192&level=3&cid=828270" class="ajax_tree2">Verse 6.1-10
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122667.Selfofphenomena" border=0 hspace=2><a id="href_122667.Selfofphenomena" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927201&level=2&cid=828279" class="ajax_tree1">Self of phenomena
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <a href="javascript:;" onclick="Expand('122668.Productionfromself')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122668.Productionfromself" border=0 hspace=2><a id="href_122668.Productionfromself" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927203&level=2&cid=828281" class="ajax_tree1">Production from self
+</td></tr></table>
+<div style="display:none;"  id="div_122668.Productionfromself">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122669.Verse6.11-20" border=0 hspace=2><a id="href_122669.Verse6.11-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927207&level=3&cid=828285" class="ajax_tree2">Verse 6.11-20
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <a href="javascript:;" onclick="Expand('122670.Productionfromother')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122670.Productionfromother" border=0 hspace=2><a id="href_122670.Productionfromother" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927211&level=2&cid=828289" class="ajax_tree1">Production from other
+</td></tr></table>
+<div style="display:none;"  id="div_122670.Productionfromother">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122671.Verse6.21-30" border=0 hspace=2><a id="href_122671.Verse6.21-30" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927223&level=3&cid=828301" class="ajax_tree2">Verse 6.21-30
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122672.Thetwotruths" border=0 hspace=2><a id="href_122672.Thetwotruths" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927228&level=3&cid=828306" class="ajax_tree2">The two truths
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122673.Verse6.31-40" border=0 hspace=2><a id="href_122673.Verse6.31-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927238&level=3&cid=828316" class="ajax_tree2">Verse 6.31-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122674.Verse6.41-50" border=0 hspace=2><a id="href_122674.Verse6.41-50" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927251&level=3&cid=828329" class="ajax_tree2">Verse 6.41-50
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122675.Mind-only" border=0 hspace=2><a id="href_122675.Mind-only" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927255&level=3&cid=828333" class="ajax_tree2">Mind-only
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122676.Verse6.51-60" border=0 hspace=2><a id="href_122676.Verse6.51-60" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927261&level=3&cid=828339" class="ajax_tree2">Verse 6.51-60
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122677.Verse6.61-70" border=0 hspace=2><a id="href_122677.Verse6.61-70" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927271&level=3&cid=828349" class="ajax_tree2">Verse 6.61-70
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122678.Verse6.71-80" border=0 hspace=2><a id="href_122678.Verse6.71-80" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927282&level=3&cid=828360" class="ajax_tree2">Verse 6.71-80
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <a href="javascript:;" onclick="Expand('122679.Thedependentnature')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122679.Thedependentnature" border=0 hspace=2><a id="href_122679.Thedependentnature" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927283&level=2&cid=828361" class="ajax_tree1">The dependent nature
+</td></tr></table>
+<div style="display:none;"  id="div_122679.Thedependentnature">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122680.Verse6.81-90" border=0 hspace=2><a id="href_122680.Verse6.81-90" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927292&level=3&cid=828370" class="ajax_tree2">Verse 6.81-90
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122681.Verse6.91-100" border=0 hspace=2><a id="href_122681.Verse6.91-100" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927302&level=3&cid=828380" class="ajax_tree2">Verse 6.91-100
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122682.Productionfromboth" border=0 hspace=2><a id="href_122682.Productionfromboth" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927309&level=2&cid=828387" class="ajax_tree1">Production from both
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <a href="javascript:;" onclick="Expand('122683.Causelessproduction')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122683.Causelessproduction" border=0 hspace=2><a id="href_122683.Causelessproduction" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927310&level=2&cid=828388" class="ajax_tree1">Causeless production
+</td></tr></table>
+<div style="display:none;"  id="div_122683.Causelessproduction">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122684.Verse6.101-110" border=0 hspace=2><a id="href_122684.Verse6.101-110" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927312&level=3&cid=828390" class="ajax_tree2">Verse 6.101-110
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122685.Verse6.110-120" border=0 hspace=2><a id="href_122685.Verse6.110-120" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927322&level=3&cid=828400" class="ajax_tree2">Verse 6.110-120
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122686.Dependentarising" border=0 hspace=2><a id="href_122686.Dependentarising" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927325&level=2&cid=828403" class="ajax_tree1">Dependent arising
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <a href="javascript:;" onclick="Expand('122687.Selfoftheperson')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122687.Selfoftheperson" border=0 hspace=2><a id="href_122687.Selfoftheperson" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927331&level=2&cid=828409" class="ajax_tree1">Self of the person
+</td></tr></table>
+<div style="display:none;"  id="div_122687.Selfoftheperson">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122688.Verse6.121-130" border=0 hspace=2><a id="href_122688.Verse6.121-130" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927332&level=3&cid=828410" class="ajax_tree2">Verse 6.121-130
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122689.Verse6.131-140" border=0 hspace=2><a id="href_122689.Verse6.131-140" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927344&level=3&cid=828422" class="ajax_tree2">Verse 6.131-140
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122690.Verse6.141-150" border=0 hspace=2><a id="href_122690.Verse6.141-150" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927354&level=3&cid=828432" class="ajax_tree2">Verse 6.141-150
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <a href="javascript:;" onclick="Expand('122691.Sevenfoldreasoningofthechariot')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122691.Sevenfoldreasoningofthechariot" border=0 hspace=2><a id="href_122691.Sevenfoldreasoningofthechariot" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927363&level=2&cid=828441" class="ajax_tree1">Sevenfold reasoning of the chariot
+</td></tr></table>
+<div style="display:none;"  id="div_122691.Sevenfoldreasoningofthechariot">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122692.Verse6.151-160" border=0 hspace=2><a id="href_122692.Verse6.151-160" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927364&level=3&cid=828442" class="ajax_tree2">Verse 6.151-160
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122693.Verse6.161-170" border=0 hspace=2><a id="href_122693.Verse6.161-170" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927374&level=3&cid=828452" class="ajax_tree2">Verse 6.161-170
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <a href="javascript:;" onclick="Expand('122694.Mereimputation')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122694.Mereimputation" border=0 hspace=2><a id="href_122694.Mereimputation" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927379&level=2&cid=828457" class="ajax_tree1">Mere imputation
+</td></tr></table>
+<div style="display:none;"  id="div_122694.Mereimputation">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122695.Verse6.171-180" border=0 hspace=2><a id="href_122695.Verse6.171-180" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927384&level=3&cid=828462" class="ajax_tree2">Verse 6.171-180
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <a href="javascript:;" onclick="Expand('122696.Thesixteenkindsofemptiness')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122696.Thesixteenkindsofemptiness" border=0 hspace=2><a id="href_122696.Thesixteenkindsofemptiness" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927392&level=2&cid=828470" class="ajax_tree1">The sixteen kinds of emptiness
+</td></tr></table>
+<div style="display:none;"  id="div_122696.Thesixteenkindsofemptiness">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122697.Verse6.181-190" border=0 hspace=2><a id="href_122697.Verse6.181-190" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927394&level=3&cid=828472" class="ajax_tree2">Verse 6.181-190
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122698.Verse6.191-200" border=0 hspace=2><a id="href_122698.Verse6.191-200" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927405&level=3&cid=828483" class="ajax_tree2">Verse 6.191-200
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122699.Verse6.201-210" border=0 hspace=2><a id="href_122699.Verse6.201-210" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927415&level=3&cid=828493" class="ajax_tree2">Verse 6.201-210
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122700.Verse6.211-220" border=0 hspace=2><a id="href_122700.Verse6.211-220" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927425&level=3&cid=828503" class="ajax_tree2">Verse 6.211-220
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122701.Verse6.221-226" border=0 hspace=2><a id="href_122701.Verse6.221-226" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927453&level=3&cid=828531" class="ajax_tree2">Verse 6.221-226
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122702.Conclusion" border=0 hspace=2><a id="href_122702.Conclusion" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927456&level=2&cid=828534" class="ajax_tree1">Conclusion
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122703.Chapter7:Dūraṃgamā" border=0 hspace=2><a id="href_122703.Chapter7:Dūraṃgamā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927460&level=1&cid=828538" class="ajax_tree0">Chapter 7: Dūraṃgamā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122704.Chapter8:Acalā" border=0 hspace=2><a id="href_122704.Chapter8:Acalā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927463&level=1&cid=828541" class="ajax_tree0">Chapter 8: Acalā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122705.Chapter9:Sādhumatī" border=0 hspace=2><a id="href_122705.Chapter9:Sādhumatī" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927469&level=1&cid=828547" class="ajax_tree0">Chapter 9: Sādhumatī
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122706.Chapter10:Dharmameghā" border=0 hspace=2><a id="href_122706.Chapter10:Dharmameghā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927472&level=1&cid=828550" class="ajax_tree0">Chapter 10: Dharmameghā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('122707.Chapter11:buddhabhūmi','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122707.Chapter11:buddhabhūmi" border=0 hspace=2><a id="href_122707.Chapter11:buddhabhūmi" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927475&level=1&cid=828553" class="ajax_tree0">Chapter 11: buddhabhūmi
+</td></tr></table>
+<div style="display:none;"  id="div_122707.Chapter11:buddhabhūmi">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <a href="javascript:;" onclick="Expand('122708.Thequalitiesofthegrounds')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122708.Thequalitiesofthegrounds" border=0 hspace=2><a id="href_122708.Thequalitiesofthegrounds" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927476&level=2&cid=828554" class="ajax_tree1">The qualities of the grounds
+</td></tr></table>
+<div style="display:none;"  id="div_122708.Thequalitiesofthegrounds">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122709.Verse11.1-10" border=0 hspace=2><a id="href_122709.Verse11.1-10" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927476&level=3&cid=828554" class="ajax_tree2">Verse 11.1-10
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <a href="javascript:;" onclick="Expand('122710.Theresult')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122710.Theresult" border=0 hspace=2><a id="href_122710.Theresult" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927485&level=2&cid=828563" class="ajax_tree1">The result
+</td></tr></table>
+<div style="display:none;"  id="div_122710.Theresult">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122711.Verse11.11-20" border=0 hspace=2><a id="href_122711.Verse11.11-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927486&level=3&cid=828564" class="ajax_tree2">Verse 11.11-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122712.Verse11.21-30" border=0 hspace=2><a id="href_122712.Verse11.21-30" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927496&level=3&cid=828574" class="ajax_tree2">Verse 11.21-30
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <a href="javascript:;" onclick="Expand('122713.Thetenpowers')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122713.Thetenpowers" border=0 hspace=2><a id="href_122713.Thetenpowers" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927503&level=2&cid=828581" class="ajax_tree1">The ten powers
+</td></tr></table>
+<div style="display:none;"  id="div_122713.Thetenpowers">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122714.Verse11.31-40" border=0 hspace=2><a id="href_122714.Verse11.31-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927506&level=3&cid=828584" class="ajax_tree2">Verse 11.31-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122715.Verse11.41-50" border=0 hspace=2><a id="href_122715.Verse11.41-50" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927526&level=3&cid=828604" class="ajax_tree2">Verse 11.41-50
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122716.Verse11.51-56" border=0 hspace=2><a id="href_122716.Verse11.51-56" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927536&level=3&cid=828614" class="ajax_tree2">Verse 11.51-56
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122717.Conclusion" border=0 hspace=2><a id="href_122717.Conclusion" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927537&level=2&cid=828615" class="ajax_tree1">Conclusion
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122718.Colophon" border=0 hspace=2><a id="href_122718.Colophon" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927542&level=2&cid=828620" class="ajax_tree1">Colophon
+</td></tr></table>
+</div>
+<script language=javascript>test('122684.Verse6.101-110|122683.Causelessproduction|122664.Chapter6:Abhimukhī|')</script><div class='bverknavn'><a href='/polyglotta/index.php?page=library&amp;bid=2'>Back to library</a></div></div><!-- venstrefulltekstfelt --><div class="clear"></div><!-- clear --><div id="nav-menu"><ul>
+  		  <li  id="nav-1"><a class="tabValgt" href="/polyglotta/index.php?page=record&amp;view=record&amp;vid=1113&amp;mid=1927312&amp;level=3">Sentence by sentence view</a></li>
+  		  <li  id="nav-2"><a  href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1113&amp;cid=828390&amp;mid=1927312&amp;level=3">Continuous text view</a></li>
+ 		<li  id="nav-3"><a  href="/polyglotta/admin/index.php?page=fulltext&amp;view=fulltext&amp;vid=1113&amp;cid=828390&amp;mid=1927312&amp;level=3">View in admin</a></li>
+
+  		  </ul></div><div class='clear'></div><!-- clear -->			<script language="javascript" type="text/javascript">
+			var kilderef = '';
+			var tekstid = 0;
+			var tekstid_bilder = 0;
+			var filsti = '';
+			var thumbnail = '';
+			</script>
+		<div class='infofulltekstfelt'><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><div class='kilderef' id='7641521'></div><div class='clear'></div><span id='7641521bi' class='verse'>
+							འབྱུང་བ་དེ་དག་བདག་ཉིད་གང་ཞིག་(4)གིས་ནི་ཁྱོད་ཀྱི་བློའི། །<br />ཡུལ་དུ་འགྱུར་བ་དེ་ཡི་བདག་ཉིད་ཅན་ནི་མ་ཡིན་ན། །<br />གང་ལ་ཡིད་ཀྱི་མུན་པ་འཐུག་པོ་འདི་ཉིད་དུ་ཡོད་པ། །<br />དེས་ནི་ཇི་ལྟར་འཇིག་རྟེན་ཕ་རོལ་ཡང་དག་རྟོགས་པར་འགྱུར། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><div class='kilderef' id='7641975'></div><div class='clear'></div><span id='7641975bi' class='verse'>
+							If it’s the nature of the elements that make<br />Your mental image though its nature it does lack,<br />How could someone so densely dimmed towards this life<br />Be trusted to have knowledge of the lives beyond? (6.101)&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><div class='kilderef' id='7646194'></div><div class='clear'></div><span id='7646194bi' class='verse'>
+							སེམས་པ་འབྱུང་བ་ལས་གྱུར་པ་དག་ནི་རྒྱུ་དམིགས་པ་བཞིན་པ་ལ་ནི་བསྙོན་པར་མི་ནུས་ཏེ། མཐོང་བའི་ཕྱིར་དང། ཇི་སྐད་བཤད་པའི་སྐྱོན་དུ་ཐལ་བར་འགྱུར་བའི་ཕྱིར་ཏེ། རྒྱུ་དང་འབྲས་བུའི་དངོས་པོ་འཇིག་རྟེན་ལ་གྲགས་པ་འདི་ནི་ཡོད་པ་ཉིད་དོ། །དེ་ཉིད་ནི་བཞི་ཁོ་ན་སྟེ། འགྲོ་བ་སྣ་ཚོགས་པ་མཐའ་དག་གི་རྒྱུར་གྱུར་པ་ས་དང་ཆུ་དང་མེ་དང་རླུང་ཞེས་བྱ་བ་རྣམས་སོ། །དེ་རྣམས་ཀྱི་ཡོངས་སུ་སྨིན་པའི་ཁྱད་པར་ལས་པད་མ་དང་བལ་པོ་སེའུ་ལ་སོགས་པ་དག་དང། རྨ་བྱ་དང་བྱ་གག་གི་ཚོགས་པ་དག་གི་སྣ་ཚོགས་པ་ཇི་ལྟར་མཐོང་བཞིན་པ་འཐད་པ་འགའ་ཞིག་ཏུ་མ་ཟད་ཀྱི། བློ་དངོས་པོའི་དེ་ཁོ་ན་ཉིད་སྣ་ཚོགས་ཡོངས་སུ་གཅོད་པ་པོར་གྱུར་པ་ཡང་དེ་ཁོ་ན་ལས་སྐྱེ་བ་ཡིན་ནོ། །དེ་ལ་ཇི་ལྟར་ཆང་དག་ལས་འབྱུང་བའི་བྱེ་བྲག་ཕྲད་པ་ཡོངས་སུ་འགྱུར་བའི་ཁྱད་པར་ལས་སྲོག་ཆགས་རྣམས་ཀྱི་མྱོས་པ་དང་བརྒྱལ་བའི་རྒྱུ་མྱོས་པར་འགྱུར་བའི་ནུས་པ་སྐྱེ་བ་དེ་བཞིན་དུ། ནུར་ནུར་པོ་ལ་སོགས་པའི་འབྱུང་བ་ཆེན་པོའི་ཁྱད་པར་ཅན་ཡོངས་སུ་སྨིན་པ་ལས་བློ་དག་སྐྱེ་ཞིང། དེ་དག་དངོས་པོ་མཐའ་དག་ཡོངས་སུ་གཅོད་པར་བྱེད་པའི་བར་དུ་ཡང་འགྱུར་རོ། །དེའི་ཕྱིར་ཕྱི་རོལ་དང་ནང་གི་དངོས་པོ་རྣམས་ནི་འཇིག་རྟེན་འདིའི་རྒྱུ་ལས་འབྱུང་བ་ཁོ་ན་ཡིན་གྱི། གང་དུ་བྱས་པའི་ལས་ཀྱི་རྣམ་པར་སྨིན་པ་འདིར་རམ། འདིར་བྱས་པའི་རྣམ་པར་སྨིན་པ་འཇིག་རྟེན་གཞན་དུ་འབྱུང་བ་འཇིག་རྟེན་ཕ་རོལ་དག་ཡོད་པ་ཉིད་ནི་མ་ཡིན་ནོ་སྙམ་དུ་སེམས་སོ། །མཛེས་མ་ལེགས་པར་སྤྱོད་ཅིང་བཟའ་བར་གྱིས། །ལུས་མཆོག་འདས་གང་དེ་ཁྱོད་ལ་མི་འབྱུང། །ལུས་འདི་ཚོགས་པར་གྱུར་པ་ཙམ་ཞིག་སྟེ། །འཇིགས་མ་སོང་བ་ལྡོག་པར་མི་འགྱུར་རོ། །ཞེས་སྨོས་ཏེ། འདི་ནི་བུ་མོ་ལ་མངོན་པར་བགྲོད་པར་འདོད་ཅིང་བུ་མོས་འཇིག་རྟེན་ཕ་རོལ་མེད་པར་རྟོགས་པར་འདོད་ནས་སྨྲས་པ་ཡིན་ནོ། །འདི་ལ་བརྗོད་པར་བྱ་སྟེ། ཁྱོད་ཀྱི་འཇིག་རྟེན་ཕ་རོལ་ཡོད་པ་མ་ཡིན་ནོ་སྙམ་པའི་ངེས་པ་འདི་ག་ལས་ཡིན། མངོན་སུམ་མ་ཡིན་པ་ཉིད་ཀྱི་ཕྱིར་རོ་ཞེ་ན། ཁྱོད་ཀྱི་འཇིག་རྟེན་ཕ་རོལ་མངོན་སུམ་མ་ཡིན་པ་ཉིད་ཅི་མངོན་སུམ་ཞིག་གམ་འོན་ཏེ་མངོན་སུམ་མ་ཡིན་པ་ཞིག་ཡིན་གྲང། མངོན་སུམ་མོ་ཞེ་ན་འཇིག་རྟེན་ཕ་རོལ་མངོན་སུམ་དུ་གྱུར་པ་ཉིད་མེད་པ་མངོན་སུམ་ཡིན་པས་དངོས་པོ་མེད་པ་ཡང་མངོན་སུམ་ཉིད་དུ་འགྱུར་རོ། །དེའི་ཕྱིར་དངོས་པོ་མེད་པ་ཡང་ཁྱོད་ལ་དངོས་པོར་འགྱུར་ཏེ། མངོན་སུམ་ཡིན་པའི་ཕྱིར་དངོས་པོ་བཞིན་ནོ། །དེའི་ཕྱིར་དངོས་པོ་མེད་པ་ཞེས་བྱ་བ་འགའ་ཡང་མེད་པས་ཟླ་པོ་མེད་པའི་ཕྱིར་དངོས་པོ་ཡང་མེད་པར་འགྱུར་རོ། །དངོས་པོ་དང་དངོས་པོ་མེད་པ་མེད་ན་ཡང་འབྱུང་བ་རྣམས་ཀྱི་ཡོད་པ་ཉིད་དང། འཇིག་རྟེན་ཕ་རོལ་མེད་པ་ཉིད་ཉམས་པར་འགྱུར་རོ། །ཅི་སྟེ་མངོན་སུམ་མ་ཡིན་ན་ནི་རེ་ཞིག་མངོན་སུམ་མ་ཡིན་པ་དེ་ཉིད་མངོན་སུམ་མ་ཡིན་པའི་ཕྱིར་མ་བཟུང་བས། ཅི་ལྟར་མ་བཟུང་བ་དེའི་སྒོ་ནས་འཇིག་རྟེན་ཕ་རོལ་མེད་པར་རྗེས་སུ་དཔོག་པར་འགྱུར། ཅི་སྟེ་རྗེས་སུ་དཔག་པས་བཟུང་བ་ཡིན་ནོ་ཞེ་ན། རྗེས་སུ་དཔག་པ་ལས་རབ་ཏུ་གྲུབ་པས་ཀྱང་དོན་སྒྲུབ་པ་ཡིན་ན་འདི་ནི། ཇི་ཙམ་དབང་པོའི་སྤྱོད་ཡུལ་བས། །སྐྱེས་བུ་དེ་ཙམ་ཁོ་ནར་ཟད། །བཟང་མོ་མང་ཐོས་གང་སྨྲ་བ། །དེ་ནི་སྤྱང་ཀིའི་རྗེས་དང་འདྲ། །ཞེས་ཁྱོད་ཀྱིས་ཁས་བླངས་པ་ཡང་ཡིན་ནོ། །དེའི་ཕྱིར་འདིར་ཐམས་ཅད་ལ་སྐུར་པ་འདེབས་པར་བྱེད་པ་ན། སེམས་པ་ཡོད་པ་འབྱུང་བ་ལས་གྱུར་པ་པ་ལ་སུན་འབྱིན་པ་བཤད་ཟིན་པའི་ལམ་གྱི་རྗེས་སུ་འབྲངས་ཏེ་ཐམས་ཅད་དུ་སུན་འབྱིན་པ་བརྗོད་པར་བྱའོ། །གཞན་ཡང་ཇི་ལྟར་རབ་རིབ་ཅན་ཟླ་བ་གཉིས་ལ་སོགས་པའི་ངོ་བོ་ཡོད་པ་མ་ཡིན་པ་ཡོད་དོ་སྙམ་དུ་འཛིན་པའི་མཐོང་བ་སྐྲ་ཤད་དང་སྦྲང་མ་ལ་སོགས་པ་ཡང་དག་པ་མ་ཡིན་པའི་ཡུལ་ཅན་དུ་རྣམ་པ་དེ་ལྟ་བུ་གཞན་ཡང་མི་བདེན་པ་ཁོ་ན་ཡིན་པ་དེ་བཞིན་དུ་ཁྱོད་ཀྱི་འཇིག་རྟེན་ཕ་རོལ་ལ་སོགས་པ་མེད་པར་ཤེས་པ་གཞན་ཡང་མཐོང་བའི་དངོས་པོ་ཕྱིན་ཅི་ལོག་ཏུ་རྟོགས་པའི་སྒོ་ནས་ཕྱིན་ཅི་ལོག་ཉིད་ཡིན་ནོ་ཞེས་བསྟན་པའི་ཕྱིར་བཤད་པ། <br /> འབྱུང་བ་དེ་དག་བདག་ཉིད་གང་ཞིག་གིས་ནི་ཁྱོད་ཀྱི་བློའི། །<br /> ཡུལ་དུ་འགྱུར་བ་དེ་ཡི་བདག་ཉིད་ཅན་ནི་མ་ཡིན་ན། །<br /> གང་ལ་ཡིད་ཀྱི་མུན་པ་མཐུག་པོ་འདི་ཉིད་དུ་ཡོད་པ། །<br /> དེས་ན་ཇི་ལྟར་འཇིག་རྟེན་ཕ་རོལ་ཡང་དག་རྟོགས་པར་འགྱུར། །<br /> ས་ལ་སོགས་པ་དེ་ཁོ་ན་ཉིད་བཞི་པོ་གང་དག་སྨྲས་པ་དེ་དག་ནི་ཇི་ལྟར་ཁྱོད་ཀྱི་ཤེས་པའི་ཡུལ་ཉིད་དུ་འགྱུར་བའི་བདག་ཉིད་དེར་ཡོད་པ་མ་ཡིན་ནོ། །གང་གི་ཚེ་དེ་ལྟར་ཁྱོད་འཇིག་རྟེན་འདི་ཉིད་ལ་ཕྱིན་ཅི་ལོག་ཏུ་མཐོང་བ་ཡིན་པ་དེའི་ཚེ། འཇིག་རྟེན་ཕ་རོལ་ཏེ་པོར་ཕྲ་བ་ལྷའི་མིག་གི་ཤེས་པའི་སྤྱོད་ཡུལ་དུ་གྱུར་པ་ཇི་ལྟར་རྟོགས་པར་འགྱུར་ཏེ་མི་སྲིད་པ་ཉིད་དོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><div class='kilderef' id='7646658'></div><div class='clear'></div><span id='7646658bi' class='verse'>
+							<p>Those who believe that mind originates from the elements<a class='fotnote rn' name='FN5550rn1' href='#N5550rn1'><sup>1</sup></a>
+ think, &lsquo;Causes are evident and cannot be denied, because we do see them, and because of the faults you have mentioned. The causal relationships between things is a fact commonly accepted in the world. There are only four things that are real: earth, water, fire and wind, and these form the basis for the endless variety within the world. Not only is it the case that a particular synthesis of these leads to the varieties of lotus, pomegranate and so forth, and species such as peacock and crane, that we can observe; sentience and the ability to distinguish between the various types of things also originate with them. Just as when particular elements combine and develop, producing the intoxicating capacity of alcohol that causes beings to experience intoxication and stupefaction, so it is that certain combinations of the major elements developing from the embryonic stage oblong (kalana) give rise to consciousness and eventually the ability to distinguish between all manner of things. All the things that make up the environment and the living beings therefore develop from within this world, and there is nothing that is now the outcome of karmic acts, nor will the actions of this life have an effect in future lives after one dies.&rsquo;</p> <p style="padding-left: 30px;">My dear, let us enjoy ourselves and eat.<br />What is past will not haunt you, my beauty.<br />This body is but a gathering of things,<br />O timid girl, what is gone will not return.<a class='fotnote rn' name='FN5550rn2' href='#N5550rn2'><sup>2</sup></a>
+</p> <p>Desiring to have sex with his daughter he spoke thus to convince her that there are no future lives.</p> <p>To address this: How can you be so certain that there are no other lives? If they say, &lsquo;Because they can&rsquo;t be directly perceived,&rsquo; is the fact that you don&rsquo;t have direct perception of other lives something you directly perceive, or not? &lsquo;I directly perceive it.&rsquo; Well, if you directly perceive that there is no direct perception of other lives, that would mean that non-existent things can also be directly perceived. And then, non-existent things would be existent for you because they are directly perceived in exactly the same way as existent things. In that case there would be nothing that could be labeled non-existent. And without their opposite, existent things likewise cannot exist. And when there are neither existent things nor non-existent things, that undermines the existence of elements and non-existence of future lives.</p> <p>If they say, &lsquo;It is not directly perceived;&rsquo; something that is not directly perceived cannot be apprehended precisely because it is not directly perceived. And how could failing to apprehend be a valid way to infer the non-existence of future lives?</p> <p>They then suggest, &lsquo;It is apprehended through inference.&rsquo; But in regard to using inference as a valid way of proving things, you have made the claim:</p> <p>There is nothing more to man<br />Than what our senses reveal.<br />What the learned say, dear girl,<br />Is nothing but a wolf&rsquo;s trail.<a class='fotnote rn' name='FN5550rn3' href='#N5550rn3'><sup>3</sup></a>
+</p> <p>Therefore, if you keep on denying everything, I can use the same approach used when rejecting that mind comes from the elements to entirely reject this too.</p> <p>Furthermore, someone with a visual impairment who thinks that there are such things as two moons when in fact there are not, will also mistakenly see other things that aren&rsquo;t really there, such as hair strands, bees and so forth. Similarly, when thinking that future lives and the like do not exist, because you have a perverted understanding, you will likewise be mistaken about other things that you see. To express this it was said:</p> <p style="padding-left: 30px;"><strong>If it&rsquo;s the nature of the elements that make</strong><br /><strong>Your mental image though its nature it does lack,</strong><br /><strong>How could someone so densely dimmed towards this life</strong><br /><strong>Be trusted to have knowledge of the lives beyond? (6.101)</strong></p> <p>How can these four that you talk of, that are of the nature of earth and so forth, become objects of your mind without sharing its nature? Having such a flawed way of seeing this world, how could you possibly have any understanding of that which is beyond this world, a sphere of knowledge requiring exceptionally subtle divine vision?</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641522bi' class='verse'>
+							འཇིག་རྟེན་ཕ་རོལ་འགོག་པར་བྱེད་པའི་དུས་སུ་བདག་ཉིད་ནི། །<br />ཤེས་བྱའི་(5)རང་བཞིན་ཕྱིན་ཅི་ལོག་ཏུ་ལྟ་བར་རྟོགས་བྱ་སྟེ། །<br />དེ་ཡི་ལྟ་བའི་རྣམ་པའི་རྟེན་མཚུངས་ལུས་དང་ལྡན་ཉིད་ཕྱིར། །<br />གང་ཚེ་འབྱུང་བའི་བདག་ཉིད་ཡོད་ཉིད་ཁས་ལེན་དེ་ཚེ་བཞིན། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641976bi' class='verse'>
+							When you deny that there are lives beyond this one, <br />Your view of how things are is flawed since such views have<br />This bodily existence as their common ground,<br />Like when you make the claim that elements are real. (6.102)&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7646195bi' class='verse'>
+							གཞན་ཡང། <br /> འཇིག་རྟེན་ཕ་རོལ་འགོག་པར་བྱེད་པའི་དུས་སུ་བདག་ཉིད་ནི། །<br /> ཤེས་བྱའི་རང་བཞིན་ཕྱིན་ཅི་ལོག་ཏུ་ལྟ་བར་རྟོགས་བྱ་སྟེ། །<br /> དེ་ཡི་ལྟ་བའི་རྣམ་པའི་རྟེན་མཚུངས་ལུས་དང་ལྡན་ཉིད་ཕྱིར། །<br /> གང་ཚེ་འབྱུང་བའི་བདག་ཉིད་ཡོད་ཉིད་ཁས་ལེན་དེ་ཚེ་བཞིན། །<br /> མཚུངས་པ་ནི་མཉམ་པ་སྟེ་འདྲ་བ་ཞེས་བྱ་བའི་དོན་ཏོ། །རྟེན་ནི་གནས་པའི་རྒྱུའོ། །ལུས་ནི་ཁོག་པའོ། །དེའི་ལྟ་བའི་རྣམ་པ་ནི་འཇིག་རྟེན་ཕ་རོལ་ལ་སྐུར་པ་འདེབས་པ་དེའི་ལྟ་བའི་རྣམ་པའོ། །རྟེན་ཡང་དེ་ཡིན་ལ་མཚུངས་པ་ཡང་དེ་ཡིན་པས་ཞེས་ཁྱད་པར་གྱི་ཚིག་བསྡུ་བའོ། །རྟེན་དུ་མཚུངས་པ་ཉིད་ལུས་ཡིན་པས་ན་དེའི་ལྟ་བའི་རྣམ་པའི་རྟེན་དུ་མཚུངས་པའི་ལུས་ཞེས་ཚིག་རྣམ་པར་སྦྱར་རོ། །དེ་འདི་ལ་ཡོད་པས་ན་མ་ཏུབ་ཀྱི་རྐྱེན་ནོ། །དེའི་དངོས་པོ་ནི། དེ་ཡི་ལྟ་བའི་རྣམ་པའི་རྟེན་མཚུངས་ལུས་དང་ལྡན་ཉིད་ཕྱིར། །ཞེས་བྱ་བ་སྟེ་གཏན་ཚིགས་སོ། །རྟེན་དེ་ནི་ཇི་སྲིད་སེམས་པ་འབྱུང་བ་ལས་གྱུར་པའི་འཇིག་རྟེན་ཕ་རོལ་ཡོད་པ་ཉིད་དུ་ལྟ་བའམ། ཐེ་ཚོམ་གྱི་རྟེན་ཉིད་དུ་མ་གྱུར་པ་དེ་སྲིད་དུ་ལོག་པར་ལྟ་བ་འཇིག་རྟེན་ཕ་རོལ་ལ་སྐུར་པ་འདེབས་པའི་རྟེན་དུ་མཚུངས་པ་ཉིད་དུ་འགྱུར་བས་འབྱུང་བའི་བདག་ཉིད་ཡོད་པ་ཉིད་དུ་རྟོགས་པ་ན་ཡང་འཇིག་རྟེན་རྒྱང་འཕེན་པ་ལ་དེའི་ལྟ་བའི་རྣམ་པའི་རྟེན་དུ་མཚུངས་པའི་ལུས་དང་ལྡན་པ་ཉིད་ཡོད་པ་ཡིན་ཏེ། འདི་ལྟར་དེའི་གནས་སྐབས་ནི་གཉིས་ཏེ། གཅིག་ནི་འབྱུང་བའི་རང་བཞིན་ཁོང་དུ་ཆུད་པའི་གནས་སྐབས་སོ། །གཞན་ནི་འཇིག་རྟེན་གཞན་ལ་སྐུར་པ་འདེབས་པའི་གནས་སྐབས་སོ། །དེ་ལ་གཅིག་ནི་ཕྱོགས་སུ་བྱས་པ་ཉིད་ཀྱིས་ན་གཞན་དཔེ་ཉིད་དུ་བསྟན་པའི་ཕྱིར། གང་ཚེ་འབྱུང་བའི་བདག་ཉིད་ཡོད་ཉིད་ཁས་ལེན་དེ་ཚེ་བཞིན། །ཞེས་བྱ་བ་སྨོས་ཏེ། གནས་སྐབས་དེར་ཡང་དེའི་ལྟ་བའི་རྣམ་པའི་རྟེན་དུ་མཚུངས་པའི་ལུས་དང་ལྡན་པ་ཉིད་དང་ཤེས་བྱའི་རང་བཞིན་ཕྱིན་ཅི་ལོག་ཏུ་ལྟ་བ་ཡོད་པ་ཡིན་ནོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646659bi' class='verse'>
+							<p>Furthermore,</p> <p style="padding-left: 30px;"><strong>When you deny that there are lives beyond this one, </strong><br /><strong>Your view of how things are is flawed since such views have</strong><br /><strong>This bodily existence as their common ground,</strong><br /><strong>Like when you make the claim that elements are real. (6.102)</strong></p> <p><em>Common</em> (<em>sama</em>) means that there is a similarity of kind. <em>Ground</em> (<em>āśraya</em>) means that it underlies it.<a class='fotnote rn' name='FN5550rn4' href='#N5550rn4'><sup>4</sup></a>
+ <em>Body</em> (<em>mūrti</em>) refers to corporeality. <em>Such views</em> implies this particular view that rejects past and future lives. Since it describes it as being a <em>common ground</em>, this is a specifying compound. Bodily existence is the common ground, and the phrase is thus combined as <em>such views have this bodily existence as their common ground</em>. A <em>matup</em>-affix is used to give the sense of <em>in whom it is</em>.<a class='fotnote rn' name='FN5550rn5' href='#N5550rn5'><sup>5</sup></a>
+ That then becomes, <em>since such views have this bodily existence as their common ground</em>, supplying the reason.<a class='fotnote rn' name='FN5550rn6' href='#N5550rn6'><sup>6</sup></a>
+</p> <p>Concerning this ground, as long as the mind is thought to be generated from the elements and no room is left for the possibility of past and future lives, there is a common ground for this mistaken view of denying past and future lives and when thinking that the elements are really existent, and the common ground for these types of views of the materialist is this bodily existence. There are thus two contexts here: one being their understanding of the natural elements, and the other their denial of past and future lives. Here in the verse, one of these indicates their stance and the other serves as an example, when it says, <em>like when you make the claim that elements are real</em>; in that context as well, it is physical reality which is the common ground for their view, and this <em>view of how</em> knowable <em>things are is flawed</em>.</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641523bi' class='verse'>
+							འབྱུང་བ་དེ་དག་ཇི་ལྟར་ཡོད་མིན་དེ་ལྟར་བཤད་ཟིན་ཏེ། །<br />གང་གི་ཕྱིར་ན་གོང་དུ་རང་གཞན་(6)ལས་དང་གཉིས་ཀ་ལས། །<br />སྐྱེ་དང་རྒྱུ་མེད་ཐུན་མོང་དུ་ནི་བཀག་ཟིན་དེ་ཡི་ཕྱིར། །<br />མ་བཤད་འབྱུང་བ་འདི་དག་ལྟ་ཞིག་ཡོད་པ་མ་ཡིན་ནོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641977bi' class='verse'>
+							It has been shown how elements cannot exist,<br />As it was generally disproved things can’t arise<br />From self, other, both, or without a cause; and so<br />Though not explicit, they have no reality. (6.103)&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7646196bi' class='verse'>
+							ཅི་སྟེ་འབྱུང་བའི་བདག་ཉིད་ཡོད་པ་ཉིད་རྟོགས་པའི་གནས་སྐབས་ན་ཡང་བདག་ཕྱིན་ཅི་མ་ལོག་པ་མཐོང་བ་ཡིན་པའི་ཕྱིར་དཔེ་བསྒྲུབ་བྱས་སྟོང་པ་ཉིད་ཡིན་ནོ་སྙམ་ན། དེ་ཡང་ཡོད་པ་མ་ཡིན་ཏེ། མ་སྐྱེས་པ་ཉིད་ཀྱིས་ཡོད་མ་ཡིན་པའི་རང་བཞིན་ཅན་གྱི་འབྱུང་བ་དག་ལ་སྐྱེ་བ་དང་ཡོད་པ་ཉིད་དུ་རྟོགས་པས་ཕྱིན་ཅི་ལོག་ཏུ་ལྟ་བ་ཉིད་གྲུབ་པའི་ཕྱིར་རོ། །འབྱུང་བ་དག་མ་སྐྱེས་པ་ཉིད་དེ་ཁོ་ན་བསྒྲུབ་པར་བྱ་དགོས་སོ་ཞེ་ན། མ་ཡིན་ཏེ་བསྒྲུབས་ཟིན་པའི་ཕྱིར་རོ་ཞེས་བཤད་པ་སྟེ། <br /> འབྱུང་བ་དེ་དག་ཇི་ལྟར་ཡོད་མིན་དེ་ལྟར་བཤད་ཟིན་ཏོ། །<br /> གང་གི་ཕྱིར་ན་གོང་དུ་རང་གཞན་ལས་དང་གཉི་ག་ལས། །<br /> སྐྱེ་དང་རྒྱུ་མེད་ཐུན་མོང་དུ་ནི་བཀག་ཟིན་དེ་ཡི་ཕྱིར། །<br /> མ་བཤད་འབྱུང་བ་འདི་དག་ལྟ་ཞིག་ཡོད་པ་མ་ཡིན་ནོ། །<br />དངོས་པོ་རྣམས་ཐུན་མོང་དུ་རང་དང་གཞན་དང་གཉི་ག་དང་རྒྱུ་མེད་པ་ལས་སྐྱེ་བ་འགོག་པར་བྱེད་པ་ན། འབྱུང་བ་དང་སྐྱེ་བ་ཡང་བདག་གིས་སྤྱིར་བཀག་པ་ཁོ་ན་ལས་སྐྱེ་བ་མེད་པའི་ཕྱིར། །འབྱུང་བ་དག་ལ་རང་བཞིན་ཡོད་པ་མ་ཡིན་པས་དཔེ་གྲུབ་པ་ཉིད་དོ། །དེ་བཞིན་དུ་ཐམས་ཅད་མཁྱེན་པ་ལ་སྐུར་པ་འདེབས་པ་དང། དངོས་པོ་ཡོད་པ་ཉིད་དུ་སྨྲ་བ་དང། དངོས་པོ་མེད་པ་ཉིད་དུ་སྨྲ་བ་དང། དབང་ཕྱུག་དང་དུས་དང་རྡུལ་དང་རང་བཞིན་དང་ངོ་བོ་ཉིད་སྨྲ་བ་རྣམས་དང། དེ་དག་ལས་གཞན་པ་རྣམས་ལ་ཡང་རང་རང་གི་ཇི་ལྟ་བ་ཡིན་པ་སྨྲ་བ་ན་རྟོགས་པ་ཕྱིན་ཅི་ལོག་ཉིད་སྦྱར་བར་བྱའོ། །འདི་ལྟ་སྟེ། རྫོགས་པའི་སངས་རྒྱས་འགོག་པར་བྱེད་པའི་དུས་སུ་བདག་ཉིད་ནི། །ཤེས་བྱའི་རང་བཞིན་ཕྱིན་ཅི་ལོག་ཏུ་ལྟ་བར་རྟོགས་བྱ་སྟེ། །དེ་ཡི་ལྟ་བའི་རྣམ་པའི་རྟེན་མཚུངས་ལུས་དང་ལྡན་ཉིད་ཕྱིར། །གང་ཚེ་འབྱུང་བའི་བདག་ཉིད་ཡོད་ཉིད་ཁས་ལེན་དེ་ཚེ་བཞིན། །ཞེས་བྱ་བ་ལ་སོགས་པ་སྦྱར་བར་བྱ་སྟེ། ཡོད་པ་དང་མེད་པ་ཉིད་དུ་ལྟ་བ་ཐམས་ཅད་དགག་པར་འདོད་པའི་ཕྱིར་རོ། །ཁོ་བོ་ཅག་ལ་ནི་གནས་སྐབས་འགར་ཡང་མི་འདོད་པ་ཐོབ་པ་ཡོད་པ་མ་ཡིན་ཏེ། དེའི་ཕྱིར་མཁས་པས་ཡོངས་སུ་བསྒྱུར་ལ་ཚིགས་སུ་བཅད་པ་འདི་ཉིད་ཀྱིས་གཞན་གྱིས་ཡོངས་སུ་བརྟགས་པའི་ཕྱོགས་སྔ་མ་མ་ལུས་པ་བསལ་བར་ངེས་པར་བྱ་སྟེ། རྟོག་པའི་དྲ་བ་མ་ལུས་པར་བཀག་པར་དོན་དམ་པའི་ཡེ་ཤེས་གྲུབ་པར་མངོན་པར་འདོད་པའི་ཕྱིར་རོ། །ཅི་སྟེ་ཁྱོད་ལ་ཡང་ཐལ་བར་འགྱུར་བ་འདི་ཙམ་མཚུངས་སོ་སྙམ་ན། དེ་ཡང་ཡོད་པ་མ་ཡིན་ཏེ། ཁོ་བོ་ཅག་ཕྱིན་ཅི་ལོག་པར་སྒྲུབ་པ་ལ་དཔེ་མེད་པའི་ཕྱིར་རོ། །འཇིག་རྟེན་གཞན་རྟོགས་ཡོད་པ་ཉིད་དུ་རྟོགས་པའི་དུས་སུ་བདག །ཤེས་བྱའི་རང་བཞིན་དམ་པའི་དོན་ནི་ལྟ་བར་རྟོགས་བྱ་སྟེ། །བདག་གི་ལྟ་བའི་རྣམ་པའི་རྟེན་མཚུངས་ལུས་དང་ལྡན་ཉིད་ཕྱིར། །གང་གི་ཚེ་ནི་བདག་མེད་རྟོགས་པར་ཁས་ལེན་དེ་ཚེ་བཞིན། །ཞེས་བྱ་བར་བརྗོད་པར་ནུས་པ་ཡང་ཡིན་ནོ། །དེ་བཞིན་དུ། འདི་ན་ཐམས་ཅད་མཁྱེན་པ་ཡོད་ཅེས་རྟོགས་པའི་དུས་སུ་བདག །ཤེས་བྱའི་རང་བཞིན་དམ་པའི་དོན་ནི་ལྟ་བར་རྟོགས་བྱ་སྟེ། །གཏན་ཚིགས་དང་དཔེ་དག་ནི་དེ་གཉིས་ཁོ་ནའོ། །དེ་བཞིན་དུ་དངོས་པོ་ཐམས་ཅད་ངེས་པ་ལ་ཡང་སྦྱར་བར་བྱའོ། །དེའི་ཕྱིར་ཚུལ་འདིས་ནི། དེ་ཉིད་དེ་ལས་འབྱུང་མིན་གཞན་དག་ལས་ལྟ་ག་ལ་ཞིག །གཉི་ག་ལས་ཀྱང་མ་ཡིན་རྒྱུ་མེད་པར་ནི་ག་ལ་ཡོད། །ཅེས་གང་དམ་བཅས་པར་གྱུར་པ་དེ་རབ་ཏུ་བསྒྲུབས་པ་ཡིན་ནོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646660bi' class='verse'>
+							<p>They might think, &lsquo;There is nothing wrong in the way I see things when understanding the natural existence of the elements; so the example that you use in your proof is void.&rsquo;</p> <p>That is not so, since the fact that they are unproduced shows that it is a mistaken view to think that these elements, being in nature non-existent, can have any sense of production or existence. If they say that we would need to prove that the elements are in fact unproduced, we don&rsquo;t, because it has already been proven. To express this:</p> <p style="padding-left: 30px;"><strong>It has been shown how elements cannot exist,</strong><br /><strong>As it was generally disproved things can&rsquo;t arise</strong><br /><strong>From self, other, both, or without a cause; and so</strong><br /><strong>Though not explicit, they have no reality. (6.103)</strong></p> <p>It has been commonly refuted that existent things can be produced from self, other, both or causelessly, and since this general refutation showing that there is no production also applies to production with respect to the elements, they have no inherent existence and the example is therefore valid. This likewise applies to those who variously refute the Omniscient One, who propound that entities exist, who propound that entities do not exist, who propound an almighty god, time, particles, primordial nature or inherence, or anyone else. One may in these cases adapt the verse accordingly, for example:</p> <p style="padding-left: 30px;">When you deny that the <em>Perfect Buddha</em> exists, <br />Your view of how things are is flawed since such views have<br />This bodily existence as their common ground,<br />Like when you make the claim that elements are real.<a class='fotnote rn' name='FN5550rn7' href='#N5550rn7'><sup>7</sup></a>
+</p> <p>This will serve to refute all views that hold on to any form of existence or non-existence. Nothing unwanted can ever befall us, so by skilfully altering this verse we are certain to eliminate each and every position our opponents may formulate, thus halting the entire web of conception and making the ultimate wisdom manifest.</p> <p>They might then think, &lsquo;You are equally affected by this consequence.&rsquo; But we are not, because there is no example that shows our proof to be mistaken. We may say:</p> <p style="padding-left: 30px;">When I acknowledge there are lives beyond this one,<br />My view of how this are is accurate since such views have<br />This bodily existence as a common ground,<br />Like when I claim the understanding of selflessness.</p> <p>Likewise,</p> <p style="padding-left: 30px;">When I say that the Omniscient One exists at present,<br />My view of how things are is accurate since such views have&hellip;,</p> <p>The reason and example are the same two; and this may likewise be applied in connection with all things. With this approach, whatever the thesis may be it remains valid that:</p> <p style="padding-left: 30px;">It can&rsquo;t come from itself, and how from other things?<br />Can&rsquo;t come from both, how could it be without a cause?<a class='fotnote rn' name='FN5550rn8' href='#N5550rn8'><sup>8</sup></a>
+</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641524bi' class='verse'>
+							གང་གི་ཕྱིར་ན་བདག་དང་གཞན་དང་གཉིས་ཀ་ལས་སྐྱེ་དང་། །<br />རྒྱུ་ལ་མ་ལྟོས་ཡོད་པ་མིན་པས་དངོས་རྣམས་རང་བཞིན་བྲལ། །<br />གང་(7)གིས་སྤྲིན་ཚོགས་དང་མཚུངས་གཏི་མུག་སྟུག་པོ་འཇིག་རྟེན་ལ། །<br />ཡོད་པ་དེས་ན་ཡུལ་རྣམས་ལོག་པ་དག་ཏུ་སྣང་བར་འགྱུར། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641978bi' class='verse'>
+							Because things don’t arise from self, other or both, <br />Nor causelessly, they’re nothing in and of themselves.<br />The clouds of dense confusion lie across the world,<br />And therefore objects are perceived mistakenly. (6.104)&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7646197bi' class='verse'>
+							འདིར་སྨྲས་པ། གལ་ཏེ་དངོས་པོ་རྣམས་བདག་དང་གཞན་དང་གཉི་ག་དང་རྒྱུ་མེད་པ་ལས་མི་སྐྱེ་ན། འོ་ན་ཇི་ལྟར་སྐྱེ། བཤད་པ་གལ་ཏེ་དངོས་པོ་རྣམས་ལ་རང་བཞིན་འགའ་ཞིག་ཡོད་ན་ནི་སྐྱེ་བའི་རྣམ་པར་རྟོག་པ་གཞན་མི་སྲིད་པའི་ཕྱིར། ཐེ་ཚོམ་མེད་པར་དེ་བདག་གམ་གཞན་ནམ་གཉི་གའམ་རྒྱུ་མེད་པ་ཞིག་ལས་སྐྱེ་བའམ་དམིགས་པར་འགྱུར་བ་ཞིག་གོ། །གང་དག་དབང་ཕྱུག་ལ་སོགས་པ་དག་ལས་དངོས་པོ་རྣམས་སྐྱེ་བར་མངོན་པར་འདོད་པ་དེ་དག་གི་ལྟར་ན་ཡང་དབང་ཕྱུག་ལ་སོགས་པ་དེ་དག་བདག་ཏུ་གྱུར་པའམ། གཞན་དུ་གྱུར་པའམ། གཉི་གར་གྱུར་པ་ཞིག་ཏུ་འགྱུར་པས་དབང་ཕྱུག་ལ་སོགས་པ་རྒྱུར་སྨྲ་བ་དག་ཀྱང་བཤད་ཟིན་པའི་སྐྱོན་ལས་མི་འདའ་སྟེ། དེའི་ཕྱིར་སྐྱེད་པར་བྱེད་པའི་རྒྱུའི་རྣམ་པར་རྟོག་པ་གཞན་ལྔ་པ་ཡོད་པ་མ་ཡིན་ནོ། །དེའི་ཕྱིར་གཞན་མེད་པའི་ཕྱིར་ལ་རྣམ་པར་རྟོག་པ་བཞིས་སྐྱེ་བ་བཀག་པའི་ཕྱིར་དངོས་པོ་རྣམས་ཀྱི་རང་བཞིན་སྐྱེ་བ་མེད་དོ་ཞེས་བསྟན་པའི་ཕྱིར། <br /> གང་གི་ཕྱིར་ན་བདག་དང་གཞན་དང་གཉི་ག་ལས་སྐྱེ་དང། །<br /> རྒྱུ་ལ་མ་ལྟོས་ཡོད་པ་མིན་པས་དངོས་རྣམས་རང་བཞིན་བྲལ། །<br /> ཞེས་བྱ་བ་སྨྲས་སོ། །འདིར་སྨྲས་པ། གལ་ཏེ་དངོས་པོ་རྣམས་ཀྱི་རང་བཞིན་སྐྱེ་བ་མེད་པ་ཉིད་ཡིན་ན། འོ་ན་མ་སྐྱེས་པ་སྔོན་པོ་ལ་སོགས་པ་རྣམས་ཅི་ལྟར་བཟུང། བཤད་པ་སྔོན་པོ་ལ་སོགས་པ་རྣམས་ཀྱི་རང་བཞིན་ནི་ཇི་ལྟར་ཡང་འགའ་ཞིག་གི་ཡུལ་ཉིད་དུ་འགྱུར་བ་མ་ཡིན་པས་སྔོན་པོ་ལ་སོགས་པ་རྣམས་ཀྱི་རང་བཞིན་ནི་བཟུང་བ་མ་ཡིན་ནོ། །གལ་ཏེ་དེ་ལྟར་ན་ནི་འོ་ན་གང་ཞིག་ཡང་དང་ཡང་དུ་ཡུལ་གྱི་ངོ་བོ་ཉིད་དུ་མདུན་ན་སྣང་བར་མཐོང་བ་དེ་ཅི་ཞིག་ཏུ་འགྱུར་བར་འོས་ཤེ་ན། བཤད་པ་འདི་ནི་ཕྱིན་ཅི་ལོག་ཉིད་ཀྱིས་ན་རང་བཞིན་མ་ཡིན་ཏེ། མ་རིག་པ་དང་བཅས་པ་རྣམས་ཁོ་ན་བདག་ཉིད་དེར་དམིགས་པའི་ཕྱིར་ལ་མ་རིག་པ་དང་བྲལ་བ་རྣམས་ཀྱིས་ནི་མ་དམིགས་པའི་ཕྱིར་རོ་ཞེས་བསྟན་པའི་ཕྱིར་བཤད་པ། <br /> གང་ཕྱིར་སྤྲིན་ཚོགས་དང་མཚུངས་གཏི་མུག་སྟུག་པོ་འཇིག་རྟེན་ལ། །<br /> ཡོད་པ་དེས་ན་ཡུལ་རྣམས་ལོག་པ་དག་ཏུ་སྣང་བར་འགྱུར། །<br /> སྤྲིན་ཚོགས་ནི་ཆར་སྤྲིན་གྱི་ཚོགས་སོ། །གང་གི་ཕྱིར་སྤྲིན་གྱི་ཚོགས་དང་འདྲ་བའི་གཏི་མུག་སྟུག་པོ་སྔོན་པོ་ལ་སོགས་པའི་རང་བཞིན་མཐོང་བ་གཡོགས་ནས་གནས་པ་དེའི་ཕྱིར་བྱིས་པ་རྣམས་ལ་སྔོན་པོ་ལ་སོགས་པའི་རང་བཞིན་མཐོང་བ་ཡོད་པ་མ་ཡིན་ཏེ་རང་གི་ངོ་བོ་ཕྱིན་ཅི་ལོག་ཏུ་མངོན་པར་ཞེན་པའི་གནས་སུ་གྱུར་པ་འདི་ནི་བྱིས་པ་བདེན་པར་མངོན་པར་ཞེན་པ་རྣམས་ལ་སྣང་བ་ཡིན་ནོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646661bi' class='verse'>
+							<p>One may ask, &lsquo;If things are neither produced from self, other, both, nor causelessly, how are they then produced?&rsquo;</p> <p>To explain: If things had any sort of inherent existence, no other type of arising could be conceived of, and one would undoubtedly have to observe that they arose either from self, other, both, or causelessly. Some might propose that things are produced from a creator god or the like, but in those cases too, such things as a creator god would be a self, an other, or both; so those propounding such things as a god to be the cause, will not therefore avoid the problems already presented. Hence, no fifth cause of production can be imagined. To express how, in the absence of any other alternative, and since production by any of these four conceivable options has been refuted, there is no inherent production of things, it was said:</p> <p style="padding-left: 30px;"><strong>Because things don&rsquo;t arise from self, other or both, </strong><br /><strong>Nor causelessly, they&rsquo;re nothing in and of themselves.</strong></p> <p>One might then ask, &lsquo;If things are indeed without inherent arising, how do we then apprehend the unarisen, such as the colour blue?&rsquo;</p> <p>To explain: Since there is no way that a true nature of blueness and so forth could be objectified, the nature of things such as blue is not apprehended.</p> <p>&lsquo;If that is the case, what are these things which keep appearing as actual objects to our perception?&rsquo;</p> <p>To explain: the mistaken is not the actual nature &ndash; true identities are only perceived by the ignorant and not by those free from ignorance. To express this:</p> <p style="padding-left: 30px;"><strong>The clouds of dense confusion lie across the world,</strong><br /><strong>And therefore objects are perceived mistakenly. (6.104)</strong></p> <p>By <em>clouds</em> amassing rain-clouds are meant. Since thick ignorance, similar to a layer of clouds, blocks the perception of the nature of blueness and so forth, immature beings cannot perceive the true nature of blue. They make the mistake of thinking that it has essential nature, and with this belief the immature perceive it to be real.</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641525bi' class='verse'>
+							ཇི་ལྟར་རབ་རིབ་མཐུ་ཡིས་འགའ་ཞིག་སྐྲ་ཤད་ཟླ་གཉིས་དང་། །<br />རྨ་བྱའི་མདོངས་དང་སྦྲང་མ་ལ་སོགས་ལོག་པར་འཛིན་བྱེད་པ། །<br />དེ་བཞིན་དུ་ནི་གཏི་(209b1)མུག་སྐྱོན་གྱི་དབང་གིས་མི་མཁས་པས། །<br />འདུས་བྱས་ལྟ་ཞིག་སྣ་ཚོགས་བློ་གྲོས་ཀྱིས་ནི་རྟོགས་པར་འགྱུར། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641979bi' class='verse'>
+							An eye disease may cause mistaken visions like<br />Hairs, double moons, the peacock eyes, bees and so forth.<br />The unwise, tricked by their confusion, will likewise<br />Believe the sundry fashioned imagery they see. (6.105)&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7646198bi' class='verse'>
+							འདིར་སྨྲས་པ་གཏི་མུག་གིས་བཀབ་པའི་ཕྱིར་རྣམ་པ་ཐམས་ཅད་དུ་དེ་ཁོ་ན་ཉིད་མི་མཐོང་བར་ནི་འགྱུར་ལ་རག་ན། ཕྱིན་ཅི་ལོག་ཏུ་མཐོང་བ་ག་ལས་ཤེ་ན། དེ་ལྟ་བུར་གྱུར་པ་མ་ཡིན་པ་རྣམས་མ་རིག་པའི་དབང་གིས་དེ་ལྟ་བུའི་བདག་ཉིད་དུ་སྣང་ངོ་ཞེས་བྱ་བ་འདི་ཉིད་ཕྱི་རོལ་གྱི་དཔེའི་སྒོ་ནས་བསྟན་པའི་ཕྱིར། <br /> ཇི་ལྟར་རབ་རིབ་མཐུ་ཡིས་འགའ་ཞིག་སྐྲ་ཤད་ཟླ་གཉིས་དང། །<br /> རྨ་བྱའི་མདོངས་དང་སྦྲང་མ་ལ་སོགས་ལོག་པར་འཛིན་བྱེད་པ། །<br /> ཞེས་བྱ་བ་སྨོས་ཏེ། ཇི་ལྟར་རབ་རིབ་ཀྱི་མཐུས་རབ་རིབ་ཅན་གྱིས་སྐྲ་ཤད་ལ་སོགས་པ་རྣམས་མ་སྐྱེས་པའི་རང་བཞིན་ཡིན་དུ་ཟིན་ཀྱང་དངོས་པོ་ཉིད་དུ་འཛིན་པར་བྱེད་པ། <br />དེ་བཞིན་དུ་ནི་གཏི་མུག་སྐྱོན་གྱི་དབང་གིས་མི་མཁས་པས། །<br /> འདུས་བྱས་ལྟ་ཞིག་སྣ་ཚོགས་བློ་གྲོས་ཀྱིས་ནི་རྟོགས་པར་འགྱུར། །<br /> འདི་ནི་མ་རིག་པའི་རྐྱེན་གྱིས་འདུ་བྱེད་རྣམས་ཞེས་བྱ་བ་དང། དེ་བཞིན་དུ་མ་རིག་པ་དང་རྗེས་སུ་འབྲེལ་པའི་གང་ཟག་འདི་ནི་བསོད་ནམས་མངོན་པར་འདུ་བྱ་བ་དང། བསོད་ནམས་མ་ཡིན་པ་མངོན་པར་འདུ་བྱ་བ་དང། །མི་གཡོ་བ་མངོན་པར་འདུ་བྱ་བ་ཡང་མངོན་པར་འདུ་བྱེད་དོ་ཞེས་བྱ་བ་དང། དེ་བཞིན་དུ་མ་རིག་པ་འགགས་པས་འདུ་བྱེད་འགག་ཅེས་བཅོམ་ལྡན་འདས་ཀྱིས་གསུངས་པ་ཡིན་ནོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646662bi' class='verse'>
+							<p>They interject: &lsquo;With the actual reality not being in any way seen since it is blocked by ignorance, how does this mistaken perception then come about?&rsquo;</p> <p>To show by means of external examples how things are experienced as real in this way despite this not actually being the case, it was said:</p> <p style="padding-left: 30px;"><strong>An eye disease may cause mistaken visions like</strong><br /><strong>Hairs, double moons, the peacock eyes, bees and so forth.</strong></p> <p>Just as in instances when things are taken to be real when in fact not really there, such as when cataracts lead the afflicted to perceive hairs and so forth&hellip;,</p> <p>The unwise, tricked by their confusion, will likewise<br />Believe the sundry fashioned imagery they see. (6.105)</p> <p>The Illustrious One has stated that:</p> <p style="padding-left: 30px;">Confusion leads to formations.<a class='fotnote rn' name='FN5550rn9' href='#N5550rn9'><sup>9</sup></a>
+</p> <p>That:</p> <p style="padding-left: 30px;">A person affected by ignorance generates meritorious formations, non-meritorious formations and unwavering formations.<a class='fotnote rn' name='FN5550rn10' href='#N5550rn10'><sup>10</sup></a>
+</p> <p>And likewise that:</p> <p style="padding-left: 30px;">When ignorance is halted formations cease.<a class='fotnote rn' name='FN5550rn11' href='#N5550rn11'><sup>11</sup></a>
+</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641526bi' class='verse'>
+							གལ་ཏེ་གཏི་མུག་བརྟེན་ནས་ལས་འབྱུང་གཏི་མུག་མེད་པར་དེ། །<br />མི་འབྱུང་ཞེས་བྱར་མི་མཁས་ཁོ་ནས་རྟོགས་པར་གོར་མ་ཆག། །<br />བློ་བཟང་ཉི་མས་མུན་པ་སྟུག་པོ་རྣམ་(2)པར་བསལ་བ་ཡི། །<br />མཁས་པ་དག་ནི་སྟོང་ཉིད་ཁོང་དུ་ཆུད་ཅིང་གྲོལ་བར་འགྱུར། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641980bi' class='verse'>
+							It is a sign of witlessness if one declares,<br />‘Confusion causes karma; does not come without.’<br />Just like the sun of wisdom sheds the nightly gloom,<br />The wise unravel emptiness and are set free. (6.106)&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7646199bi' class='verse'>
+							དེའི་ཕྱིར་ཚུལ་འདིས། <br /> གལ་ཏེ་གཏི་མུག་བརྟེན་ནས་ལས་བྱུང་གཏི་མུག་མེད་པར་དེ། །<br /> མི་འབྱུང་ཞེས་བྱར་མི་མཁས་ཁོ་ནས་རྟོགས་པར་གོར་མ་ཆག །<br /> བློ་བཟང་ཉི་མས་མུན་པ་སྟུག་པོ་རྣམ་པར་བསལ་བ་བཞིན། །<br /> མཁས་པ་དག་ནི་སྟོང་ཉིད་ཁོང་དུ་ཆུད་ཅིང་གྲོལ་བར་འགྱུར། །<br /> ཤེས་རབ་ཅན་ནི་མ་རིག་པའི་རྐྱེན་གྱིས་འདུ་བྱེད་དོ་ཞེས་བྱ་བ་མཐོང་བ་ན་འདུ་བྱེད་རྣམས་རང་བཞིན་མེད་པར་ཁོང་དུ་ཆུད་པར་འགྱུར་བ་འབའ་ཞིག་ཏུ་མ་ཟད་ཀྱི། དེ་རྟོགས་པ་ལས་མ་རིག་པ་སྤངས་ཤིང་འདུ་བྱེད་དག་ཀྱང་ཉེ་བར་མི་ལེན་ཏེ། དེ་ཉེ་བར་ལེན་པའི་རྒྱུ་སྤངས་པའི་ཕྱིར་རོ། །དེའི་ཕྱིར་འཁོར་བ་ལས་རྣམ་པར་གྲོལ་བར་འགྱུར་རོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646663bi' class='verse'>
+							<p>Accordingly,</p> <p style="padding-left: 30px;"><strong>It is a sign of witlessness if one declares,</strong><br /><strong>&lsquo;Confusion causes karma; does not come without.&rsquo;</strong><br /><strong>Just like the sun of wisdom sheds the nightly gloom,</strong><br /><strong>The wise unravel emptiness and are set free. (6.106)</strong></p> <p>When seeing the statement, &lsquo;Confusion leads to formations,&rsquo;<a class='fotnote rn' name='FN5550rn12' href='#N5550rn12'><sup>12</sup></a>
+ the judicious not only come to appreciate that formations lack inherent existence. Due to their understanding they also rid themselves of ignorance and stop perpetuating conditioned phenomena, having abandoned the causes for their perpetuation. Thus they are freed from cyclic existence.</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641527bi' class='verse'>
+							གལ་ཏེ་དངོས་རྣམས་དེ་ཉིད་དུ་མེད་ན། །<br />ཐ་སྙད་དུ་ཡང་མོ་གཤམ་བུ་ཇི་བཞིན། །<br />དེ་དག་མེད་པ་ཉིད་འགྱུར་དེ་ཡི་ཕྱིར། །<br />དེ་དག་རང་བཞིན་གྱིས་ནི་ཡོད་པ་ཉིད། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641981bi' class='verse'>
+							‘If in reality things don’t in fact exist,<br />They’re like a barren woman’s son and should like him<br />Have no existence also as conventional things.<br />They must therefore exist as things inherently.’ (6.107)&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7646200bi' class='verse'>
+							འདིར་སྨྲས་པ། གལ་ཏེ་དེ་ལྟར་གཟུགས་ལ་སོགས་པ་རྣམས་ལ་དོན་དམ་པར་རང་བཞིན་འགའ་ཡང་མེད་ན། འོ་ན་མོ་གཤམ་གྱི་བུ་བཞིན་དུ་དོན་དམ་པར་ཡོད་པ་མ་ཡིན་པའི་ཕྱིར། དེ་དག་གི་རང་བཞིན་ཀུན་རྫོབ་ཏུ་ཡང་ཡོད་པར་མི་འགྱུར་བ་ཞིག་ན། གཟུགས་ལ་སོགས་པ་རྣམས་ཀྱི་རང་བཞིན་ནི་ཀུན་རྫོབ་ཏུ་ཡོད་པ་ཡང་ཡིན་ནོ། །དེའི་ཕྱིར་དེ་དག་གི་ཡོད་པ་ཉིད་ནི་དོན་དམ་པར་ཡང་ཡོད་པ་ཁོ་ནའོ་ཞེས་སྨྲས་པ། <br /> གལ་ཏེ་དངོས་རྣམས་དེ་ཉིད་དུ་མེད་ན། །<br /> ཐ་སྙད་དུ་ཡང་མོ་གཤམ་བུ་ཇི་བཞིན། །<br /> དེ་དག་མེད་པ་ཉིད་འགྱུར་དེ་ཡི་ཕྱིར། །<br /> དེ་དག་རང་བཞིན་གྱིས་ནི་ཡོད་པ་ཉིད། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646664bi' class='verse'>
+							<p>They now object, &lsquo;If form and so forth ultimately have no inherent nature whatsoever, then they are just like the son of a barren woman in having no ultimate existence, which means that relatively too they wouldn&rsquo;t have any inherent nature. But form and so forth do have a relative nature. Therefore, seeing as they have such an existence, they must then have ultimate existence.&rsquo;</p> <p style="padding-left: 30px;"><strong>&lsquo;If in reality things don&rsquo;t in fact exist,</strong><br /><strong>They&rsquo;re like a barren woman&rsquo;s son and should like him</strong><br /><strong>Have no existence also as conventional things.</strong><br /><strong>They must therefore exist as things inherently.&rsquo; (6.107)</strong></p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641528bi' class='verse'>
+							གང་དག་རབ་རིབ་ཅན་(3)སོགས་ཡུལ་འགྱུར་བ། །<br />སྐྲ་ཤད་ལ་སོགས་དེ་དག་མ་སྐྱེས་པས། །<br />རེ་ཞིག་དེ་དག་ཉིད་ལ་བརྩད་བྱ་སྟེ། །<br />ཕྱི་ནས་མ་རིག་རབ་རིབ་རྗེས་འབྲེལ་ལའོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641982bi' class='verse'>
+							Take objects such as hairs, although they are not there,<br />Do still appear to someone who has cataracts.<br />Thus, first of all, please settle your dispute with them.<br />And then go deal with those impaired by ignorance. (6.108)&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7646201bi' class='verse'>
+							འདི་ལ་བརྗོད་པར་བྱ་སྟེ། <br /> གང་དག་རབ་རིབ་ཅན་སོགས་ཡུལ་གྱུར་པ། །<br /> སྐྲ་ཤད་ལ་སོགས་དེ་དག་མ་སྐྱེས་པས། །<br /> རེ་ཞིག་དེ་དག་ཉིད་ལ་བརྩད་བྱ་སྟེ། །<br /> ཕྱི་ནས་མ་རིག་རབ་རིབ་རྗེས་འབྲེལ་ལའོ། །<br /> དེ་ཅིའི་ཕྱིར་ཁྱོད་ཅག་གིས་ཡོད་པ་མ་ཡིན་པའི་ཡུལ་སྐྲ་ཤད་ལ་སོགས་པ་དག་མཐོང་ལ་མོ་གཤམ་གྱི་བུ་ནི་མ་ཡིན་ཞེས་རེ་ཞིག་གང་དག་རབ་རིབ་ལ་སོགས་པས་མིག་ཉམས་པར་བྱས་པ་དེ་དག་ཁོ་ན་ལ་བརྩད་པར་བྱ་ལ། ཕྱིས་ནི་ཅིའི་ཕྱིར་མ་སྐྱེས་པའི་རང་བཞིན་ཅན་གཟུགས་ལ་སོགས་པ་དག་མཐོང་ལ་མོ་གཤམ་གྱི་བུ་ནི་མ་ཡིན་ཞེས་མ་རིག་པའི་རབ་རིབ་ཀྱིས་བློའི་མིག་བསྒྲིབས་པ་རྣམས་ལ་བརྒལ་ཞིང་བརྟག་པར་བྱ་དགོས་སོ། །ཁོ་བོ་ཅག་ལ་ནི་འདི་བརྒལ་ཞིང་བརྟག་པ་མ་ཡིན་ཏེ། འདི་ལྟར་ཁོ་བོ་ཅག་ནི་རྣལ་འབྱོར་པ་རྣམས་ཀྱིས་དངོས་པོ་དེ་དག་འདི་ལྟར་གཟིགས་ཤིང་གཞན་གང་དག་རྣལ་འབྱོར་པའི་ཡེ་ཤེས་ཐོབ་པར་འདོད་པ་དེ་དག་གིས་ཀྱང་ཆོས་ཀྱི་རང་བཞིན་དེ་སྐད་བཤད་པ་ལ་ལྷག་པར་མོས་པར་བྱའོ། །ཞེས་ལུང་ཇི་ལྟ་བ་བཞིན་དུ་རྣལ་འབྱོར་པའི་ཡེ་ཤེས་ཀྱིས་ཐུགས་སུ་ཆུད་པའི་སྒོ་ནས་དངོས་པོ་རང་བཞིན་མེད་པར་འཆད་པར་བཞུགས་པ་ཡིན་གྱི། རང་གི་ཤེས་པ་ལ་ལྟོས་ནས་ནི་མ་ཡིན་ཏེ། ཁོ་བོ་ཅག་ནི་མ་རིག་པའི་རབ་རིབ་ཀྱིས་བློའི་མིག་བསྒྲིབས་པ་ཡིན་པའི་ཕྱིར་རོ། །ཇི་སྐད་དུ། ཕུང་པོ་རང་བཞིན་དབེན་ཞིང་སྟོང་པ་ཉིད། །བྱང་ཆུབ་རང་བཞིན་དཔེན་ཞིང་སྟོང་པ་ཉིད། །གང་སྤྱོད་དེ་ཡང་རང་བཞིན་སྟོང་པ་སྟེ། །ཡེ་ཤེས་ལྡན་པས་ཤེས་ཀྱི་བྱིས་པས་མིན། །ཡེ་ཤེས་རང་བཞིན་སྟོང་པར་རིག་འགྱུར་ཏེ། །ཤེས་བྱའི་རང་བཞིན་སྟོང་པར་རིག་གྱུར་ནས། །ཤེས་པ་པོ་དང་འདྲ་བར་རྟོགས་གྱུར་ན། །བྱང་ཆུབ་ལམ་ལ་དེ་དག་སྤྱོད་ཅེས་བྱ། །ཞེས་གསུངས་པ་ལྟ་བུའོ། །དེའི་ཕྱིར་འདི་ནི་རྣལ་འབྱོར་པ་རྣམས་ལ་བརྒལ་ཞིང་བརྟག་པ་མ་ཡིན་ཏེ། དེ་དག་གིས་ནི་ཀུན་རྫོབ་ཏུ་ཡང་ཆོས་འགའ་ཞིག་གི་རང་བཞིན་མ་གཟིགས་ལ། དོན་དམ་པར་ཡང་མ་ཡིན་ནོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646665bi' class='verse'>
+							<p>We reply:</p> <p style="padding-left: 30px;"><strong>Take objects such as hairs, although they are not there,</strong><br /><strong>Do still appear to someone who has cataracts.</strong><br /><strong>Thus, first of all, please settle your dispute with them.</strong><br /><strong>And then go deal with those impaired by ignorance. (6.108)</strong></p> <p>First you should then take your arguments to those who have defective eyesight, such as those suffering from cataracts, and ask them, &lsquo;Why is it that you see such non-existent things as strands of hair, but not the son of a barren woman?&rsquo; And then you should question those whose mind&rsquo;s eye is veiled by the cataracts of ignorance, asking them, &lsquo;Why is it that you see forms that are by nature unarisen, but not the son of a barren woman?&rsquo;</p> <p>I am not the one to be censured here. I am quoting the scriptures: &lsquo;that yogis see things in this way, and that others who wish to gain the wisdom of the yogis should pay attention to the way in which they explain the nature of things.&rsquo;<a class='fotnote rn' name='FN5550rn13' href='#N5550rn13'><sup>13</sup></a>
+ It is through realisation, brought about by yogic wisdom, that entities may be explained as lacking inherent nature. This is not something taken from my own understanding, since my mind&rsquo;s eye is veiled by the cataracts of ignorance. But as is stated:</p> <p style="padding-left: 30px;">Devoid of nature, the aggregates are emptiness.<br />Devoid of nature, awakening is emptiness.<br />Anything engaged in is empty by nature.<br />The wise understand this, the immature do not.</p> <p style="padding-left: 30px;">With the nature of insight seen to be empty,<br />The nature of the known seen to be empty,<br />The knower as well is thus understood;<br />This is called practicing the path of awakening.<a class='fotnote rn' name='FN5550rn14' href='#N5550rn14'><sup>14</sup></a>
+</p> <p>And the yogis are therefore not the ones to be censured; they are the ones who see that no phenomena have inherent nature, either relatively or ultimately.</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641529bi' class='verse'>
+							གལ་ཏེ་རྨི་ལམ་དྲི་ཟའི་གྲོང་ཁྱེར་བཅས། །<br />སྨིག་རྒྱུའི་ཆུ་དང་མིག་འཕྲུལ་གཟུགས་བརྙན་སོགས། །<br />སྐྱེ་མེད་མཐོང་(4)ན་ཡོད་ཉིད་མིན་མཚུངས་ཀྱང་། །<br />ཁྱོད་ལ་ཇི་ལྟར་དེར་འགྱུར་དེ་མི་རིགས། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641983bi' class='verse'>
+							In fact you too see things that are not really there,<br />The city of gandharvas, images in dreams,<br />Illusions, a mirage, reflections and so forth.<br />So, is it not unsound how these appear to you? (6.109)&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7646202bi' class='verse'>
+							རབ་རིབ་ཅན་ལ་བརྒལ་ཞིང་བརྟག་པ་ལྟར་ཕར་འདུག་ཅིག །རེ་ཞིག་འདི་ནི་ཁྱོད་ཉིད་ལ་ཆེར་བརྒལ་ཞིང་བརྟག་པར་བྱ་བ་ཡིན་ནོ་ཞེས་བཤད་པ། <br  /> གལ་ཏེ་རྨི་ལམ་དྲི་ཟའི་གྲོང་ཁྱེར་བཅས། །<br  /> སྨིག་རྒྱུའི་ཆུ་དང་མིག་འཕྲུལ་གཟུགས་བརྙན་སོགས། །<br  /> སྐྱེ་མེད་མཐོང་ན་ཡོད་ཉིད་མིན་མཚུངས་ཀྱང། །<br  /> ཁྱོད་ལ་ཇི་ལྟར་དེར་འགྱུར་དེ་མི་རིགས། །<br  /> དཔེར་ན་རྨི་ལམ་དུ་དམིགས་པ་དང། མོ་གཤམ་གྱི་བུ་ཡོད་པ་མ་ཡིན་པ་ཉིད་དུ་འདྲ་ཡང་རྨི་ལམ་མཐོང་ལ་མོ་གཤམ་གྱི་བུ་མ་ཡིན་པར་འགྱུར། དེ་བཞིན་དུ་དྲི་ཟའི་གྲོང་ཁྱེར་ལ་ཡང་ངོ། །སྨིག་རྒྱུའི་ཆུ་ཞེས་བྱ་བ་ནི་སྨིག་རྒྱུ་ལ་ཆུ་ཞེས་བྱ་བའི་དོན་ནོ། །དེ་བཞིན་དུ་མིག་འཕྲུལ་ལ་ཡང་ངོ། །གཟུགས་བརྙན་ལ་སོགས་ཞེས་བྱ་བའི་སོགས་པའི་སྒྲས་ནི་བྲག་ཅ་དང་སྤྲུལ་པ་ལ་སོགས་པ་དག་ཡོངས་སུ་བཟུང་ངོ། །དཔེར་ན་རང་བཞིན་གྱིས་སྟོང་པ་ཡིན་དུ་ཟིན་ཀྱང། དེ་དག་མཐོང་གི་མོ་གཤམ་གྱི་བུ་ནི་མ་ཡིན་ནོ་། །དེའི་ཕྱིར་ཇི་བདག་ཉིད་ལ་བརྒལ་ཞིང་བརྟག་པ་གྱིས་དང། དེ་ནས་ཕྱིས་ང་ལ་བརྒལ་ཞིང་བརྟག་པར་འགྱུར་རོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646666bi' class='verse'>
+							<p>So stop censuring the cataract-ridden! First of all take a closer look at yourself. To explain:</p> <p style="padding-left: 30px;"><strong>In fact you too see things that are not really there,</strong><br /><strong>The city of gandharvas, images in dreams,</strong><br /><strong>Illusions, a mirage, reflections and so forth.</strong><br /><strong>So, is it not unsound how these appear to you? (6.109)</strong></p> <p>To take dream perceptions as an example, they are just as non-existent as the son of a barren woman. Still, one can experience a dream but not the son of a barren woman. It is the same with the city of gandharvas.<a class='fotnote rn' name='FN5550rn15' href='#N5550rn15'><sup>15</sup></a>
+ <em>A mirage</em> refers to the phenomena of water appearing in a mirage. The same is the case for illusions. When saying <em>reflections and so forth</em>, the phrase and so forth is meant to include such things as echoes and apparitions. And although everything in these examples is empty of inherent existence, they can be seen; but the son of a barren woman cannot. So you should in fact be censuring yourself. And only after that should you come criticising me.</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641530bi' class='verse'>
+							དེ་ཉིད་དུ་འདི་ཇི་ལྟར་སྐྱེ་མེད་ཀྱང་། །<br />མོ་གཤམ་བུ་ལྟར་གང་ཕྱིར་འཇིག་རྟེན་གྱི། །<br />མཐོང་བའི་ཡུལ་དུ་མི་འགྱུར་མ་ཡིན་པ། །<br />དེ་ཡི་ཕྱིར་ན་སྨྲ་འདི་མ་ངེས་པའོ། །&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7641521";
+							kilderef = "Ma Tib: Tg, dbu ma, ’a  209a3 - Tib: Tg, dbu ma, ’a b4";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641984bi' class='verse'>
+							Though actually these are as unborn as<br />The barren woman’s son, that does not mean<br />That these things are not seen within the world.<br />It’s therefore not conclusive what you say. (6.110)&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7641975";
+							kilderef = "Ma Eng: Liland (2019)  - Eng: Liland (2019) ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7646203bi' class='verse'>
+							དེ་ཉིད་དུ་འདི་ཇི་ལྟར་སྐྱེ་མེད་ཀྱང། །<br /> མོ་གཤམ་བུ་ལྟར་གང་ཕྱིར་འཇིག་རྟེན་གྱི། །<br /> མཐོང་བའི་ཡུལ་དུ་མི་འགྱུར་མ་ཡིན་ན། །<br /> དེ་ཡི་ཕྱིར་ན་སྨྲས་འདི་མ་ངེས་པའོ། །<br /> ཞེས་བརྗོད་པར་ནུས་པ་ཡང་ཡིན་ནོ། །ཇི་སྐད་དུ་བཅོམ་ལྡན་འདས་ཀྱིས། འགྲོ་བ་དག་ནི་རྨི་འདྲར་བཤད། །དེ་ཉིད་དུ་ནི་རྣམ་མ་བཞག། །རྨི་ལམ་གང་ལ་འང་དངོས་པོ་མེད། །ལོག་པའི་བློ་ཅན་མངོན་པར་ཞེན། །དྲི་ཟའི་གྲོང་ཁྱེར་ཇི་ལྟར་སྣང་གྱུར་ཀྱང། །གྲོང་ཁྱེར་ཕྱོགས་བཅུར་ཡོད་མིན་གཞན་ན་འང་མེད། །གྲོང་ཁྱེར་མིང་ཙམ་ཞིག་གིས་རབ་ཏུ་བཞག །དེ་བཞིན་བདེ་བར་གཤེགས་པས་འགྲོ་འདི་གཟིགས། །ཆུ་ཡི་འདུ་ཤེས་ཅན་གྱིས་ནི། །མཐོང་ཡང་སྨིག་རྒྱུ་ལ་ཆུ་མེད། །དེ་བཞིན་ཡོངས་སུ་རྟོགས་པས་བཀྲུགས། །སྡུག་པ་མིན་པར་སྡུག་པར་རྟོག། །མེ་ལོང་ཤིན་ཏུ་ཡོངས་དག་ལ། །ཇི་ལྟར་རང་བཞིན་མེད་པ་ཡི། །གཟུགས་བརྙན་སྣང་བ་དེ་བཞིན་དུ། །ལྗོན་པ་ཆོས་རྣམས་ཤེས་པར་གྱིས། །ཞེས་གསུངས་པའི་ལུང་ལས་ན་གཟུགས་ལ་སོགས་པ་རྣམས་རང་བཞིན་གྱིས་མ་སྐྱེས་པ་ཡིན་བཞིན་དུ་འཇིག་རྟེན་གྱིས་འཛིན་པའི་ཡུལ་ཉིད་དུ་འགྱུར་ལ། །མོ་གཤམ་གྱི་བུ་ནི་མ་ཡིན་པས་འདི་ནི་ཁྱོད་ལ་རང་ཉིད་ལས་མ་ངེས་པ་ཡིན་ནོ། །&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7646194";
+							kilderef = "Ma Tib: Tg, dbu ma, ’a  285a - Tib: Tg, dbu ma, ’a 289a";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646667bi' class='verse'>
+							<p>We may well then say:</p> <p style="padding-left: 30px;"><strong>Though actually these are as unborn as</strong><br /><strong>The barren woman&rsquo;s son, that does not mean</strong><br /><strong>That these things are not seen within the world.</strong><br /><strong>It&rsquo;s therefore not conclusive what you say. (6.110)</strong></p> <p>As the Illustrious One has stated:</p> <p style="padding-left: 30px;">Beings are explained to be like dreams,<br />And not considered real in actual fact.<br />Nothing appearing in a dream is real,<br />But people misconstruing still believe.</p> <p style="padding-left: 30px;">The city of gandharvas may appear,<br />But there is no such city anywhere.<br />Just as its city status is but a name,<br />The Sugata sees beings in the same way.<a class='fotnote rn' name='FN5550rn16' href='#N5550rn16'><sup>16</sup></a>
+</p> <p style="padding-left: 30px;">Though to the observer there is water,<br />No water can be found in a mirage.<br />Just so for those confused by their ideas<br />The unappealing is considered fair.<a class='fotnote rn' name='FN5550rn17' href='#N5550rn17'><sup>17</sup></a>
+</p> <p style="padding-left: 30px;">O Druma, though it has no true nature,<br />Within a spotless mirror <br />Reflections may still appear &ndash;<br />You should understand phenomena thus.<a class='fotnote rn' name='FN5550rn18' href='#N5550rn18'><sup>18</sup></a>
+</p> <p>So as this scriptural quote makes clear, even though a true nature has not arisen, material forms and so forth are perceptible objects to worldly people, while the son of a barren woman is not, and your argument is therefore inconclusive.</p>&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7646658";
+							kilderef = "Ma Eng: Liland (2019)  - Eng: Liland (2019) ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'><div style='' id='1' class='note rn'>1.<a class="internt" name='N5550rn1' href='#FN5550rn1'> One type of Cārvāka (followers of Cārvāka) or Lokāyata (materialist) philosopher, considered hedonists holding nihilistic views.</a>&nbsp; <br>2.<a class="internt" name='N5550rn2' href='#FN5550rn2'> The verse was spoken by Ṛṣi Lokacakṣu, a Cārvāka philosopher who authored the treatise <em>The One Hundred Thousand</em>.</a>&nbsp; <br>3.<a class="internt" name='N5550rn3' href='#FN5550rn3'> This is a statement by the Cārvākas themselves denying the validity of inference. Jayānanda (221a) supplies the context: A learned astrologer once came to a village of fools and told them that a wolf would come that very night and eat them all. They fled to the mountains in fear, and while they were gone the astrologer made wolf tracks and robbed their houses of valuables. Hence, the words of the learned might be deceptive. Jayānanda adds a second verse he says is implied by <em>sogs</em> (etc.), but this word does not appear in the available Tibetan translation.</a>&nbsp; <br>4.<a class="internt" name='N5550rn4' href='#FN5550rn4'> <em>Samāśraya</em> (<em>rten mtshungs</em>), which is analysed into its component parts <em>sama</em> (<em>mtshungs</em>) and <em>āśraya</em> (<em>rten</em>) in this analyisis.</a>&nbsp; <br>5.<a class="internt" name='N5550rn5' href='#FN5550rn5'> The Sanskrit <em>matup</em>-affix adds the affix <em>-mat</em> to a word to give the sense of <em>whose it is</em>, or <em>in whom it is</em>. In the word gomat, for example, -mat is added to the word <em>go</em> (‘cow’) to give the sense of either <em>who has cows</em> (as a person), or <em>in which there are cows</em> (as a pasture) [Pāṇini 5.2.94; see Ballantyne (1891), Laghukaumudī of Varadarāja, p.395–6.] In the case in question the <em>matup</em>-affix is added to the word <em>body</em> (<em>mūrti</em>) in the sense that these views (that future lives do not exist, and that the elements do exist) are similar in that they have bodily existence (which can mean both the physical world and the present body) as a common ground, i.e. they presuppose the existence of the physical world.</a>&nbsp; <br>6.<a class="internt" name='N5550rn6' href='#FN5550rn6'> As this is a very technical paragraph specific to Sanskrit grammar, the present translation can only give a general idea of its implications. When the topic matter is so closely linked with the language of the original as here, a translation of a translation easily becomes practically irrelevant.</a>&nbsp; <br>7.<a class="internt" name='N5550rn7' href='#FN5550rn7'> Verse 6.103 altered.</a>&nbsp; <br>8.<a class="internt" name='N5550rn8' href='#FN5550rn8'> Verse 6.8.</a>&nbsp; <br>9.<a class="internt" name='N5550rn9' href='#FN5550rn9'> <em>The Rice Seedling Sutra</em> (<em>Śālistambhasūtra</em>), Toh 210, Kangyur, mdo sde, <em>tsha</em> 116b7.</a>&nbsp; <br>10.<a class="internt" name='N5550rn10' href='#FN5550rn10'> <em>The Rice Seedling Sutra</em> (<em>Śālistambhasūtra</em>), Toh 210, Kangyur, mdo sde, <em>tsha</em> 120a7 (correspondence not exact in available translation).</a>&nbsp; <br>11.<a class="internt" name='N5550rn11' href='#FN5550rn11'> <em>The Rice Seedling Sutra</em> (<em>Śālistambhasūtra</em>), Toh 210, Kangyur, mdo sde, <em>tsha</em> 117a2.</a>&nbsp; <br>12.<a class="internt" name='N5550rn12' href='#FN5550rn12'> See previous section.</a>&nbsp; <br>13.<a class="internt" name='N5550rn13' href='#FN5550rn13'> The scripture quoted here has not been identified.</a>&nbsp; <br>14.<a class="internt" name='N5550rn14' href='#FN5550rn14'> <em>Meeting of Father and Son Sutra</em> (<em>Pitāputrasamāgamasūtra</em>), Toh 60, dkon brtsegs, <em>nga</em> 48b3.</a>&nbsp; <br>15.<a class="internt" name='N5550rn15' href='#FN5550rn15'> Jayānanda (229a) explains that the <em>city of gandharvas</em> is a certain bad omen resembling a city that can be seen in the sky at times.</a>&nbsp; <br>16.<a class="internt" name='N5550rn16' href='#FN5550rn16'> <em>Meeting of Father and Son Sutra</em> (<em>Pitāputrasamāgamasūtra</em>), Toh 60, dkon brtsegs, <em>nga</em> 51a7.</a>&nbsp; <br>17.<a class="internt" name='N5550rn17' href='#FN5550rn17'> <em>Meeting of Father and Son Sutra</em> (<em>Pitāputrasamāgamasūtra</em>), Toh 60, dkon brtsegs, <em>nga</em> 51a4.</a>&nbsp; <br>18.<a class="internt" name='N5550rn18' href='#FN5550rn18'> <em>Meeting of Father and Son Sutra</em> (<em>Pitāputrasamāgamasūtra</em>), Toh 60, dkon brtsegs, <em>nga</em> 50a1. This last verse was also quoted in connection with verse 6.37.</a>&nbsp; <br></div><div class='clear'></div></div></div><div class='clear'></div><div class="fontboks"><a onClick=onOffdiv('permlink') name="permlink" href="#permlink">Permanent link</a></div><div class='clear'></div><div class='perm_felt' id='permlink'>http://www2.hf.uio.no/common/apps/permlink/permlink.php?app=polyglotta&amp;context=ctext&amp;uid=5f21abc7-b22e-11ea-bba8-0050569f23b2</div></div></div><!-- infofelt --></div><!-- divControl --><div class="clear"></div>
+<div style="clear:both"></div><div class="signatur"><div class="signatur_left">
+		<a href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation">Go to Wiki Documentation</a></br>Enhet: <a HREF=http://www.hf.uio.no>Det humanistiske fakultet</a> &nbsp; Utviklet av: <a href="http://www.hf.uio.no/tjenester/it">IT-seksjonen ved HF</a></div><!--signatur_left -->
+		<div class="signatur_right"><a href="/polyglotta/admin/index.php">Login</a></div>
+		<div style="clear:both"></div></div>
+</body></html><SCRIPT LANGUAGE="JAVASCRIPT">
+	
+	$("#tr_IA").click(function(){
+	    if ($("#toggle_container_IA").is(':hidden'))
+	    	$("#toggle_container_IA").show();
+	    else{
+	        $("#toggle_container_IA").hide();
+	    }
+	    return false;
+		});
+
+	$("#tr_lang").click(function(){
+	    if ($("#toggle_container_lan").is(':hidden'))
+	    	$("#toggle_container_lan").show();
+	    else{
+	        $("#toggle_container_lan").hide();
+	    }
+	    return false;
+	});
+
+	$("#tr_img").click(function(){
+	    if ($("#toggle_container_img").is(':hidden'))
+	    	$("#toggle_container_img").show();
+	    else{
+	        $("#toggle_container_img").hide();
+	    }
+	    return false;
+	});
+
+	$("#diac2button").click(function(){
+	   if ($("#ex3a").is(':hidden')){
+		   $("#ex3a").show();
+	       $("#diac2button").html("Hide&#32Diacritica-help");
+	   }else{
+	       $("#ex3a").hide();
+	       $("#diac2button").html("Diacritica-help");
+	   }
+	   return false;
+	});
+
+	$("#diacbutton").click(function(){
+	   if ($("#diacritical_sign").is(':hidden')){
+		   	$("#diacritical_sign").show();
+	      	$("#diacbutton").html("Hide&#32diacritica");
+	   }else{
+	        $("#diacritical_sign").hide();
+	        $("#diacbutton").html("Diacritica");
+	   }
+	   return false;
+    });
+
+	$('#toggle_container_IA').click(function(e) {
+	   e.stopPropagation();
+	});
+
+	$('#toggle_container_lan').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#toggle_container_img').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#ex3a').click(function(e) {
+	    e.stopPropagation();
+	});
+
+	$('#diacritical_sign').click(function(e) {
+        e.stopPropagation();
+    });
+
+	//Kode for å sette inn diakritiske tegn
+	$('#diacritical > tbody > tr > td').click(function() {
+	  	//alert('red');
+		$("#sokeboks").val($("#sokeboks").val() + $(this).text());
+	});
+
+	$('.diac2button').text(($('.diacbutton').text() == 'Diacritica-help') ? 'Hide Diacritica-help' : 'Diacritica-help');
+	
+	//Lukker alle åpnede pop'uper ved klikk på siden
+	$(document).click(function() {
+		$('#toggle_container_IA').hide();
+	    
+        $('#toggle_container_lan').hide();
+    
+        $('#toggle_container_img').hide();
+   
+   		$('#diacritical_sign').hide();
+   		$("#diacbutton").html("Diacritica");
+   
+       	$('#ex3a').hide();
+       	$("#diac2button").html("Diacritica-help");
+   });
+	</SCRIPT>

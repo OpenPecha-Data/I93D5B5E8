@@ -1,0 +1,223 @@
+id: I93D5B5E8
+source: https://www2.hf.uio.no/polyglotta/index.php?page=library&bid=2
+source_file: null
+initial_creation_type: input
+imported: '2022-05-27T19:30:48.142228'
+last_modified: '2022-05-27T19:30:48.142242'
+parser: null
+source_metadata:
+  title: 'Candrakīrti: Madhyamakāvatāra'
+  language: bo
+  base:
+    f7D66:
+      title: Title
+      base_file: f7D66.txt
+      order: 1
+    f5226:
+      title: Preface
+      base_file: f5226.txt
+      order: 2
+    f45AF:
+      title: CI_Verse 1.1-10
+      base_file: f45AF.txt
+      order: 3
+    f4E05:
+      title: CI_Verse 1.11-17
+      base_file: f4E05.txt
+      order: 4
+    f7BA3:
+      title: 'Chapter 2: Vimalā'
+      base_file: f7BA3.txt
+      order: 5
+    fF50F:
+      title: CII_Verse 3.1-10
+      base_file: fF50F.txt
+      order: 6
+    f8E30:
+      title: CII_Verse 3.11-13
+      base_file: f8E30.txt
+      order: 7
+    fB664:
+      title: 'Chapter 4: Arciṣmatī'
+      base_file: fB664.txt
+      order: 8
+    f066F:
+      title: 'Chapter 5: Sudurjayā'
+      base_file: f066F.txt
+      order: 9
+    f7D54:
+      title: CIII_Verse 6.1-10
+      base_file: f7D54.txt
+      order: 10
+    f4D48:
+      title: CIII_Self of phenomena
+      base_file: f4D48.txt
+      order: 11
+    f6E97:
+      title: CIII_Verse 6.11-20
+      base_file: f6E97.txt
+      order: 12
+    f12A4:
+      title: CIII_Verse 6.21-30
+      base_file: f12A4.txt
+      order: 13
+    f81BF:
+      title: CIII_The two truths
+      base_file: f81BF.txt
+      order: 14
+    f48E7:
+      title: CIII_Verse 6.31-40
+      base_file: f48E7.txt
+      order: 15
+    f8449:
+      title: CIII_Verse 6.41-50
+      base_file: f8449.txt
+      order: 16
+    fF43E:
+      title: CIII_Mind-only
+      base_file: fF43E.txt
+      order: 17
+    f3338:
+      title: CIII_Verse 6.51-60
+      base_file: f3338.txt
+      order: 18
+    f3A36:
+      title: CIII_Verse 6.61-70
+      base_file: f3A36.txt
+      order: 19
+    f4BB2:
+      title: CIII_Verse 6.71-80
+      base_file: f4BB2.txt
+      order: 20
+    f838D:
+      title: CIII_Verse 6.81-90
+      base_file: f838D.txt
+      order: 21
+    fB3A2:
+      title: CIII_Verse 6.91-100
+      base_file: fB3A2.txt
+      order: 22
+    fD8E0:
+      title: CIII_Production from both
+      base_file: fD8E0.txt
+      order: 23
+    f58CE:
+      title: CIII_Verse 6.101-110
+      base_file: f58CE.txt
+      order: 24
+    f0E4A:
+      title: CIII_Verse 6.110-120
+      base_file: f0E4A.txt
+      order: 25
+    fB9EE:
+      title: CIII_Dependent arising
+      base_file: fB9EE.txt
+      order: 26
+    fDDAA:
+      title: CIII_Verse 6.121-130
+      base_file: fDDAA.txt
+      order: 27
+    fCC75:
+      title: CIII_Verse 6.131-140
+      base_file: fCC75.txt
+      order: 28
+    fC74F:
+      title: CIII_Verse 6.141-150
+      base_file: fC74F.txt
+      order: 29
+    f10A2:
+      title: CIII_Verse 6.151-160
+      base_file: f10A2.txt
+      order: 30
+    f16CF:
+      title: CIII_Verse 6.161-170
+      base_file: f16CF.txt
+      order: 31
+    f3B93:
+      title: CIII_Verse 6.171-180
+      base_file: f3B93.txt
+      order: 32
+    f3169:
+      title: CIII_Verse 6.181-190
+      base_file: f3169.txt
+      order: 33
+    f9593:
+      title: CIII_Verse 6.191-200
+      base_file: f9593.txt
+      order: 34
+    fB625:
+      title: CIII_Verse 6.201-210
+      base_file: fB625.txt
+      order: 35
+    f6044:
+      title: CIII_Verse 6.211-220
+      base_file: f6044.txt
+      order: 36
+    f4FC1:
+      title: CIII_Verse 6.221-226
+      base_file: f4FC1.txt
+      order: 37
+    f3933:
+      title: CIII_Conclusion
+      base_file: f3933.txt
+      order: 38
+    f1348:
+      title: 'Chapter 7: Dūraṃgamā'
+      base_file: f1348.txt
+      order: 39
+    fF3D3:
+      title: 'Chapter 8: Acalā'
+      base_file: fF3D3.txt
+      order: 40
+    fEE3B:
+      title: 'Chapter 9: Sādhumatī'
+      base_file: fEE3B.txt
+      order: 41
+    fF5E4:
+      title: 'Chapter 10: Dharmameghā'
+      base_file: fF5E4.txt
+      order: 42
+    fD6B8:
+      title: CIV_Verse 11.1-10
+      base_file: fD6B8.txt
+      order: 43
+    f3365:
+      title: CIV_Verse 11.11-20
+      base_file: f3365.txt
+      order: 44
+    f2727:
+      title: CIV_Verse 11.21-30
+      base_file: f2727.txt
+      order: 45
+    fBA49:
+      title: CIV_Verse 11.31-40
+      base_file: fBA49.txt
+      order: 46
+    fDA50:
+      title: CIV_Verse 11.41-50
+      base_file: fDA50.txt
+      order: 47
+    fB1FF:
+      title: CIV_Verse 11.51-56
+      base_file: fB1FF.txt
+      order: 48
+    fC61D:
+      title: CIV_Conclusion
+      base_file: fC61D.txt
+      order: 49
+    fF383:
+      title: CIV_Colophon
+      base_file: fF383.txt
+      order: 50
+  chapter_to_tile:
+    CI: 'Chapter 1: Pramuditā'
+    CII: 'Chapter 3: Prabhākarī'
+    CIII: 'Chapter 6: Abhimukhī'
+    CIV: 'Chapter 11: buddhabhūmi'
+statistics: {}
+quality: {}
+copyright:
+  status: Unknown
+  notice: ''
+  info_url: null
+license: null

@@ -1,0 +1,773 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Bibliotheca Polyglotta</title>
+<link rel='stylesheet' type='text/css' href='css/bp.css'>
+<link rel='stylesheet' type='text/css' href='css/diac_doc.css'>
+
+<link rel='stylesheet' type='text/css' href='css/imageGallery.css'>
+<link rel='stylesheet' type='text/css' href='css/ss.css'>
+	      <link rel='stylesheet' type='text/css' href='css/tree_menu.css'>
+<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+<!--  <script type="text/javascript" src="js/jqModal.js"></script>-->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/tree_menu.js"></script>
+<!-- <script src="js/analytics_tracking.js" type="text/javascript"></script> -->
+
+
+<!-- <script type="text/javascript" src="js/popupDivhandling.js"></script> -->
+<!--  <script type="text/javascript" src="jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-imagegallery.js"></script>-->
+</head>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//vrtx.uio.no/js/analytics/v2/analytics.js','ga');
+
+ga('create', 'UA-86407471-1', 'auto');
+ga(function(tracker) {
+
+	// Modifies sendHitTask to hit ipproxy instead of http://www.google-analytics.com directly
+	tracker.set('sendHitTask', function(model) {
+		payload = model.get('hitPayload');
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', '//w3prod-ipproxy.uio.no/collect' +'?' + payload, true);
+		xhr.send();
+	});
+		ga('send', 'pageview');
+});
+</script>
+<body><div class='banner'></div><!-- banner --><div class='uiologo'>
+<a href='http://www.hf.uio.no/'><img src='https://www2.hf.uio.no/polyglotta/hfe.png' border='0'></a></div><!-- uiologo --><div class='clear'></div>
+<div class='smule_tittel'>
+<div class='brodsmuleboks'>You are here: <a href='/polyglotta/index.php' accesskey='1'> BP HOME</a> >  <a href='/polyglotta/index.php?page=library&amp;bid=2' accesskey='1'>TLB</a> > <a href='/polyglotta/index.php
+	?page=volume&amp;vid=1113' accesskey='1'>Candrakīrti: Madhyamakāvatāra</a> > fulltext</div><div class='clear'></div>
+<div class='headline'>Candrakīrti: Madhyamakāvatāra<div class='clear'></div></div><!-- headline -->
+</div><!-- smule_tittel -->
+<!--<div>-->
+
+<h2 class="trigger" id="tr_lang"><a  href="#">Choose languages</a></h2>
+<h2 class="trigger" id="tr_img"><a  href="#">Choose images, etc.</a></h2>
+
+
+<div id="toggle_container_lan">
+
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_lan.php" method="POST">
+
+<div style="float:left; width:auto; text-align:left; margin-left:20px;">
+<h5>Choose languages</h5>
+<ul>
+<input value="Choose all" type="button" onClick="markAll('tr')"><input value="Uncheck all" type="button" onClick="markNone('tr')">
+
+	<li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1113[5542]" value="5542" id="lancheckbox"   >Sanskrit: San: Li Xuezhu (2015)</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1113[5543]" value="5543" id="lancheckbox" checked >Tibetan: Tib: Tg, dbu ma, ’a</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1113[5544]" value="5544" id="lancheckbox" checked >English: Eng: Liland (2019)</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1113[5549]" value="5549" id="lancheckbox" checked >Tibetan: Tib: Tg, dbu ma, ’a</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1113[5550]" value="5550" id="lancheckbox" checked >English: Eng: Liland (2019)</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1113[5547]" value="5547" id="lancheckbox"   >Tibetan: Tib ṭīkā (Jayānanda): Tg, dbu ma, ra</label></li><div style="clear:both"></div>
+<input type='submit' name='set_cookie' value='Save view'>
+<div style="clear:both"></div>
+
+</ul>
+<input type="hidden" name="vid" value="1113">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+</div>
+
+<div id="toggle_container_img">
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_img.php" method="POST">
+
+<div style="float:left; width:auto; text-align: left;">
+<h5>Choose display</h5>
+<ul>
+		
+	<li> 
+		<input type='checkbox' name='bilder' checked="checked" > Enable images
+	</li>
+	<li> 
+	<input type='checkbox' onclick="onOffCheckbox();" name='fotnoter' checked="checked"> Enable footnotes
+	<div id="pff" style="display:block" >
+	<ul>
+	<li><input type='radio' name='fotnote_valg'  value='show_a' checked> Show all footnotes</li>
+	<li><input type='radio' name='fotnote_valg'  value='show_h'  > Minimize footnotes</li>
+	</ul>
+	</li>
+	
+	</div>
+	<div style="float:left; width:20em; text-align: left; margin-left:120px ">
+	<div style="clear:both"></div>
+	<input type='submit' name='set_cookie' value='Save view'>
+	<div style="clear:both"></div>
+	</div>
+	
+</ul>
+<input type="hidden" name="vid" value="1113">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+	
+
+
+
+</div>
+</div>
+
+<div class='sok'><form name='Sok' id='FormBlock' action='/polyglotta/index.php' method='get'>
+<input type='hidden' name='page' value='search'>
+<input type='hidden' name='bid' value='2'>
+<input type='hidden' name='vid' value='1113'>
+<div class='sokeboks'>
+<input name='sokefelt' id='sokeboks' type='text' size='30' value=''>
+<input type='submit' name='Sok' value='Search' id='nsubmit'>
+<div class='clear'></div><a class="diacbutton" id="diacbutton" href="#">Diacritica</a><a id="diac2button" class="diac2button"  href="#">Diacritica-help</a><a class="s2button" href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation:SearchHelp">Search-help</a><div class='diacritical' id='diacritical_sign'><div style="text-align: left; ">
+<table class = 'diacritica' width="200" border="1" cellpadding="1" cellspacing="1" id="diacritical">
+    <tbody>
+        <tr>
+            <td style="text-align: center; ">ā</td>
+            <td style="text-align: center; ">ī</td>
+            <td style="text-align: center; ">ū</td>
+            <td style="text-align: center; ">ṛ</td>
+            <td style="text-align: center; ">ṝ</td>
+            <td style="text-align: center; ">ḷ</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ḹ</td>
+            <td style="text-align: center; ">&rsquo;</td>
+            <td style="text-align: center; ">ṃ</td>
+            <td style="text-align: center; ">ḥ</td>
+            <td style="text-align: center; ">ṅ</td>
+            <td style="text-align: center; ">&ntilde;</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ṭ</td>
+            <td style="text-align: center; ">ḍ</td>
+            <td style="text-align: center; ">ṇ</td>
+            <td style="text-align: center; ">ṣ</td>
+            <td style="text-align: center; ">ś</td>
+            <td style="text-align: center; ">ź</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">&scaron;</td>
+            <td style="text-align: center; ">č</td>
+            <td style="text-align: center; ">ǰ</td>
+            <td style="text-align: center; ">&gamma;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+</div></div><!-- diacritical --><div id="ex3a" class="jqmDialog"><div>
+	<span style="font-size:12px;">Note on the transliteration:</span></div>
+<div>
+	<span style="font-size:12px;">The transliteration system of the BP/TLB is based on the Unicode/UTF-8 system. However, there may be difficulties with some of the letters &ndash; particularly on PC/Windows-based systems, but not so much on the Mac. We have chosen the most accepted older and traditional systems of transliteration against, e.g, Wylie for Tibetan, since with Unicode it is possible, in Sanskrit and Tibetan, etc., to represent one sound with one letter in almost all the cases (excepting Sanskrit and Tibetan aspirated letters, and Tibetan tsa, tsha, dza). We thus do not use the Wylie system which widely employs two letters for one sound (ng, ny, sh, zh etc.).</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">Important:</span></div>
+<div>
+	<span style="font-size:12px;">We ask you in particular to note the use of the &rsquo; apostrophe and not the &#39; representing the avagrāha in Sanskrit, and most important the &rsquo;a-chuṅ in Tibetan. On the Mac the &rsquo; is Alt-M.</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">If you cannot find the letters on your key-board, you may click on the link &quot;Diacritica&quot; to access it for your search.</span></div>
+</div><!-- diacritical_doc --><div class='clear'></div><select name='searchmode'><option selected value='phrase'>Search for exact phrase</option>
+<option  value='phraseregex'>Search for exact phrase (regex)</option>
+<option  value='word'>Search for every word in one record</option>
+<option  value='free'>Search for every word fragment in one record</option>
+</select>
+<select name='context'>
+<option ($_GET[context]=="a" ? "selected" : "") value="a"> Search in all libraries</option><option selected value="bTLB">Search in TLB</option><option selected value="v1113">Search in Candrakīrti: Madhyamakāvatāra</option></select><div class='clear'></div><a class='sbutton' href='/polyglotta/index.php?page=asearch&amp;bid=2&amp;vid=1113'>Choose specific texts..</a><div class='clear'></div></div></form></div><!-- sok --><div class='clear'></div><!-- clear --><div id='dcr' class='divControlRead'><div class='venstrefulltekstfelt'><div class='bverknavn'><a href='/polyglotta/index.php?page=volume&amp;vid=1113'>Candrakīrti: Madhyamakāvatāra</a></div><table class="tlvl2">
+					<tr>
+						<td bgcolor="#ffffff"> &nbsp; &nbsp;
+						<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_7627.Verses41-58" border=0 hspace=2>
+						<a href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1113" class="ajax_tree0">Complete text</a>
+						</td>
+					</tr>
+				  </table><input type="hidden" name="tree_top_options" id="tree_top_options" value="122651.Title|122652.Preface|122653.Chapter1:Pramuditā|122658.Chapter2:Vimalā|122659.Chapter3:Prabhākarī|122662.Chapter4:Arciṣmatī|122663.Chapter5:Sudurjayā|122664.Chapter6:Abhimukhī|122703.Chapter7:Dūraṃgamā|122704.Chapter8:Acalā|122705.Chapter9:Sādhumatī|122706.Chapter10:Dharmameghā|122707.Chapter11:buddhabhūmi|">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122651.Title" border=0 hspace=2><a id="href_122651.Title" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927089&level=1&cid=828167" class="ajax_tree0">Title
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122652.Preface" border=0 hspace=2><a id="href_122652.Preface" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927090&level=1&cid=828168" class="ajax_tree0">Preface
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('122653.Chapter1:Pramuditā','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122653.Chapter1:Pramuditā" border=0 hspace=2><a id="href_122653.Chapter1:Pramuditā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927091&level=1&cid=828169" class="ajax_tree0">Chapter 1: Pramuditā
+</td></tr></table>
+<div style="display:none;"  id="div_122653.Chapter1:Pramuditā">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <a href="javascript:;" onclick="Expand('122654.Thepraises')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122654.Thepraises" border=0 hspace=2><a id="href_122654.Thepraises" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927092&level=2&cid=828170" class="ajax_tree1">The praises
+</td></tr></table>
+<div style="display:none;"  id="div_122654.Thepraises">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122655.Verse1.1-10" border=0 hspace=2><a id="href_122655.Verse1.1-10" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927092&level=3&cid=828170" class="ajax_tree2">Verse 1.1-10
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <a href="javascript:;" onclick="Expand('122656.Thefirstresolve')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122656.Thefirstresolve" border=0 hspace=2><a id="href_122656.Thefirstresolve" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927108&level=2&cid=828186" class="ajax_tree1">The first resolve
+</td></tr></table>
+<div style="display:none;"  id="div_122656.Thefirstresolve">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122657.Verse1.11-17" border=0 hspace=2><a id="href_122657.Verse1.11-17" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927125&level=3&cid=828203" class="ajax_tree2">Verse 1.11-17
+</td></tr></table>
+</div>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122658.Chapter2:Vimalā" border=0 hspace=2><a id="href_122658.Chapter2:Vimalā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927135&level=1&cid=828213" class="ajax_tree0">Chapter 2: Vimalā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('122659.Chapter3:Prabhākarī','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122659.Chapter3:Prabhākarī" border=0 hspace=2><a id="href_122659.Chapter3:Prabhākarī" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927151&level=1&cid=828229" class="ajax_tree0">Chapter 3: Prabhākarī
+</td></tr></table>
+<div style="display:none;"  id="div_122659.Chapter3:Prabhākarī">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122660.Verse3.1-10" border=0 hspace=2><a id="href_122660.Verse3.1-10" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927152&level=2&cid=828230" class="ajax_tree1">Verse 3.1-10
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122661.Verse3.11-13" border=0 hspace=2><a id="href_122661.Verse3.11-13" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927162&level=2&cid=828240" class="ajax_tree1">Verse 3.11-13
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122662.Chapter4:Arciṣmatī" border=0 hspace=2><a id="href_122662.Chapter4:Arciṣmatī" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927175&level=1&cid=828253" class="ajax_tree0">Chapter 4: Arciṣmatī
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122663.Chapter5:Sudurjayā" border=0 hspace=2><a id="href_122663.Chapter5:Sudurjayā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927184&level=1&cid=828262" class="ajax_tree0">Chapter 5: Sudurjayā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('122664.Chapter6:Abhimukhī','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122664.Chapter6:Abhimukhī" border=0 hspace=2><a id="href_122664.Chapter6:Abhimukhī" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927191&level=1&cid=828269" class="ajax_tree0">Chapter 6: Abhimukhī
+</td></tr></table>
+<div style="display:none;"  id="div_122664.Chapter6:Abhimukhī">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <a href="javascript:;" onclick="Expand('122665.Introduction')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122665.Introduction" border=0 hspace=2><a id="href_122665.Introduction" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927192&level=2&cid=828270" class="ajax_tree1">Introduction
+</td></tr></table>
+<div style="display:none;"  id="div_122665.Introduction">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122666.Verse6.1-10" border=0 hspace=2><a id="href_122666.Verse6.1-10" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927192&level=3&cid=828270" class="ajax_tree2">Verse 6.1-10
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122667.Selfofphenomena" border=0 hspace=2><a id="href_122667.Selfofphenomena" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927201&level=2&cid=828279" class="ajax_tree1">Self of phenomena
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <a href="javascript:;" onclick="Expand('122668.Productionfromself')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122668.Productionfromself" border=0 hspace=2><a id="href_122668.Productionfromself" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927203&level=2&cid=828281" class="ajax_tree1">Production from self
+</td></tr></table>
+<div style="display:none;"  id="div_122668.Productionfromself">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122669.Verse6.11-20" border=0 hspace=2><a id="href_122669.Verse6.11-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927207&level=3&cid=828285" class="ajax_tree2">Verse 6.11-20
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <a href="javascript:;" onclick="Expand('122670.Productionfromother')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122670.Productionfromother" border=0 hspace=2><a id="href_122670.Productionfromother" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927211&level=2&cid=828289" class="ajax_tree1">Production from other
+</td></tr></table>
+<div style="display:none;"  id="div_122670.Productionfromother">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122671.Verse6.21-30" border=0 hspace=2><a id="href_122671.Verse6.21-30" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927223&level=3&cid=828301" class="ajax_tree2">Verse 6.21-30
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122672.Thetwotruths" border=0 hspace=2><a id="href_122672.Thetwotruths" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927228&level=3&cid=828306" class="ajax_tree2">The two truths
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122673.Verse6.31-40" border=0 hspace=2><a id="href_122673.Verse6.31-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927238&level=3&cid=828316" class="ajax_tree2">Verse 6.31-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122674.Verse6.41-50" border=0 hspace=2><a id="href_122674.Verse6.41-50" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927251&level=3&cid=828329" class="ajax_tree2">Verse 6.41-50
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122675.Mind-only" border=0 hspace=2><a id="href_122675.Mind-only" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927255&level=3&cid=828333" class="ajax_tree2">Mind-only
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122676.Verse6.51-60" border=0 hspace=2><a id="href_122676.Verse6.51-60" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927261&level=3&cid=828339" class="ajax_tree2">Verse 6.51-60
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122677.Verse6.61-70" border=0 hspace=2><a id="href_122677.Verse6.61-70" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927271&level=3&cid=828349" class="ajax_tree2">Verse 6.61-70
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122678.Verse6.71-80" border=0 hspace=2><a id="href_122678.Verse6.71-80" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927282&level=3&cid=828360" class="ajax_tree2">Verse 6.71-80
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <a href="javascript:;" onclick="Expand('122679.Thedependentnature')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122679.Thedependentnature" border=0 hspace=2><a id="href_122679.Thedependentnature" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927283&level=2&cid=828361" class="ajax_tree1">The dependent nature
+</td></tr></table>
+<div style="display:none;"  id="div_122679.Thedependentnature">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122680.Verse6.81-90" border=0 hspace=2><a id="href_122680.Verse6.81-90" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927292&level=3&cid=828370" class="ajax_tree2">Verse 6.81-90
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122681.Verse6.91-100" border=0 hspace=2><a id="href_122681.Verse6.91-100" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927302&level=3&cid=828380" class="ajax_tree2">Verse 6.91-100
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122682.Productionfromboth" border=0 hspace=2><a id="href_122682.Productionfromboth" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927309&level=2&cid=828387" class="ajax_tree1">Production from both
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <a href="javascript:;" onclick="Expand('122683.Causelessproduction')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122683.Causelessproduction" border=0 hspace=2><a id="href_122683.Causelessproduction" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927310&level=2&cid=828388" class="ajax_tree1">Causeless production
+</td></tr></table>
+<div style="display:none;"  id="div_122683.Causelessproduction">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122684.Verse6.101-110" border=0 hspace=2><a id="href_122684.Verse6.101-110" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927312&level=3&cid=828390" class="ajax_tree2">Verse 6.101-110
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122685.Verse6.110-120" border=0 hspace=2><a id="href_122685.Verse6.110-120" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927322&level=3&cid=828400" class="ajax_tree2">Verse 6.110-120
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122686.Dependentarising" border=0 hspace=2><a id="href_122686.Dependentarising" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927325&level=2&cid=828403" class="ajax_tree1">Dependent arising
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <a href="javascript:;" onclick="Expand('122687.Selfoftheperson')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122687.Selfoftheperson" border=0 hspace=2><a id="href_122687.Selfoftheperson" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927331&level=2&cid=828409" class="ajax_tree1">Self of the person
+</td></tr></table>
+<div style="display:none;"  id="div_122687.Selfoftheperson">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122688.Verse6.121-130" border=0 hspace=2><a id="href_122688.Verse6.121-130" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927332&level=3&cid=828410" class="ajax_tree2">Verse 6.121-130
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122689.Verse6.131-140" border=0 hspace=2><a id="href_122689.Verse6.131-140" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927344&level=3&cid=828422" class="ajax_tree2">Verse 6.131-140
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122690.Verse6.141-150" border=0 hspace=2><a id="href_122690.Verse6.141-150" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927354&level=3&cid=828432" class="ajax_tree2">Verse 6.141-150
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <a href="javascript:;" onclick="Expand('122691.Sevenfoldreasoningofthechariot')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122691.Sevenfoldreasoningofthechariot" border=0 hspace=2><a id="href_122691.Sevenfoldreasoningofthechariot" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927363&level=2&cid=828441" class="ajax_tree1">Sevenfold reasoning of the chariot
+</td></tr></table>
+<div style="display:none;"  id="div_122691.Sevenfoldreasoningofthechariot">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122692.Verse6.151-160" border=0 hspace=2><a id="href_122692.Verse6.151-160" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927364&level=3&cid=828442" class="ajax_tree2">Verse 6.151-160
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122693.Verse6.161-170" border=0 hspace=2><a id="href_122693.Verse6.161-170" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927374&level=3&cid=828452" class="ajax_tree2">Verse 6.161-170
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <a href="javascript:;" onclick="Expand('122694.Mereimputation')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122694.Mereimputation" border=0 hspace=2><a id="href_122694.Mereimputation" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927379&level=2&cid=828457" class="ajax_tree1">Mere imputation
+</td></tr></table>
+<div style="display:none;"  id="div_122694.Mereimputation">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122695.Verse6.171-180" border=0 hspace=2><a id="href_122695.Verse6.171-180" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927384&level=3&cid=828462" class="ajax_tree2">Verse 6.171-180
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <a href="javascript:;" onclick="Expand('122696.Thesixteenkindsofemptiness')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122696.Thesixteenkindsofemptiness" border=0 hspace=2><a id="href_122696.Thesixteenkindsofemptiness" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927392&level=2&cid=828470" class="ajax_tree1">The sixteen kinds of emptiness
+</td></tr></table>
+<div style="display:none;"  id="div_122696.Thesixteenkindsofemptiness">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122697.Verse6.181-190" border=0 hspace=2><a id="href_122697.Verse6.181-190" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927394&level=3&cid=828472" class="ajax_tree2">Verse 6.181-190
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122698.Verse6.191-200" border=0 hspace=2><a id="href_122698.Verse6.191-200" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927405&level=3&cid=828483" class="ajax_tree2">Verse 6.191-200
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122699.Verse6.201-210" border=0 hspace=2><a id="href_122699.Verse6.201-210" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927415&level=3&cid=828493" class="ajax_tree2">Verse 6.201-210
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122700.Verse6.211-220" border=0 hspace=2><a id="href_122700.Verse6.211-220" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927425&level=3&cid=828503" class="ajax_tree2">Verse 6.211-220
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122701.Verse6.221-226" border=0 hspace=2><a id="href_122701.Verse6.221-226" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927453&level=3&cid=828531" class="ajax_tree2">Verse 6.221-226
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122702.Conclusion" border=0 hspace=2><a id="href_122702.Conclusion" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927456&level=2&cid=828534" class="ajax_tree1">Conclusion
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122703.Chapter7:Dūraṃgamā" border=0 hspace=2><a id="href_122703.Chapter7:Dūraṃgamā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927460&level=1&cid=828538" class="ajax_tree0">Chapter 7: Dūraṃgamā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122704.Chapter8:Acalā" border=0 hspace=2><a id="href_122704.Chapter8:Acalā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927463&level=1&cid=828541" class="ajax_tree0">Chapter 8: Acalā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122705.Chapter9:Sādhumatī" border=0 hspace=2><a id="href_122705.Chapter9:Sādhumatī" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927469&level=1&cid=828547" class="ajax_tree0">Chapter 9: Sādhumatī
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122706.Chapter10:Dharmameghā" border=0 hspace=2><a id="href_122706.Chapter10:Dharmameghā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927472&level=1&cid=828550" class="ajax_tree0">Chapter 10: Dharmameghā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('122707.Chapter11:buddhabhūmi','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122707.Chapter11:buddhabhūmi" border=0 hspace=2><a id="href_122707.Chapter11:buddhabhūmi" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927475&level=1&cid=828553" class="ajax_tree0">Chapter 11: buddhabhūmi
+</td></tr></table>
+<div style="display:none;"  id="div_122707.Chapter11:buddhabhūmi">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <a href="javascript:;" onclick="Expand('122708.Thequalitiesofthegrounds')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122708.Thequalitiesofthegrounds" border=0 hspace=2><a id="href_122708.Thequalitiesofthegrounds" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927476&level=2&cid=828554" class="ajax_tree1">The qualities of the grounds
+</td></tr></table>
+<div style="display:none;"  id="div_122708.Thequalitiesofthegrounds">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122709.Verse11.1-10" border=0 hspace=2><a id="href_122709.Verse11.1-10" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927476&level=3&cid=828554" class="ajax_tree2">Verse 11.1-10
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <a href="javascript:;" onclick="Expand('122710.Theresult')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122710.Theresult" border=0 hspace=2><a id="href_122710.Theresult" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927485&level=2&cid=828563" class="ajax_tree1">The result
+</td></tr></table>
+<div style="display:none;"  id="div_122710.Theresult">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122711.Verse11.11-20" border=0 hspace=2><a id="href_122711.Verse11.11-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927486&level=3&cid=828564" class="ajax_tree2">Verse 11.11-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122712.Verse11.21-30" border=0 hspace=2><a id="href_122712.Verse11.21-30" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927496&level=3&cid=828574" class="ajax_tree2">Verse 11.21-30
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <a href="javascript:;" onclick="Expand('122713.Thetenpowers')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_122713.Thetenpowers" border=0 hspace=2><a id="href_122713.Thetenpowers" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927503&level=2&cid=828581" class="ajax_tree1">The ten powers
+</td></tr></table>
+<div style="display:none;"  id="div_122713.Thetenpowers">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122714.Verse11.31-40" border=0 hspace=2><a id="href_122714.Verse11.31-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927506&level=3&cid=828584" class="ajax_tree2">Verse 11.31-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122715.Verse11.41-50" border=0 hspace=2><a id="href_122715.Verse11.41-50" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927526&level=3&cid=828604" class="ajax_tree2">Verse 11.41-50
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp;  &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122716.Verse11.51-56" border=0 hspace=2><a id="href_122716.Verse11.51-56" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927536&level=3&cid=828614" class="ajax_tree2">Verse 11.51-56
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122717.Conclusion" border=0 hspace=2><a id="href_122717.Conclusion" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927537&level=2&cid=828615" class="ajax_tree1">Conclusion
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_122718.Colophon" border=0 hspace=2><a id="href_122718.Colophon" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1113&mid=1927542&level=2&cid=828620" class="ajax_tree1">Colophon
+</td></tr></table>
+</div>
+<script language=javascript>test('122655.Verse1.1-10|122654.Thepraises|122653.Chapter1:Pramuditā|')</script><div class='bverknavn'><a href='/polyglotta/index.php?page=library&amp;bid=2'>Back to library</a></div></div><!-- venstrefulltekstfelt --><div class="clear"></div><!-- clear --><div id="nav-menu"><ul>
+  		  <li  id="nav-1"><a class="tabValgt" href="/polyglotta/index.php?page=record&amp;view=record&amp;vid=1113&amp;mid=1927092&amp;level=3">Sentence by sentence view</a></li>
+  		  <li  id="nav-2"><a  href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1113&amp;cid=828170&amp;mid=1927092&amp;level=3">Continuous text view</a></li>
+ 		<li  id="nav-3"><a  href="/polyglotta/admin/index.php?page=fulltext&amp;view=fulltext&amp;vid=1113&amp;cid=828170&amp;mid=1927092&amp;level=3">View in admin</a></li>
+
+  		  </ul></div><div class='clear'></div><!-- clear -->			<script language="javascript" type="text/javascript">
+			var kilderef = '';
+			var tekstid = 0;
+			var tekstid_bilder = 0;
+			var filsti = '';
+			var thumbnail = '';
+			</script>
+		<div class='infofulltekstfelt'><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><div class='kilderef' id='7641301'></div><div class='clear'></div><span id='7641301bi' class='verse'>
+							ཉན་ཐོས་སངས་རྒྱས་འབྲིང་རྣམས་ཐུབ་དབང་སྐྱེས། །<br />སངས་རྒྱས་བྱང་ཆུབ་སེམས་དཔའ་ལས་འཁྲུངས་ཤིང། །<br />སྙིང་རྗེའི་སེམས་དང་གཉིས་སུ་མེད་བློ་དང། །<br />བྱང་ཆུབ་སེམས་ནི་རྒྱལ་སྲས་རྣམས་ཀྱི་རྒྱུ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><div class='kilderef' id='7641755'></div><div class='clear'></div><span id='7641755bi' class='verse'>
+							From mighty sages hearers and half-buddhas come,<br />While buddhas from the bodhisattvas are conceived.<br />Compassion, non-duality, awakening mind –<br />These are what serve as causes of the victor’s heirs. (1.1)&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><div class='kilderef' id='7645964'></div><div class='clear'></div><span id='7645964bi' class='verse'>
+							དབུ་མའི་བསྟན་བཅོས་ལ་འཇུག་པར་བྱ་བའི་ཕྱིར། དབུ་མ་ལ་འཇུག་པ་རྩོམ་པར་འདོད་པས། ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་དང་བྱང་ཆུབ་སེམས་དཔའ་རྣམས་པས་ཀྱང་ཐོག་མར། བཅོམ་ལྡན་འདས་སྙིང་རྗེ་ཆེན་པོ་སངས་རྒྱས་ཉིད་ཀྱི་རྒྱུ་ཕུན་སུམ་ཚོགས་པ་དང་པོ། སེམས་ཅན་འཁོར་བའི་བཙོན་རར་བསྡམས་པ་སྐྱབས་མེད་པ་དཔག་ཏུ་མེད་པ་མ་ལུས་པ་ཡོངས་སུ་སྐྱོབ་པའི་མཚན་ཉིད་ཅན་ལ་བསྟོད་པར་འོས་པ་ཉིད་དུ་བསྟན་པའི་ཕྱིར། <br /> ཉན་ཐོས་སངས་རྒྱས་འབྲིང་རྣམས་ཐུབ་དབང་སྐྱེས། །<br /> སངས་རྒྱས་བྱང་ཆུབ་སེམས་དཔའ་ལས་འཁྲུངས་ཤིང། །<br /> སྙིང་རྗེའི་སེམས་དང་གཉིས་སུ་མེད་བློ་དང། །<br /> བྱང་ཆུབ་སེམས་ནི་རྒྱལ་སྲས་རྣམས་ཀྱི་རྒྱུ། །<br /> ཞེས་བྱ་བ་ལ་སོགས་པ་ཚིགས་སུ་བཅད་པ་གཉིས་སྨོས་སོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><div class='kilderef' id='7646428'></div><div class='clear'></div><span id='7646428bi' class='verse'>
+							<p>With the aim to compose an introduction (<em>avatāra</em>) to the Middle Way (<em>madhyamaka</em>) that may help one access (<em>avatāra</em>) the <em>Middle Way Treatise</em>, it seemed appropriate to present at first a praise to the illustrious lady Great Compassion, the perfect cause of buddhahood and characterised by being the complete protection for all the untold numbers of defenceless sentient beings without exception trapped in the prison of cyclic existence, even before praising the true and complete buddhas and the bodhisattvas. Hence, I expressed two stanzas, this and the following one:</p> <p style="padding-left: 30px;"><strong>From mighty sages hearers and half-buddhas come,</strong><br /><strong>While buddhas from the bodhisattvas are conceived.</strong><br /><strong>Compassion, non-duality, awakening mind –</strong><br /><strong>These are what serve as causes of the victor’s heirs. (1.1)</strong></p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641302bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641756bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645965bi' class='verse'>
+							དེ་ལ་གོང་ན་མེད་པའི་ཆོས་ཀྱི་དབང་ཕྱུག་ཕུན་སུམ་ཚོགས་པ་མངའ་བས། ཉན་ཐོས་དང་རང་སངས་རྒྱས་དང་བྱང་ཆུབ་སེམས་དཔའ་རྣམས་པས་ཀྱང་དབང་ཕྱུག་དམ་པ་ཕུན་སུམ་ཚོགས་པ་ཉིད་དང། ཉན་ཐོས་ལ་སོགས་པ་རྣམས་དེའི་བཀས་མངའ་བསྒྱུར་བའི་ཕྱིར། སངས་རྒྱས་བཅོམ་ལྡན་འདས་རྣམས་ལ་ཐུབ་དབང་ཞེས་བྱའོ། །དེ་རྣམས་ལས་ཉན་ཐོས་ལ་སོགས་པ་དག་སྐྱེས་པ་ནི་དེ་དག་ལས་བསྐྲུན་པའོ། །ཇི་ལྟར་ཞེ་ན། སངས་རྒྱས་རྣམས་བྱུང་བར་གྱུར་པ་ན་རྟེན་ཅིང་འབྲེལ་པར་འབྱུང་བ་ཕྱིན་ཅི་མ་ལོག་པ་སྟོན་པ་ལ་འཇུག་པའི་ཕྱིར་ལ། དེ་ཉན་པ་དང་སེམས་པ་དང་སྒོམ་པའི་རིམ་པ་ལས་ཀྱང་ལྷག་པར་མོས་པ་ཇི་ལྟ་བ་བཞིན་ཉན་ཐོས་ལ་སོགས་པ་རྣམས་ཡོངས་སུ་རྫོགས་པར་འགྱུར་བའི་ཕྱིར་རོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646429bi' class='verse'>
+							<p>The illustrious buddhas are here termed <em>mighty sages</em> (<em>munīndra</em>) because they possess perfect mastery as unsurpassed lords of Dharma, are also perfect supreme lords over the hearers, solitary buddhas and bodhisattvas, and because the hearers and so forth are governed by their command. From them the hearers and so forth <em>come</em>, meaning that they are born from them. How so? Due to the fact that, when buddhas appear and teach the unmistaken ways of dependent origination, they engage with that teaching through the stages of learning, contemplation and meditation, and according to their particular propensities will then actualise the final complete result of the hearers and so forth.</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641303bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641757bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645966bi' class='verse'>
+							གལ་ཏེ་ཡང་ཁ་ཅིག་གིས་རྟེན་ཅིང་འབྲེལ་པར་འབྱུང་བ་ཉེ་བར་བསྟན་པ་ཉན་པ་ཁོ་ན་ལས་དོན་དམ་པ་རྟོགས་པ་ལ་མཁས་སུ་ཟིན་ཀྱང་མཐོང་བའི་སྐྱེ་བ་ཁོ་ན་ལ་མྱ་ངན་ལས་འདས་པ་ཐོབ་པར་མི་འགྱུར་མོད་ཀྱི། དེ་ལྟ་ན་ཡང་ཉེ་བར་སྟོན་པའི་སྒྲུབ་པ་པོ་དག་གིས་ལས་རྣམ་པར་སྨིན་པར་ངེས་པའི་འབྲས་བུ་ལྟར་ཚེ་རབས་གཞན་དུ་མངོན་པར་འདོད་པའི་འབྲས་བུ་ཡོངས་སུ་སྨིན་པ་གོར་མ་ཆག་ཐོབ་པར་འགྱུར་རོ། །ཇི་སྐད་དུ་འཕགས་པ་ལྷས། དེ་ཉིད་ཤེས་པས་གལ་ཏེ་འདིར། །མྱ་ངན་འདས་པ་མ་ཐོབ་ཀྱང། །སྐྱེ་བ་གཞན་དུ་འབད་མེད་པར། །ངེས་པར་ཐོབ་འགྱུར་ལས་བཞིན་ནོ། །ཞེས་བཤད་དོ། །དེ་ཉིད་ཀྱི་ཕྱིར་དབུ་མ་ལས་ཀྱང་རྫོགས་སངས་རྒྱས་རྣམས་མ་བྱུང་ཞིང། །ཉན་ཐོས་རྣམས་ཀྱང་ཟད་པ་ན། །རང་སངས་རྒྱས་ཀྱི་ཡེ་ཤེས་ནི། །རྟེན་པ་མེད་པར་རབ་ཏུ་འབྱུང། །ཞེས་གསུངས་སོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646430bi' class='verse'>
+							<p>For some it may be that, although they do become erudite, realising the ultimate truth through just listening to the teachings on interdependent origination, they do not attain transcendence in their present existence. Although this might be the case, those who practice what is taught will without doubt attain it in a future lifetime when the result of their yearning ripens, in the same way that the ripening of karma will definitely come to fruition. As Āryadeva states:</p> <p style="padding-left: 30px;">When reality is understood, though here<br />They may not reach transcendence, <br />They will certainly attain it effortlessly<br />In another lifetime, just as with karma.<a class='fotnote rn' name='FN5550rn1' href='#N5550rn1'><sup>1</sup></a>
+</p> <p>That is also why the <em>Middle Way Treatise</em> states:</p> <p style="padding-left: 30px;">When the complete buddhas do not appear<br />And the hearers as well are no more,<br />The wisdom of the solitary buddhas<br />Will be actualised independently.<a class='fotnote rn' name='FN5550rn2' href='#N5550rn2'><sup>2</sup></a>
+</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641304bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641758bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645967bi' class='verse'>
+							དེ་ལ་ཡང་དག་པའི་གདམས་ངག་གི་འབྲས་བུ་ཐོབ་པར་བྱེད་པས་ན་ཉན་ཐོས་དག་སྟེ། འདི་ལྟར་བྱ་བ་བྱས་སོ། །འདི་ལས་སྲིད་པ་གཞན་མི་ཤེས་སོ་ཞེས་བྱ་བ་ལ་སོགས་པ་འབྱུང་བ་ཡིན་ནོ། །ཡང་ན་འབྲས་བུའི་མཆོག་གམ་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་ཀྱི་ལམ་དེ་བཞིན་གཤེགས་པ་རྣམས་ལས་ཐོས་ནས་དེ་དོན་དུ་གཉེར་བ་རྣམས་ལ་སྒྲོགས་པར་བྱེད་པས་ན་ཉན་ཐོས་དག་སྟེ། དམ་པའི་ཆོས་པདྨ་དཀར་པོའི་མདོ་ལས། མགོན་པོ་དེ་རིང་བདག་ཅག་ཉན་ཐོས་གྱུར། །བྱང་ཆུབ་དམ་པ་ཡང་དག་བསྒྲགས་པར་བགྱི། །བྱང་ཆུབ་པ་ཡི་སྒྲ་ཡང་རབ་ཏུ་བརྗོད། །དེ་བས་བདག་ཅག་ཉན་ཐོས་མི་ཟད་འདྲ<a class='fotnote cn' name='FN5549cn1' href='#N5549cn1'><sup>1</sup></a>
+། །ཞེས་ཇི་སྐད་གསུངས་པ་ལྟ་བུའོ། །བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ཀྱང་དེ་ལྟ་ཡིན་མོད་ཀྱི། དེ་ལྟ་ན་ཡང་སྒྲོགས་པར་བྱེད་པ་ཉིད་ཡིན་གྱི་རྗེས་སུ་མཐུན་པ་ཙམ་ཡང་མི་སྒྲུབ་པ་གང་ཡིན་པ་དེ་དག་ཉན་ཐོས་ཡིན་པས་བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ལ་ཐལ་བར་མི་འགྱུར་རོ། །&nbsp;</span><div style='' id='1' class='note cn'>1.<a class="internt" name='N5549cn1' href='#FN5549cn1'> This is spelt མི་བཟད་ in the Kangyur Lhasa version of the sutra, but མི་ཟད་པ་ in Jayānanda’s commentary (7a). The Sanskrit <i>bhīṣma</i> can have the sense of formidable, mighty, dreadful, etc.</a>&nbsp; </div><div class='clear'></div></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646431bi' class='verse'>
+							<p>They are called hearers (<em>śrāvaka</em>) because they facilitate attainment of the result of the instructions: ‘It has been completed. After this I will not know another existence.’ Alternatively, they are <em>hearers</em> because they <em>hear</em> (<em>śrutvā</em>) about the supreme result or the path of unsurpassed true and complete awakening from the tathāgatas, and then <em>proclaim</em> (<em>śrāvaṇatva</em>) it to those who aspire to it. Just as the <em>White Lotus of Sacred Dharma Sutra</em> states:</p> <p style="padding-left: 30px;">Protector, today we have become hearers,<br />And will now proclaim supreme awakening.<br />We will clarify the awakening statements.<br />Thus we are like the formidable hearers.<a class='fotnote rn' name='FN5550rn3' href='#N5550rn3'><sup>3</sup></a>
+</p> <p>Although bodhisattvas also fit this description, the hearers proclaim it without actually practicing in accord with it, which is not the case for bodhisattvas.</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641305bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641759bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645968bi' class='verse'>
+							སངས་རྒྱས་ཀྱི་སྒྲ་འདི་སངས་རྒྱས་ཀྱི་དེ་ཉིད་ཉན་ཐོས་དང་རང་སངས་རྒྱས་དང་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་གསུམ་ཅར་ལ་ཡང་འཇུག་སྟེ། དེས་ན་སངས་རྒྱས་ཀྱི་སྒྲས་རང་སངས་རྒྱས་དག་བསྙད་དོ། །དེ་དག་ནི་བསོད་ནམས་དང་ཡེ་ཤེས་གོང་དུ་འཕེལ་བའི་ཁྱད་པར་གྱིས་ཉན་ཐོས་རྣམས་ལས་ཁྱད་པར་དུ་འཕགས་པའི་ཕྱིར་དང། བསོད་ནམས་དང་ཡེ་ཤེས་ཀྱི་ཚོགས་དང་ཐུགས་རྗེ་ཆེན་པོ་དང། རྣམ་པ་ཐམས་ཅད་མཁྱེན་པ་ལ་སོགས་པ་མེད་པས་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་རྣམས་པས་དམན་པའི་ཕྱིར་ན་འབྲིང་ངོ། །དེ་ཉིད་ཀྱི་ཕྱིར་དེ་དག་ནི་ཉེ་བར་མ་བསྟན་པར་ཡེ་ཤེས་འབྱུང་ཞིང་བདག་ཉིད་གཅིག་པུའི་ཕྱིར་རང་ཉིད་སངས་རྒྱས་པས་རང་སངས་རྒྱས་སོ།  །ཇི་སྐད་བཤད་པའི་ཚུལ་གྱིས་ཉན་ཐོས་དང་རང་སངས་རྒྱས་དེ་དག་ནི་དེ་བཞིན་གཤེགས་པས་ཆོས་བསྟན་པ་ལས་ངེས་པར་བྱུང་བ་ཉིད་ཀྱི་ཕྱིར་ཐུབ་དབང་ལས་སྐྱེས་སོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646432bi' class='verse'>
+							<p>The term <em>buddha</em>, awakened to reality, applies to all three: hearers, solitary buddhas and unsurpassed true and complete buddhas. Hence, the term <em>buddha</em> is here used to refer to solitary buddhas. These surpass the hearers due to their comparatively excellent development of merit and wisdom, but are inferior to the true and complete buddhas as they lack their accumulation of merit and wisdom, great compassion, two types of omniscience and so on. Hence, they are half-. They are <em>solitary buddhas</em> (<em>pratyekabuddha</em>) since they develop wisdom without being taught and gain awakening solely for themselves. As has been explained, the hearers and solitary buddhas are <em>from mighty sages … come</em>, in the sense that they originate from the tathāgatas teaching the Dharma.</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641306bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641760bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645969bi' class='verse'>
+							ཡང་ཐུབ་པའི་དབང་པོ་དེ་རྣམས་གང་ལས་བལྟམས་ཤེ་ན། སངས་རྒྱས་བྱང་ཆུབ་སེམས་དཔའ་ལས་འཁྲུངས་ཤིང། །ཞེས་བྱ་བ་སྨོས་སོ། །གལ་ཏེ་བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ཀྱང་དེ་བཞིན་གཤེགས་པས་ཉེ་བར་བསྟན་པ་ལས་སྐྱེས་པར་གྱུར་བས་རྒྱལ་པའི་སྲས་ཞེས་བརྗོད་པ་མ་ཡིན་ནམ། དེའི་ཕྱིར་ཇི་ལྟར་སངས་རྒྱས་བཅོམ་ལྡན་འདས་རྣམས་བྱང་ཆུབ་སེམས་དཔའ་ལས་འཁྲུངས་ཤེ་ན། འདི་ནི་བདེན་མོད་ཀྱི་འོན་ཀྱང་རྒྱུ་གཉིས་ཀྱིས་བྱང་ཆུབ་སེམས་དཔའ་དག་སངས་རྒྱས་བཅོམ་ལྡན་འདས་རྣམས་ཀྱི་རྒྱུར་འགྱུར་ཏེ། གནས་སྐབས་ཀྱི་ཁྱད་པར་དང། ཡང་དག་པར་འཛིན་དུ་འཇུག་པ་ལས་སོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646433bi' class='verse'>
+							<p>From where then, are the mighty sages born? As stated, <em>while buddhas from the bodhisattvas are conceived.</em> But aren’t the bodhisattvas described as <em>children of the victor</em> because they too are born from the teachings of the tathāgatas? Why then is it said that that the illustrious buddhas are born from bodhisattvas? That is indeed true. Still, there are two reasons why the bodhisattvas are considered the cause for the illustrious buddhas: because they are the particular circumstance and because they inspire the adoption.</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641307bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641761bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645970bi' class='verse'>
+							དེ་ལ་གནས་སྐབས་ཀྱི་ཁྱད་པར་ལས་ནི་དེ་བཞིན་གཤེགས་པའི་གནས་སྐབས་ནི་བྱང་ཆུབ་སེམས་དཔའི་གནས་སྐབས་ཀྱི་རྒྱུ་ཅན་ཡིན་པ་ཉིད་ཀྱི་ཕྱིར་རོ། །ཡང་དག་པར་འཛིན་དུ་འཇུག་པ་ལས་ནི་ཇི་ལྟར་འཕགས་པ་འཇམ་དཔལ་བྱང་ཆུབ་སེམས་དཔར་གྱུར་པ་ཉིད་ཀྱིས་བཅོམ་ལྡན་འདས་ཤཱཀྱ་ཐུབ་པ་དང། དེ་ལས་གཞན་པའི་དེ་བཞིན་གཤེགས་པ་རྣམས་ཆེས་ཐོག་མ་ཁོ་ནར་བྱང་ཆུབ་ཀྱི་སེམས་ཡང་དག་པར་འཛིན་དུ་བཅུག་པར་འདོད་པ་ཡིན་ནོ། །དེའི་ཕྱིར་དེ་ལྟར་འབྲས་བུ་མཐར་ཐུག་པ་དེའི་རྒྱུ་གཙོ་བོར་གྱུར་པ་ལ་ལྟོས་ནས་དེ་བཞིན་གཤེགས་པ་རྣམས་བྱང་ཆུབ་སེམས་དཔའ་ལས་འཁྲུངས་པར་བསྟན་ཏོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646434bi' class='verse'>
+							<p>That they are the <em>particular circumstance</em> means that that which acts as the cause for the circumstance of being a tathāgata is the circumstance of being a bodhisattva. That they <em>inspire the adoption</em> refers to the case of noble Mañjuśrī who as a bodhisattva was the very first to inspire the illustrious Śākyamuni and the other tathāgatas to adopt the mind of awakening. Being thus regarded as the principal cause that enabled the final result, it is taught that the tathāgatas are born from the bodhisattvas.</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641308bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641762bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645971bi' class='verse'>
+							དེ་ཉིད་ཀྱི་ཕྱིར་རྒྱུ་ཕུན་སུམ་ཚོགས་པ་ཆེས་བརླིང་བ་ཡིན་པའི་ཕྱིར་ལ། རྒྱུ་ལ་མཆོད་པ་བརྗོད་པས་ཀྱང་འབྲས་བུ་ལ་མཆོད་པ་དོན་གྱིས་འཕངས་པར་དགོངས་ཏེ། སངས་རྒྱས་བཅོམ་ལྡན་འདས་དེ་དག་གིས་སྨན་གྱི་ལྗོན་ཤིང་ཆེན་པོ་འབྲས་བུ་ངེས་པ་དཔག་དུ་མེད་པ་སྟེར་བ། མྱུ་གུ་ལ་སོགས་མཐོ་<a class='fotnote cn' name='FN5549cn2' href='#N5549cn2'><sup>2</sup></a>
+ཞིང་ལོ་མ་འཇམ་པའི་གནས་སྐབས་སུ་གྱུར་པ་ལྟར་བསྒྲིམས་ཏེ་ཡོངས་སུ་བསྐྱང་བར་བྱ་བ་ཉིད་དུ་བསྟན་པར་བྱ་ཞིང། དུས་དེར་ཉེ་བར་གྱུར་ཅིང་ཐེག་པ་གསུམ་ལ་བཀོད་པའི་སེམས་ཅན་གྱི་ཕུང་པོ་ཐེག་པ་ཆེན་པོ་ཉིད་ལ་ངེས་པར་སྦྱར་བར་བྱ་བའི་ཕྱིར་བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ལ་བསྔགས་པ་མཛད་པ་ཡིན་ནོ། །&nbsp;</span><div style='' id='2' class='note cn'>2.<a class="internt" name='N5549cn2' href='#FN5549cn2'> Some editions have <i>mthong</i>.</a>&nbsp; </div><div class='clear'></div></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646435bi' class='verse'>
+							<p>Bodhisattvas are therefore to be esteemed, since it is recognised that they are the immensely valuable perfect cause; since expressing veneration for the cause automatically implies veneration also for the result; since the blessed buddhas teach that just as when a great medicinal tree that will definitely yield limitless fruits is still at the stage of a sprout and so on, and its leaves are tender, one must take care to protect it; and since the multitudes of sentient beings they encounter that have a predilection for the three vehicles will with certainty be impelled towards the Greater Vehicle.</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641309bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641763bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645972bi' class='verse'>
+							ཇི་སྐད་དུ་འཕགས་པ་དཀོན་མཆོག་བརྩེགས་པའི་མདོ་ལས། འོད་སྲུངས་འདི་ལྟ་སྟེ་དཔེར་ན་ཟླ་བ་ཚེས་པ་ལ་ཕྱག་འཚལ་བ་ལྟར་ཉ་བ་ལ་ནི་མ་ཡིན་ནོ། །འོད་སྲུངས་དེ་བཞིན་དུ་གང་དག་ང་ལ་རབ་ཏུ་དད་པ་དེ་དག་གིས་བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ལ་ཕྱག་བྱའི། དེ་བཞིན་གཤེགས་པ་རྣམས་ལ་ནི་དེ་ལྟ་མ་ཡིན་ནོ། །དེ་ཅིའི་ཕྱིར་ཞེ་ན། བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ལས་ནི་དེ་བཞིན་གཤེགས་པ་རྣམས་བྱུང་ངོ། །དེ་བཞིན་གཤེགས་པ་རྣམས་ལས་ནི་ཉན་ཐོས་དང་རང་སངས་རྒྱས་ཐམས་ཅད་བྱུང་ངོ་ཞེས་གསུངས་པ་ལྟ་བུའོ། །དེའི་ཕྱིར་དེ་ལྟར་ན་རིགས་པ་དང་ལུང་དག་གིས་དེ་བཞིན་གཤེགས་པ་རྣམས་བྱང་ཆུབ་སེམས་དཔའ་ལས་འཁྲུངས་པ་ཡིན་ནོ་ཞེས་བྱ་བ་འདི་བསྒྲུབས་པ་ཡིན་ནོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646436bi' class='verse'>
+							<p>As stated in the noble <em>Heap of Jewels Sutra</em>:</p> <p style="padding-left: 30px;">Kāśyapa, it is like when honour is shown to the new moon and not the full moon. Just so, Kāśyapa, should those who have faith in me pay homage to the bodhisattvas, not to the tathāgatas. Why? Because it is from bodhisattvas that the tathāgatas arise. And from the tathāgatas all the hearers and solitary buddhas arise.<a class='fotnote rn' name='FN5550rn4' href='#N5550rn4'><sup>4</sup></a>
+</p> <p>With this, it has been established through reasoning and scripture that the tathāgatas are born from the bodhisattvas.</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641310bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641764bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645973bi' class='verse'>
+							ཡང་བྱང་ཆུབ་སེམས་དཔའ་དེ་དག་ཅིའི་ཕྱིར་རྒྱུ་ཅན་ཞིག་ཡིན་ཞེ་ན། སྙིང་རྗེའི་སེམས་དང་གཉིས་སུ་མེད་བློ་དང། །བྱང་ཆུབ་སེམས་ནི་རྒྱལ་སྲས་རྣམས་ཀྱི་རྒྱུ། །ཞེས་བྱ་བ་སྨོས་སོ། །དེ་ལ་སྙིང་རྗེ་ནི་བརྩེ་བ་སྟེ། འདི་ཉིད་དུ་འཆད་པར་འགྱུར་བའི་རྣམ་པ་དང་རང་གི་ངོ་བོ་ཅན་ནོ། །གཉིས་སུ་མེད་པའི་བློ་ནི། དངོས་པོ་དང་དངོས་པོ་མེད་པ་ལ་སོགས་པ་མཐའ་གཉིས་དང་བྲལ་བའི་ཤེས་རབ་པོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646437bi' class='verse'>
+							<p>What then is the cause of the bodhisattvas? As was stated: <em>compassion, non-duality, awakening mind – these are what serve as causes of the victor’s heirs.</em> Compassion means sympathy (<em>anukampā</em>), and its aspects and nature will be explained. <em>Non-dual mind</em> is the intelligence that is free from the two extremes of entities, absence of entities and so forth.</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641311bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641765bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645974bi' class='verse'>
+							བྱང་ཆུབ་ཀྱི་སེམས་ནི་འཕགས་པ་ཆོས་ཀུན་འགྲོ་བའི་མདོ་ལས། བྱང་ཆུབ་སེམས་དཔས་བྱང་ཆུབ་ཀྱི་སེམས་ལས་ཆོས་ཐམས་ཅད་ཁོང་དུ་ཆུད་པར་བགྱིའོ། །ཆོས་ཐམས་ཅད་ནི་ཆོས་ཀྱི་དབྱིངས་དང་མཉམ་པའོ། །གློ་བུར་དུ་བྱུང་བ་མི་གནས་པ་ཆོས་ཐམས་ཅད་ནི་ཤེས་པར་བགྱི་བ་ཙམ་དང། ཤེས་པ་པོས་སྟོང་པའི་ཕྱིར་ཡོངས་སུ་ཤེས་པར་བགྱི་བ་ཙམ་དུ་བས་ན་ཆོས་ཉིད་འདི་ལྟ་བུ་འདི་སེམས་ཅན་རྣམས་ཀྱིས་ཁོང་དུ་ཆུད་པར་བྱའོ་སྙམ་ནས། བྱང་ཆུབ་སེམས་དཔའ་ལ་སེམས་གང་སྐྱེས་པ་འདི་ནི་བྱང་ཆུབ་སེམས་དཔའི་བྱང་ཆུབ་ཀྱི་སེམས་ཞེས་བགྱིའོ། །སེམས་ཅན་ཐམས་ཅད་ལ་ཕན་པ་དང་བདེ་བའི་སེམས་དང། བླ་ན་མེད་པའི་སེམས་དང། བྱམས་པས་མཉེན་པའི་སེམས་དང། སྙིང་རྗེས་མི་ཟློག་པའི་སེམས་དང། དགའ་བས་འགྱོད་པ་མ་མཆིས་པའི་སེམས་དང། བཏང་སྙོམས་ཀྱིས་དྲི་མ་མ་མཆིས་པའི་སེམས་དང་། སྟོང་པ་ཉིད་ཀྱིས་མི་འགྱུར་བའི་སེམས་དང་། མཚན་མ་མ་མཆིས་པས་སྒྲིབ་པ་མ་མཆིས་པའི་སེམས་དང། སྨོན་པ་མ་མཆིས་པས་མི་གནས་པའི་སེམས་ཞེས་ཇི་སྐད་བསྟན་པ་བཞིན་ནོ། །བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ཀྱི་གཙོ་བོའི་རྒྱུ་ནི་སྙིང་རྗེ་དང། གཉིས་སུ་མེད་པའི་ཤེས་རབ་དང། བྱང་ཆུབ་ཀྱི་སེམས་ཞེས་བྱ་བ་ཆོས་གསུམ་པོ་འདི་དག་ཡིན་ནོ། །ཇི་སྐད་དུ་རིན་པོ་ཆེའི་ཕྲེང་བ་ལས། །དེ་ཡི་རྩ་བ་བྱང་ཆུབ་སེམས། །རི་དབང་རྒྱལ་པོ་ལྟར་བརྟན་དང། །ཕྱོགས་མཐའ་གཏུགས་པའི་སྙིང་རྗེ་དང། །གཉིས་ལ་མི་བརྟེན་ཡེ་ཤེས་ལགས། །ཞེས་གསུངས་སོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646438bi' class='verse'>
+							<p>The awakening mind is described in the noble <em>Omnipresent Dharmas Sutra</em>:</p> <p style="padding-left: 30px;">Through the mind of awakening the bodhisattva will come to understand all dharmas: that all dharmas are equal in the dharmadhātu. All dharmas, being adventitious and unstable, are empty of something to be known and a knower. When within this mere recognition a bodhisattva gives rise to the sentiment of thinking that, ‘All beings must reach the recognition that this is the nature of things,’ that is what we call the awakening mind of the bodhisattva. It is the mind that aims for the benefit and happiness of all beings; that aims for the unsurpassed; a tender mind of love; an irreversible mind of compassion; a joyous mind that knows no regret; an equanimous mind without stains; an unchanging mind of emptiness; an unobscured mind not encumbered by labelling; a non-abiding mind free from aspirations.<a class='fotnote rn' name='FN5550rn5' href='#N5550rn5'><sup>5</sup></a>
+</p> <p>That the principal causes of the bodhisattvas are these three – compassion, non-dual intelligence and the mind of awakening – is expressed in the <em>Precious Garland</em>:</p> <p style="padding-left: 30px;">Its roots are the mind of awakening<br />Firm as the king of mountains,<br />Compassion without prejudice<br />And wisdom not tied to duality.<a class='fotnote rn' name='FN5550rn6' href='#N5550rn6'><sup>6</sup></a>
+</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641312bi' class='verse'>
+							གང་ཕྱིར་བརྩེ་ཉིད་རྒྱལ་བའི་ལོ་ཐོག་ཕུན་ཚོགས་འདིའི། །<br />ས་བོན་དང་ནི་སྤེལ་ལ་ཆུ་འདྲ་ཡུན་རིང་དུ། །<br />ལོངས་སྤྱོད་གནས་ལ་སྨིན་པ་ལྟ་བུར་འདོད་གྱུར་པ། །<br />དེ་ཕྱིར་བདག་གིས་ཐོག་མར་སྙིང་རྗེ་བསྟོད་པར་བགྱི། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641766bi' class='verse'>
+							Since love is like the seed for the abundant crop<br />Of victorhood, is like the water for its growth, <br />Like maturation for its yield to then endure,<br />It’s therefore that I praise compassion first of all. (1.2)&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645975bi' class='verse'>
+							བྱང་ཆུབ་ཀྱི་སེམས་དང་གཉིས་སུ་མེད་པའི་ཡེ་ཤེས་གཉིས་ཀྱི་རྩ་བ་ཡང་སྙིང་རྗེ་ཡིན་པའི་ཕྱིར་ན་སྙིང་རྗེ་གཙོ་བོ་ཉིད་དུ་བསྟན་པར་འདོད་པས། <br /> གང་ཕྱིར་བརྩེ་ཉིད་རྒྱལ་བའི་ལོ་ཐོག་ཕུན་ཚོགས་འདི་ཡི། །<br /> ས་བོན་དང་ནི་སྤེལ་ལ་ཆུར་འདྲ་ཡུན་རིང་དུ། །<br /> ལོངས་སྤྱོད་གནས་ལ་སྨིན་པ་ལྟ་བུར་འདོད་གྱུར་པ། །<br /> དེ་ཕྱིར་བདག་གིས་ཐོག་མར་སྙིང་རྗེ་བསྟོད་པར་བགྱི། །<br /> ཞེས་བྱ་བ་སྨོས་སོ། །ཇི་ལྟར་ཕྱི་རོལ་གྱི་འབྲུ་ལ་སོགས་པ་ཕུན་སུམ་ཚོགས་པ་ལ། ཐོག་མ་དང་བར་དང་ཐ་མ་རྣམས་སུ་ས་བོན་དང་ཆུ་དང་སྨིན་པ་རྣམས་གཙོ་བོ་ཉིད་དུ་གྱུར་པས་ཉེ་བར་མཁོ་བ་ཉིད་ཡིན་པ་དེ་བཞིན་དུ་སྙིང་རྗེ་ཁོ་ན་དུས་གསུམ་ཅར་དུ་ཡང་རྒྱལ་བའི་ལོ་ཐོག་ཕུན་སུམ་ཚོགས་པ་ལ་ཉེ་བར་མཁོ་བ་ཉིད་དུ་སྟོན་པ་ཡིན་ནོ། །འདི་ལྟར་སྙིང་རྗེ་ཅན་ནི་གཞན་གྱི་སྡུག་བསྔལ་གྱིས་སྡུག་བསྔལ་བ་ཉིད་ཀྱིས་སེམས་ཅན་སྡུག་བསྔལ་བར་གྱུར་པ་མ་ལུས་པ་ཡོངས་སུ་བསྐྱབ་པར་བྱ་བའི་ཕྱིར། གདོན་མི་ཟ་བར་བདག་གིས་འཇིག་རྟེན་འདི་མཐའ་དག་སྡུག་བསྔལ་ནས་བཏོན་ཏེ། སངས་རྒྱས་ཉིད་ལ་ངེས་པར་སྦྱར་བར་བྱའོ་སྙམ་དུ་ངེས་པར་སེམས་སྐྱེད་པར་བྱེད་དོ། །དམ་བཅའ་བ་འདི་ཡང་གཉིས་སུ་མེད་པའི་ཡེ་ཤེས་སྤངས་པས་སྒྲུབ་པར་མི་ནུས་པས་གཉིས་སུ་མེད་པའི་ཡེ་ཤེས་ལ་ཡང་ངེས་པ་ཁོ་ནར་འཇུག་སྟེ། དེའི་ཕྱིར་སངས་རྒྱས་ཀྱི་ཆོས་ཐམས་ཅད་ཀྱི་ས་བོན་ནི་སྙིང་རྗེ་ཉིད་ཡིན་ནོ། །ཇི་སྐད་དུ་རིན་པོ་ཆེའི་ཕྲེང་བ་ལས། ཐེག་པ་ཆེན་པོ་གང་ཞིག་ལས། །སྙིང་རྗེ་སྔོན་བཏང་སྤྱོད་པ་ཀུན། །ཡེ་ཤེས་དྲི་མ་མེད་བཤད་པ། སེམས་ཡོད་སུ་ཞིག་དེ་ལ་སྨོད། །ཅེས་གསུངས་སོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646439bi' class='verse'>
+							<p>Since compassion is the very root of the mind of awakening and wisdom of non-duality, the following was stated with the wish to illustrate the preeminence of compassion:</p> <p style="padding-left: 30px;"><strong>Since love is like the seed for the abundant crop</strong><br /><strong>Of victorhood, is like the water for its growth, </strong><br /><strong>Like maturation for its yield to then endure,</strong><br /><strong>It’s therefore that I praise compassion first of all. (1.2)</strong></p> <p>Just as seeds, water and the process of ripening are the essential prerequisites in the beginning, middle and end respectively for a perfect harvest of grains and so forth on the outer level, it is compassion that is said to be the very prerequisite in the three periods for the perfect harvest of the victors. Likewise, when others are experiencing the suffering of suffering, a compassionate individual wanting to protect all suffering sentient beings without exception, will develop the firm resolve: ‘I must by all means deliver this world from suffering and bring it to the state of buddhahood.’ And since one will not be able to bring this commitment to fruition if one has discarded the wisdom of non-duality, it is essential to engage in it through the wisdom of non-duality. Thus, the seed of all the qualities of buddhahood is compassion. As stated in the <em>Precious Garland</em>:</p> <p style="padding-left: 30px;">What rational individual would disparage<br />The Greater Vehicle which teaches<br />Compassion as the prerequisite of all<br />And wisdom that is free from stains?<a class='fotnote rn' name='FN5550rn7' href='#N5550rn7'><sup>7</sup></a>
+</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641313bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641767bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645976bi' class='verse'>
+							བྱང་ཆུབ་ཀྱི་སེམས་བསྐྱེད་དུ་ཟིན་ཀྱང། གལ་ཏེ་དུས་ཕྱིས་སྙིང་རྗེའི་ཆུས་ཡང་དང་ཡང་དུ་བཅུས་པར་མ་གྱུར་ན། འབྲས་བུའི་ཚོགས་ཡངས་པ་མ་བསགས་པ་འདི་ངེས་པར་ཉན་ཐོས་དང་རང་སངས་རྒྱས་ཀྱིས་ཡོངས་སུ་མྱ་ངན་ལས་འདས་པས་མྱ་ངན་ལས་འདའ་བར་འགྱུར་རོ། །འབྲས་བུ་མཐའ་ཡས་པའི་གནས་སྐབས་ཐོབ་ཏུ་ཟིན་ཀྱང་གལ་ཏེ་དུས་ཕྱིས་སྙིང་རྗེའི་ཡོངས་སུ་སྨིན་པ་དང་བྲལ་བར་གྱུར་ན་ནི་འདི་དུས་རིང་པོར་ཉེ་བར་ལོངས་སྤྱོད་པར་མི་འགྱུར་ལ། འཕགས་པའི་འབྲས་བུའི་ཚོགས་ཆེན་པོ་རིམ་པ་གཅིག་ནས་གཅིག་ཏུ་བརྒྱུད་པ་རྣམ་པ་བར་མ་ཆད་པ་ཡུན་རིང་པོར་མངོན་པར་འཕེལ་བར་ཡང་མི་འགྱུར་རོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646440bi' class='verse'>
+							<p>Though the mind of awakening has been generated, if one has not repeatedly moistened it with the water of compassion, preparations for the vast fruition will not be accumulated, and one will inevitably transcend to the nirvana of hearers and solitary buddhas. And, although one may reach the state of the boundless fruition, without fully ripened compassion this will not become a lasting resource, and the unbroken one-to-one lineage of the great assembly of noble fruition will not flourish for long.</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641314bi' class='verse'>
+							དང་པོར་ང་ཞེས་བདག་ལ་ཞེན་གྱུར་ཞིང་།<br />བདག་གི་འདི་ཞེས་དངོས་ལ་ཆགས་བསྐྱེད་པ། །<br />ཟོ་ཆུན་འཕྱན་ལྟར་རང་དབང་མེད་པ་ཡི། །<br />འགྲོ་ལ་སྙིང་རྗེར་གྱུར་གང་དེ་ལ་འདུད། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641768bi' class='verse'>
+							At first, the though of ‘I’ and clinging to a self;<br />Then ‘This is mine’ as they become attached to things.<br />I bow to that compassion which sees every life<br />As powerless as buckets on a water-wheel. (1.3)&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645977bi' class='verse'>
+							ད་ནི་དམིགས་པའི་བྱེ་བྲག་ལ་འཇུག་པའི་སྒོ་ནས་ཀྱང་སྙིང་རྗེའི་རང་གི་ངོ་བོའི་ཁྱད་པར་མངོན་པར་གསལ་བར་བྱས་ཏེ་དེ་ཉིད་ལ་ཕྱག་འཚལ་བ་བརྩམ་པར་འདོད་པས། <br /> དང་པོར་ང་ཞེས་བདག་ལ་ཞེན་གྱུར་ཞིང། །<br /> བདག་གི་འདི་ཞེས་དངོས་ལ་ཆགས་བསྐྱེད་པ། །<br /> ཐོ་ཆུན་འཕྱན་ལྟར་རང་དབང་མེད་པ་ཡི། །<br /> འགྲོ་ལ་སྙིང་རྗེར་གྱུར་གང་དེ་ལ་འདུད། །<br /> ཅེས་བྱ་བ་སྨོས་སོ། །འཇིག་རྟེན་འདི་ནི་བདག་གིར་མངོན་པར་ཞེན་པའི་སྔ་རོལ་ཉིད་དུ་ངར་འཛིན་པས་ཡོད་པ་མ་ཡིན་པའི་བདག་ཡོད་དོ་སྙམ་དུ་ཉེ་བར་བརྟགས་ནས་འདི་ཉིད་དུ་བདེན་པར་མངོན་པར་ཞེན་ཅིང། །འདི་ནི་བདག་གིའོ་སྙམ་དུ་ངར་འཛིན་པའི་ཡུལ་ལས་གཞན་པའི་དངོས་པོའི་རྣམ་པ་མ་ལུས་པ་ལ་མངོན་པར་ཞེན་པ་ཡིན་ནོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646441bi' class='verse'>
+							<p>Now, to clarify the distinctive forms of compassion according to how they relate to particular objects, I wished to express this as an homage:</p> <p style="padding-left: 30px;"><strong>At first, the though of &lsquo;I&rsquo; and clinging to a self;</strong><br /><strong>Then &lsquo;This is mine&rsquo; as they become attached to things.</strong><br /><strong>I bow to that compassion which sees every life</strong><br /><strong>As powerless as buckets on a water-wheel. (1.3)</strong></p> <p>In the world, self-clinging develops before the clinging of ownership, as one imputes the idea &lsquo;it exists&rsquo; onto a non-existent self and ends up clinging to it as real. And then, with the thought, &lsquo;This is mine,&rsquo; clinging to all other objects not included within this self-clinging comes.</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641315bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641769bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645978bi' class='verse'>
+							བདག་དང་བདག་གིར་མངོན་པར་ཞེན་པའི་འཇིག་རྟེན་འདི་ནི་ལས་དང་ཉོན་མོངས་པའི་ཐག་པས་ཆེས་དམ་དུ་བསྡམས་པ། འཁྲུལ་འཁོར་བསྐོར་མཁན་རྣམ་པར་ཤེས་པའི་བསྐྱོད་པ་ལ་རག་ལས་པར་འཇུག་པ། འཁོར་བའི་ཁྲོན་པ་ཆེན་པོ་སྲིད་པའི་རྩེ་མོ་ནས་མནར་མེད་པ་ལ་ཐུག་པ་ཟབ་ལ་བར་མེད་པར་འཕྱན་པ། རང་གི་རང་ཉིད་ཀྱིས་ཐུར་དུ་འགྲོ་བར་འཇུག་པ་འབད་པས་ཅི་ཞིག་ལྟར་དྲང་བར་བྱ་བ་མི་ཤེས་པ་ལ་སོགས་པ་ཉོན་མོངས་པ་དང་ལས་དང་སྐྱེ་བའི་ཀུན་ནས་ཉོན་མོངས་པ་གསུམ་ཡོད་ཀྱང་སྔ་མ་དང་ཕྱི་མ་དང་བར་གྱི་རིམ་པ་ངེས་པར་མི་ཟིན་པ། ཉི་མ་རེ་རེ་ཞིང་སྡུག་བསྔལ་གྱི་སྡུག་བསྔལ་དང། འགྱུར་བའི་སྡུག་བསྔལ་ཉིད་དག་གིས་གཅོག་པའི་ཕྱིར་ཟོ་ཆུན་ཁྱུད་མོའི་གནས་སྐབས་ལས་མ་འདས་པར་གནས་པ་ཞིག་སྟེ། གང་གི་ཕྱིར་བྱང་ཆུབ་སེམས་དཔའ་དེའིསྡུག་བསྔལ་གྱིས་སྡུག་བསྔལ་བ་དེ་ལ་ཤིན་ཏུ་སྙིང་རྗེས་དམིགས་ནས་བསྐྱབ་པར་སྤྲོ་བ་དེའི་ཕྱིར་ཆེས་ཐོག་མ་ཁོ་ནར་བཅོམ་ལྡན་འདས་མ་སྙིང་རྗེ་ཆེན་པོ་ལ་རབ་ཏུ་ཕྱག་འཚལ་ལོ། །འདི་ནི་བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ཀྱི་སྙིང་རྗེ་སེམས་ཅན་ལ་དམིགས་པའོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646442bi' class='verse'>
+							<p>The worldly state of clinging to self and mine is (1) to be tightly bound by the ropes of karma and afflictions; (2) to be reliant on the movements of consciousness, the operator of the machinery; (3) to be ceaselessly rambling through the depths of the great well of cyclic existence, from its peak to the Incessant hell; (4) to descend effortlessly of one&rsquo;s own accord but having to be drawn up with great effort; (5) not to be following a fixed order of prior, latter and middling components when it comes to the torments (<em>saṃkleśa</em>) of afflictions, such as ignorance, of karma and of birth; and (6) to each day be battered by the suffering of suffering and the suffering of change &ndash; and hence to never transcend this water-wheel condition. Since the bodhisattva, motivated by immense compassion for those tormented by suffering, develops the wish to protect them, homage is offered to the illustrious lady great compassion before anything else. This is the <em>compassion of the bodhisattvas that is focussed on sentient beings.</em> </p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641316bi' class='verse'>
+							འགྲོ་བ་གཡོ་བའི་ཆུ་ཡི་ནང་གི་ཟླ་བ་ལྟར། །<br />གཡོ་དང་རང་བཞིན་ཉིད་ཀྱིས་སྟོང་པར་མཐོང་བ་ཡི། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641770bi' class='verse'>
+							Just like the moon reflected in a rippling pond,<br />They see them waver, empty of inherent being.&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645979bi' class='verse'>
+							ཆོས་ལ་དམིགས་པ་དང་དམིགས་པ་མེད་པའི་སྙིང་རྗེ་ཡང་དམིགས་པའི་སྒོ་ནས་གསལ་བར་བྱ་བའི་ཕྱིར། <br /> འགྲོ་བ་གཡོ་བའི་ཆུ་ཡི་ནང་གི་ཟླ་བ་ལྟར། །<br /> གཡོ་དང་རང་བཞིན་ཉིད་ཀྱིས་སྟོང་པར་མཐོང་བ་ཡིས། །<br /> ཞེས་བྱ་བ་སྨོས་ཏེ། སྙིང་རྗེར་གྱུར་གང་དེ་ལ་འདུད། །ཅེས་བྱ་བ་དེ་དང་སྦྱར་བར་བྱའོ། །འདི་ལྟར་ཆུ་ཤིན་ཏུ་དངས་པ་རླུང་ཏེ་པོར་དྲག་པོ་མ་ཡིན་པས་ཆ་ཤས་བརླབས་པས་ཁྱབ་པའི་ནང་དུ་ཟླ་བའི་གཟུགས་བརྙན་སྔར་དམིགས་པའི་རྟེན་གྱི་ཡུལ་དང། ལྷན་ཅིག་འཇིག་པ་དེ་དག་གི་དངོས་པོ་མངོན་སུམ་དུ་དམིགས་པ་ལྟ་བུ་ཤར་བ་ན། དམ་པ་དག་གིས་གཉིས་པོ་འདི་རང་གི་བདག་ཉིད་གསལ་བར་བྱེད་པ་ལྟར་གནས་པར་མཐོང་སྟེ། འདི་ལྟ་སྟེ། སྐད་ཅིག་རེ་རེ་ལ་མི་རྟག་པ་ཉིད་དང། རང་བཞིན་གྱིས་སྟོང་པ་ཉིད་དོ། །དེ་བཞིན་དུ་བྱང་ཆུབ་སེམས་དཔའ་སྙིང་རྗེའི་གཞན་གྱི་དབང་དུ་གྱུར་པ་རྣམས་ཀྱིས་ཀྱང་སེམས་ཅན་འཇིག་ཚོགས་ལ་ལྟ་བའི་མཚོར་༼མ་རིག་པའི་ཆོས་ཀྱི་བདུད་རྩིའི་ཕུལ་དུ་བྱུང་བ་འབྱུང་བའི་རྒྱུ། ཕྱིན་ཅི་ལོག་རྟོག་པ་མཐའ་དག་པའི་མཚན་ཉིད། འགྲོ་བ་ཡོངས་ཀྱི་༽མ་རིག་པའི་ཆུ་སྔོན་པོ་རྒྱ་ཆེན་བ་ཚུལ་བཞིན་མ་ཡིན་པའི་རྣམ་པར་རྟོག་པའི་རླུང་གིས་རབ་ཏུ་བསྐྱོད་པའི་ནང་ན་གནས་པ་རང་གི་ལས་ཀྱི་གཟུགས་བརྙན་ལྟ་བུར་མདུན་ན་གནས་པ་རྣམས་སྐད་ཅིག་རེ་རེ་ལ་མི་རྟག་པའི་སྡུག་བསྔལ་ཐོག་ཏུ་འབབ་པ་དང། རང་བཞིན་གྱིས་སྟོང་པར་མཐོང་བ་ན། དེ་དག་གི་མི་རྟག་པ་ཉིད་ཀྱི་སྡུག་བསྔལ་ལ་འཇོམས་པ་ལྟ་བུར་གྱུར་པ། དམ་པའི་ཆོས་ཀྱི་བདུད་རྩིའི་ཕུལ་དུ་བྱུང་བ་འབྱུང་བའི་རྒྱུ། ཕྱིན་ཅི་ལོག་གི་རྟོག་པ་མཐའ་དག་ལོག་པའི་མཚན་ཉིད། འགྲོ་བ་ཡོངས་ཀྱི་གཉེན་ཉིད་ཀྱི་རང་བཞིན་དུ་གྱུར་པ་སངས་རྒྱས་ཉིད་ཡང་དག་པར་ཐོབ་པར་འདོད་པ་ཡིན་ནོ། །དེ་དག་གི་སྙིང་རྗེ་སེམས་ཅན་ལ་དམིགས་པ་དང། ཆོས་ལ་དམིགས་པ་དང། དམིགས་པ་མེད་པ་གང་ཡིན་པ་དེ་རྣམས་ལ་རབ་ཏུ་བཏུད་ནས།&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646443bi' class='verse'>
+							<p>To illustrate what the <em>compassion focussed on dharmas</em> and without a focus relate to, it was stated:</p> <p style="padding-left: 30px;"><strong>Just like the moon reflected in a rippling pond,</strong><br /><strong>They see them waver, empty of inherent being.</strong></p> <p>To this one should add the line, ‘I bow to such compassion.’ In a pool of limpid water slightly rippled by a mild breeze, the image of the moon keeps breaking up on the surface of what supports its reflection, and the combination of these two is visible as a clearly perceptible thing. The supreme ones see that these two facets illustrate the nature of things, namely moment-by-moment impermanence and absence of intrinsic nature. In the same way, bodhisattvas governed by compassion see that beings dwelling in the vast blue water of ignorance filling the ocean of the view of identity (<em>satkāyadṛṣṭi</em>) stirred by the winds of mistaken concepts, appearing in front of them as reflections of their individual karma, moment-by-moment encounter the suffering of impermanence and are empty of inherent existence. The bodhisattvas then develop the wish to help them fully attain the state of awakening, which is like the annihilator of the suffering of impermanence they undergo with respect to these two facts; which is a perfect source of the nectar of the sublime Dharma; which is characterised by a total reversal of all mistaken concepts; and is the true friend of all the world.<a class='fotnote rn' name='FN5550rn8' href='#N5550rn8'><sup>8</sup></a>
+ Having bowed to their compassion focussed on sentient beings, focussed on dharmas and without a focus …</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'>								<script language="javascript" type="text/javascript">
+
+								tekstid = "7641301";
+								kilderef = "Ma Tib: Tg, dbu ma, ’a  201b1 - Tib: Tg, dbu ma, ’a 4";
+								$('#'+tekstid).text(kilderef);
+								</script>
+							<div class='kilderef' id='7641317'></div><div class='clear'></div><span id='7641317bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'>								<script language="javascript" type="text/javascript">
+
+								tekstid = "7641755";
+								kilderef = "Ma Eng: Liland (2019)  - Eng: Liland (2019) ";
+								$('#'+tekstid).text(kilderef);
+								</script>
+							<div class='kilderef' id='7641771'></div><div class='clear'></div><span id='7641771bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'>								<script language="javascript" type="text/javascript">
+
+								tekstid = "7645964";
+								kilderef = "Ma Tib: Tg, dbu ma, ’a  220b - Tib: Tg, dbu ma, ’a 223b";
+								$('#'+tekstid).text(kilderef);
+								</script>
+							<div class='kilderef' id='7645980'></div><div class='clear'></div><span id='7645980bi' class='verse'>
+							བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ཀྱི་བྱང་ཆུབ་ཀྱི་སེམས་ཀྱི་དབྱེ་བ་རྣམ་པ་བཅུ་བརྗོད་པར་འདོད་པས་དེ་བྱང་ཆུབ་ཀྱི་སེམས་དང་པོའི་དབང་དུ་བྱས་ནས།&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'>								<script language="javascript" type="text/javascript">
+
+								tekstid = "7646428";
+								kilderef = "Ma Eng: Liland (2019)  - Eng: Liland (2019) ";
+								$('#'+tekstid).text(kilderef);
+								</script>
+							<div class='kilderef' id='7646444'></div><div class='clear'></div><span id='7646444bi' class='verse'>
+							<p>…, wishing then to speak of the ten divisions of the awakening mind of bodhisattvas, regarding the first mind of awakening:</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645908bi' class='generelltekst'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7645909bi' class='generelltekst'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645981bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646445bi' class='verse'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645914bi' class='generelltekst'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7645915bi' class='generelltekst'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645982bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646446bi' class='verse'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645920bi' class='generelltekst'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7645921bi' class='generelltekst'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645983bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646447bi' class='verse'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645932bi' class='generelltekst'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7645933bi' class='generelltekst'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645985bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646449bi' class='verse'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645944bi' class='generelltekst'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7645945bi' class='generelltekst'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645987bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646451bi' class='verse'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645956bi' class='generelltekst'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7645957bi' class='generelltekst'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645989bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646453bi' class='verse'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7643581bi' class='generelltekst'>
+							རྒྱལ་བའི་སྲས་པོ་འདི་ཡི་སེམས་གང་འགྲོ་བ་རྣམས། །<br />རྣམ་པར་གྲོལ་བར་བྱ་ཕྱིར་སྙིང་རྗེའི་དབང་གྱུར་ཞིང། །<br />ཀུན་ཏུ་བཟང་པོའི་སྨོན་པས་རབ་བསྔོས་དགའ་བ་ལ། །<br />རབ་ཏུ་གནས་པ་དེ་ནི་དང་པོ་ཞེས་བྱའོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7643582bi' class='generelltekst'>
+							The victor’s offspring filled with these compassionate thoughts<br />Will feel compelled to rescue each and every one. (1.4)<br />They dedicate just like Samantabhadra prayed,<br />Established on the Joyous which is called <i>the first</i>.&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645990bi' class='verse'>
+							རྒྱལ་བའི་སྲས་པོ་འདི་ཡི་སེམས་གང་འགྲོ་བ་རྣམས། །<br /> རྣམ་པར་གྲོལ་བར་བྱ་ཕྱིར་སྙིང་རྗེའི་དབང་གྱུར་ཞིང། །<br /> ཀུན་ཏུ་བཟང་པོའི་སྨོན་ལམ་རབ་བསྔོས་དགའ་བ་ལ། །<br /> རབ་ཏུ་གནས་པ་དེ་ནི་དང་པོ་ཞེས་བྱའོ། །<br /> ཞེས་བྱ་བ་སྨོས་སོ། །བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ཀྱི་ཟག་པ་མེད་པའི་ཡེ་ཤེས་སྙིང་རྗེ་ལ་སོགས་པས་ཡོངས་སུ་ཟིན་པ་ཉིད་ཆར་རྣམ་པར་ཕྱེ་བ་ན་ས་ཞེས་བྱ་བའི་མིང་འཐོབ་སྟེ། ཡོན་ཏན་གྱི་རྟེན་དུ་གྱུར་པའི་ཕྱིར་རོ། །དེ་ཡང་གོང་ནས་གོང་དུ་ཡོན་ཏན་གྱི་གྲངས་དང། མཐུ་ཕུལ་དུ་བྱུང་བ་ཐོབ་པ་དང། སྦྱིན་པ་ལ་སོགས་པའི་ཕ་རོལ་ཏུ་ཕྱིན་པ་ཀླགས་པ་དང། རྣམ་པར་སྨིན་པ་འཕེལ་བའི་བྱེ་བྲག་གིས་ས་རབ་ཏུ་དགའ་བ་ལ་སོགས་པའི་རྣམ་པར་དབྱེ་བས་དབྱེ་བ་རྣམ་པ་བཅུར་གཞག་གི འདི་ལ་རང་གི་ངོ་བོའི་ཁྱད་པར་གྱིས་བྱས་པའི་དབྱེ་བ་ནི་ཡོད་པ་མ་ཡིན་ནོ། །ཇི་སྐད་དུ། ཇི་ལྟར་བར་སྣང་བྱ་རྗེས་མཁས་རྣམས་ཀྱིས། །བརྗོད་པར་ནུས་མ་ཡིན་ཞིང་མི་མཐོང་བ། །དེ་ལྟར་རྒྱལ་བའི་སྲས་ཀྱི་ས་ཀུན་ཀྱང། །བརྗོད་མི་ནུས་ན་མཉན་པར་ག་ལ་ནུས། །ཞེས་གསུངས་སོ། །དེ་ལ་བྱང་ཆུབ་སེམས་དཔའི་ས་རབ་ཏུ་དགའ་བ་ནི། བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ཀྱི་སེམས་བསྐྱེད་པ་དང་པོ་ཡིན་ལ་མཐར་ཆོས་ཀྱི་སྤྲིན་ནི་སེམས་བསྐྱེད་པ་བཅུ་པའོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646454bi' class='verse'>
+							<p style="padding-left: 30px;"><strong>The victor’s offspring filled with these compassionate thoughts</strong><br /><strong>Will feel compelled to rescue each and every one. (1.4)</strong><br /><strong>They dedicate just like Samantabhadra prayed,</strong><br /><strong>Established on the Joyous which is called <i>the first</i>.</strong></p> <p>The various levels encompassed by the bodhisattvas’ compassion of undefiled wisdom receive the name <em>grounds</em> (<em>bhūmi</em>) since they are supports for qualities. We designate ten particular grounds with the names Joyous (<em>pramudita</em>) and so forth, not because there is any distinction with respect to their actual nature, but based on there being an increasing number of qualities, attainment of superior powers, advancement in the perfections such as generosity, and flourishing maturation. As stated:</p> <p style="padding-left: 30px;">Even the wise cannot express or see<br />The path a bird takes in the sky;<br />And likewise, the grounds of the victor heirs<br />Cannot be expressed, much less heard about.<a class='fotnote rn' name='FN5550rn9' href='#N5550rn9'><sup>9</sup></a>
+</p> <p>The bodhisattva ground <em>Joyous</em> is the initial resolve of the bodhisattvas, while the last and tenth resolve is <em>Cloud of Dharma</em>.</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641318bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641772bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645991bi' class='verse'>
+							དེ་ལ་བྱང་ཆུབ་སེམས་དཔའ་ཇི་སྐད་བཤད་པའི་ཚུལ་གྱིས་འགྲོ་བ་རང་བཞིན་མེད་པར་མཐོང་བ་སྙིང་རྗེའི་ཁྱད་པར་ཉིད་དུ་ཉེ་བར་གཟུང་བའི་སེམས་གང་སྙིང་རྗེའི་གཞན་གྱི་དབང་དུ་གྱུར་ཅིང། བྱང་ཆུབ་སེམས་དཔའ་ཀུན་ཏུ་བཟང་པོའི་སྨོན་ལམ་གྱིས་ཡོངས་སུ་བསྔོས་པ་རབ་ཏུ་དགའ་བ་ཞེས་བྱ་བའི་མིང་ཅན་གཉིས་སུ་མེད་པའི་ཡེ་ཤེས་དེའི་རྒྱུ་ཅན་གྱི་འབྲས་བུས་ཉེ་བར་མཚོན་པ་དེ་ལ་ནི། དང་པོ་ཞེས་བྱ་བར་བརྗོད་དོ། ། དེ་ལ་སྨོན་ལམ་ཆེན་པོ་བཅུ་ལ་སོགས་པ་སྨོན་ལམ་འབུམ་ཕྲག་གྲངས་མེད་པ་ཕྲག་བཅུ་པོ་གང་དག་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དང་པོ་བསྐྱེད་པས་འདེབས་པ་དེ་དག་ནི་བྱང་ཆུབ་སེམས་དཔའ་ཀུན་ཏུ་བཟང་པོའི་སྨོན་ལམ་གྱི་ནང་དུ་འདུས་པ་ཡིན་ཏེ། སྨོན་ལམ་མ་ལུས་པ་ཉེ་བར་བསྡུ་བར་བྱ་བའི་ཕྱིར་ཀུན་ཏུ་བཟང་པོའི་སྨོན་ལམ་ཁྱད་པར་དུ་བཀོད་པ་ཡིན་ནོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646455bi' class='verse'>
+							<p>As explained, the mind of the bodhisattva is at this point seized by the special compassion which sees the lack of inherent nature of beings, and <em>filled with these compassionate thoughts</em> they <em>dedicate just like Samantabhadra prayed</em>. Thus it is given the name Joyous, indicating that this result has non-dual wisdom as its cause, and is considered the first. Generating the resolve for the first time, the bodhisattva makes ten <em>innumerable hundred thousand aspirations</em>, such as those expressed in the <em>Ten Great Aspirations</em>, and all of these are included within the <em>Bodhisattva Samantabhadra’s Aspiration</em>. In order to include every aspiration without omission, the <em>Aspiration of Samantabhadra</em> is here singled out.</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641319bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641773bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645992bi' class='verse'>
+							དེ་ལ་ཇི་ལྟར་ཉན་ཐོས་ཀྱི་ཐེག་པར་ཞུགས་པ་དང། འབྲས་བུའི་ལམ་ལ་གནས་པའི་དབྱེ་བས་ཉན་ཐོས་ཀྱིས་བརྒྱད་རྣམ་པར་འཇོག་པ་དེ་བཞིན་དུ། ཐེག་པ་ཆེན་པོར་ཡང་བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ཀྱི་བྱང་ཆུབ་སེམས་དཔའི་ས་བཅུ་ཡིན་ནོ། །ཡང་ཇི་ལྟར་ཉན་ཐོས་ངེས་པར་འབྱེད་པའི་ཆ་དང་མཐུན་པའི་གནས་སྐབས་སྐྱེད་པ་ནི། འབྲས་བུ་དང་པོ་ལ་ཞུགས་པའི་གནས་སྐབས་ཡིན་པར་མི་འདོད་པ་དེ་བཞིན་དུ། འབྱུང་བར་འགྱུར་བའི་བྱང་ཆུབ་སེམས་དཔའ་ཡང་ཡིན་ཏེ། དཀོན་མཆོག་སྤྲིན་གྱི་མདོ་ལས། མོས་པ་ཆེན་པོའི་ཡང་ཆེན་པོས་སྤྱོད་པའི་ཆོས་ཉིད་ཀྱི་ས་དང་པོ་དེ་མ་ཐག་ཏུ་ཐོབ་པར་གནས་པ་འདི་ནི་བྱང་ཆུབ་སེམས་དཔའི་བྱང་ཆུབ་ཀྱི་སེམས་མ་བསྐྱེད་པའི་སའོ་ཞེས་ཇི་སྐད་གསུངས་པ་ལྟ་བུའོ། །མོས་པས་སྤྱོད་པའི་སྐད་ཅིག་དེ་ལ་གནས་པ་ཡང། རིགས་ཀྱི་བུ་འདི་ལྟ་སྟེ་དཔེར་ན་འཁོར་ལོས་སྒྱུར་བའི་རྒྱལ་པོ་ནི་མིའི་མདོག་ལས་ནི་འདས་ལ། ལྷའི་མདོག་ནི་མ་ཐོབ་པ་ཡིན་ཏེ། དེ་བཞིན་དུ་བྱང་ཆུབ་སེམས་དཔའ་ཡང་འཇིག་རྟེན་པ་དང་ཉན་ཐོས་དང་རང་སངས་རྒྱས་ཀྱིས་ཐམས་ཅད་ལས་ནི་ཤིན་ཏུ་འདས་ལ། དོན་དམ་པའི་བྱང་ཆུབ་སེམས་དཔའི་ས་ནི་མ་ཐོབ་པ་ཡིན་ནོ་ཞེས་དེ་ཉིད་ལས་རྣམ་པར་བཤད་དོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646456bi' class='verse'>
+							<p>Just as, in the vehicle of the hearers we designate eight types of hearers who have entered or abide in the result,<a class='fotnote rn' name='FN5550rn10' href='#N5550rn10'><sup>10</sup></a>
+ in the Greater Vehicle as well we have the bodhisattvas’ ten bodhisattva grounds. And just as we do not consider that someone having reached the stage of <em>propensity for definite separation</em><a class='fotnote rn' name='FN5550rn11' href='#N5550rn11'><sup>11</sup></a>
+ (<em>nirvedhabhagīya</em>) has reached the stage of <em>entry into the first result</em>, the same is true for the potential bodhisattvas. As taught in the <em>Cloud of Jewels Sutra</em>:</p> <p style="padding-left: 30px;">The state just before the attainment of the first ground, having the nature of magnificent aspirations aimed at great conduct, is a ground where the bodhisattva has not yet generated the mind of awakening.<a class='fotnote rn' name='FN5550rn12' href='#N5550rn12'><sup>12</sup></a>
+</p> <p>It continues, explaining about this instance of aspiring towards practice:</p> <p style="padding-left: 30px;">O son of good family. Take the example of a universal monarch, who though he transcends the ranks of humans, has not yet reached the ranks of gods. Just so, a bodhisattva can be completely beyond worldly people, hearers and solitary buddhas, without having reached the ultimate ground of the bodhisattva.<a class='fotnote rn' name='FN5550rn13' href='#N5550rn13'><sup>13</sup></a>
+</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641320bi' class='verse'>
+							དེ་ནས་བཟུང་སྟེ་དེ་ནི་ཐོབ་པར་གྱུར་པ་ཡིས། །<br />བྱང་ཆུབ་སེམས་དཔའ་ཞེས་བྱའི་སྒྲ་ཉིད་ཀྱིས་བསྙད་དོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641774bi' class='verse'>
+							At present, signifying what they have attained,<br />The epithet of <i>bodhisattva</i> is now theirs. (1.5)&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645993bi' class='verse'>
+							ཡང་གང་གི་ཚེ་འདི་རབ་ཏུ་དགའ་བ་ཞེས་བྱ་བའི་ས་དང་པོ་ལ་ཞུགས་པར་གྱུར་པ། <br /> དེ་ནས་བཟུང་སྟེ་དེ་ནི་དེ་ཐོབ་གྱུར་པ་ཡིས། །<br /> བྱང་ཆུབ་སེམས་དཔའ་ཞེས་བྱའི་སྒྲ་ཉིད་ཀྱིས་བསྙད་དོ། །<br /> སེམས་དེ་ཐོབ་པ་ནི་རྣམ་པ་ཐམས་ཅད་དུ་སོ་སོའི་སྐྱེ་བོའི་ས་ལས་འདས་པའི་གནས་སྐབས་སུ་བྱང་ཆུབ་སེམས་དཔའི་སྒྲ་ཁོ་ནས་བརྗོད་པར་བྱ་བ་ཡིན་གྱི། རྣམ་པ་གཞན་གྱིས་ནི་མ་ཡིན་ཏེ། དེའི་ཚེ་དེ་འཕགས་པ་ཡིན་པའི་ཕྱིར་རོ། ཇི་སྐད་དུ་བཅོམ་ལྡན་འདས་མ་ཉིས་སྟོང་ལྔ་བརྒྱ་པ་ལས། བྱང་ཆུབ་སེམས་དཔའ་ཞེས་བྱ་བ་ནི་རྗེས་སུ་རྟོགས་པའི་སེམས་དཔའི་ཚིག་བླ་དྭགས་ཏེ། གང་གིས་ཆོས་ཐམས་ཅད་རྗེས་སུ་རྟོགས་ཤིང་ཤེས་པའོ། །ཇི་ལྟར་ཤེས་ཤེ་ན། མ་བྱུང་བ་དང་ཡང་དག་པར་མ་བྱུང་བ་དང་ལོག་པ་དང་དེ་དག་ཇི་ལྟར་བྱིས་པ་སོ་སོའི་སྐྱེ་བོའི་བརྟགས་པ་དེ་ལྟ་མ་ཡིན་པ་དང། ཇི་ལྟར་བྱིས་པ་སོ་སོའི་སྐྱེ་བོས་རྙེད་པ་དེ་ལྟ་མ་ཡིན་པ་སྟེ། དེའི་ཕྱིར་བྱང་ཆུབ་སེམས་དཔའ་ཞེས་བྱའོ། །དེ་ཅིའི་ཕྱིར་ཞེ་ན། བྱང་ཆུབ་ནི་རྣམ་པར་མ་བརྟགས་པའོ། །བྱང་ཆུབ་ནི་མ་བསྒྲུབས་པའོ། །བྱང་ཆུབ་ནི་དམིགས་པ་མེད་པའོ། །རབ་ཀྱི་རྩལ་གྱིས་རྣམ་པར་གནོན་པ། དེ་བཞིན་གཤེགས་པས་ནི་བྱང་ཆུབ་བརྙེས་པ་མེད་དེ། ཆོས་ཐམས་ཅད་མ་རྙེད་པའི་ཕྱིར་རོ། །ཆོས་ཐམས་ཅད་མ་དམིགས་པའི་ཕྱིར་བྱང་ཆུབ་ཅེས་བྱ་སྟེ། དེ་ལྟ་བུ་ནི་སངས་རྒྱས་ཀྱི་བྱང་ཆུབ་ཅེས་བྱའི། ཇི་སྐད་བརྗོད་པ་ནི་མ་ཡིན་ནོ། །རབ་ཀྱི་རྩལ་གྱིས་རྣམ་པར་གནོན་པ། གང་དག་བྱང་ཆུབ་ཏུ་སེམས་བསྐྱེད་ཅིང་སེམས་འདི་བྱང་ཆུབ་ཏུ་སེམས་བསྐྱེད་པར་བྱའོ། །གང་དུ་བདག་ཅག་གིས་སེམས་བསྐྱེད་པར་བྱ་བའི་བྱང་ཆུབ་དེ་ནི་ཡོད་དོ་ཞེས་བྱང་ཆུབ་ཏུ་རློམ་སེམས་སུ་བྱེད་པ་དེ་དག་ནི་བྱང་ཆུབ་སེམས་དཔའ་ཞེས་མི་བྱའོ། །དེ་དག་ནི་སྐྱེ་བར་སེམས་དཔའ་ཞེས་བྱའོ། །དེ་ཅིའི་ཕྱིར་ཞེ་ན། འདི་ལྟར་སྐྱེ་བ་ལ་མངོན་པར་ཞེན། སེམས་སུ་མངོན་པར་ཞེན། བྱང་ཆུབ་ཏུ་མངོན་པར་ཞེན། ཞེས་བྱ་བ་ལ་སོགས་པ་གསུངས་པ་ལྟ་བུའོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646457bi' class='verse'>
+							<p>As they enter <em>Joyous</em>, the first ground:</p> <p style="padding-left: 30px;"><strong>At present, signifying what they have attained,</strong><br /><strong>The epithet of <em>bodhisattva</em> is now theirs. (1.5)</strong></p> <p>Having attained this mind they are in every respect beyond the level of ordinary beings, at this stage only referred to as bodhisattvas and nothing else, because they are now noble beings. As stated for instance in the <em>Illustrious Lady in Two Thousand Five Hundred Lines</em>:</p> <p style="padding-left: 30px;">Bodhisattva is an epithet for sattvas<a class='fotnote rn' name='FN5550rn14' href='#N5550rn14'><sup>14</sup></a>
+ whose insight has awakened (<em>anubuddha</em>), who have gained realisation (<em>buddha</em>) and understanding (<em>jñāna</em>) of all dharmas. How do they understand them? As non-existent (<em>abhūta</em>), unproduced (<em>asaṃbhūta</em>) and incorrect (<em>vitatha</em>), and not the way immature ordinary beings conceive of them; not how immature ordinary beings ascertain them. Therefore they are called bodhisattvas, <em>beings with awakened insight</em>. How so? Awakening is not conceived. Awakening is not accomplished. Awakening is not ascertained. O Suvikrāntavikrāmin. The Tathāgata did not attain awakening, because no dharmas can be attained. Since no dharmas are ascertained it is called awakening (<em>bodhi</em>). Likewise, we say, ‘the awakening of Buddha’ – but that actually defies expression. If, Suvikrāntavikrāmin, when generating the mind of awakening they think, ‘We shall generate this mind of awakening’, and there is a sense of this awakening being an existent awakening towards which, ‘We generate this mind’, then they are not called bodhisattvas but <em>generating sattvas</em> (<em>utpannasattva</em>).<a class='fotnote rn' name='FN5550rn15' href='#N5550rn15'><sup>15</sup></a>
+ Why? They are fixated on giving rise to it. They are focussed on this mind. They are determined to awaken.<a class='fotnote rn' name='FN5550rn16' href='#N5550rn16'><sup>16</sup></a>
+</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641321bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641775bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645994bi' class='verse'>
+							ཡང་བྱང་ཆུབ་ནི་མཚན་ཉིད་མེད་པ་སྟེ། མཚན་ཉིད་ཀྱི་རང་བཞིན་དང་བྲལ་བའོ། །གང་གིས་འདི་ལྟར་རྗེས་སུ་རྟོགས་པ་དེ་ནི་བྱང་ཆུབ་ཅེས་བྱའི། ཡང་ཇི་སྐད་བརྗོད་པ་ནི་མ་ཡིན་ནོ། །རབ་ཀྱི་རྩལ་གྱིས་རྣམ་པར་གནོན་པ་ཆོས་དེ་རྣམས་རྟོགས་པའི་ཕྱིར་བྱང་ཆུབ་སེམས་དཔའ་ཞེས་བྱའོ། །རབ་ཀྱི་རྩལ་གྱིས་རྣམ་པར་གནོན་པ་གང་ལ་ལ་ཞིག་ཆོས་འདི་མ་ཤེས་ཤིང་རྗེས་སུ་མ་རྟོགས་བཞིན་དུ་བདག་ཉིད་ལ་བྱང་ཆུབ་སེམས་དཔའ་བྱང་ཆུབ་སེམས་དཔའོ་སྙམ་དུ་ཤེས་པ་དེ་ནི་བྱང་ཆུབ་སེམས་དཔའི་ས་ལས་རིང་བ་ཡིན་ཞིང། དེ་ནི་བྱང་ཆུབ་སེམས་དཔའི་ཆོས་རྣམས་ལས་རིང་བ་ཡིན་ནོ། །དེ་བཞིན་དུ་དེ་ནི་བྱང་ཆུབ་སེམས་དཔའི་མིང་གིས་ལྷ་དང་མི་དང་ལྷ་མ་ཡིན་གྱི་འཇིག་རྟེན་བསླུ་བ་ཡིན་ནོ། །རབ་ཀྱི་རྩལ་གྱིས་རྣམ་པར་གནོན་པ་འདི་ཚིག་ཙམ་གྱིས་བྱང་ཆུབ་སེམས་དཔར་འགྱུར་ན་ནི། དེ་བས་ན་སེམས་ཅན་ཐམས་ཅད་ཀྱང་བྱང་ཆུབ་སེམས་དཔར་འགྱུར་ན། རབ་ཀྱི་རྩལ་གྱིས་རྣམ་པར་གནོན་པ་འདི་ནི་ངག་གི་ལས་ཙམ་མ་ཡིན་ཏེ། འདི་ལྟ་སྟེ། བྱང་ཆུབ་སེམས་དཔའི་སའོ་ཞེས་བྱ་བ་ལ་སོགས་པ་གསུངས་པ་ཡིན་ནོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646458bi' class='verse'>
+							<p>And likewise, among other things it is stated that:</p> <p style="padding-left: 30px;">Awakening is without characteristics; it is free from the nature of characteristics. The one for whom this realisation dawns <em>awakens</em> (<em>bodhi</em>) – but that actually defies expression. O Suvikrāntavikrāmin. Since the realisation of dharmas has dawned, they are called <em>bodhisattvas</em>. But for those, Suvikrāntavikrāmin, who have not understood these dharmas, who haven’t realised them but still consider themselves bodhisattvas, the grounds of the bodhisattvas are a long way off. They are far from the dharmas of bodhisattvas, and are deceiving the world of gods, humans and demigods by using the name <em>bodhisattva</em>. O Suvikrāntavikrāmin. If a word was all it took to be a bodhisattva, all sentient beings would be bodhisattvas. Thus, Suvikrāntavikrāmin, the <em>grounds of the bodhisattva</em> is more than just a term.<a class='fotnote rn' name='FN5550rn17' href='#N5550rn17'><sup>17</sup></a>
+</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641322bi' class='verse'>
+							འདི་ནི་དེ་བཞིན་གཤེགས་པ་རྣམས་ཀྱི་རིགས་སུའང་སྐྱེས་པ་སྟེ། །<br />འདི་ནི་ཀུན་ཏུ་སྦྱོར་བ་གསུམ་པོ་ཐམས་ཅད་སྤངས་པ་ཡིན། །<br />བྱང་ཆུབ་སེམས་དཔའ་དེ་ནི་དགའ་བ་མཆོག་ཏུ་གྱུར་འཆང་ཞིང། །<br />འཇིག་རྟེན་ཁམས་བརྒྱ་ཀུན་ནས་གཡོ་བར་ནུས་པར་གྱུར་པའང་ཡིན། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641776bi' class='verse'>
+							They’ve taken birth as kin of the tathāgatas;<br />Their fetters three have thus been utterly dispelled.<br />These bodhisattvas now endowed with utmost joy<br />Are able to make hundred world systems vibrate. (1.6)&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645995bi' class='verse'>
+							ཇི་སྐད་དུ་བཤད་པའི་བྱང་ཆུབ་ཀྱི་སེམས་ཐོབ་པ་ནི་གནས་སྐབས་དེར་བྱང་ཆུབ་སེམས་དཔའི་སྒྲ་ཁོ་ནས་བརྗོད་པ་འབའ་ཞིག་ཏུ་མ་ཟད་ཀྱི། གཞན་ཡང། <br /> འདི་ནི་དེ་བཞིན་གཤེགས་པ་རྣམས་ཀྱི་རིགས་སུའང་སྐྱེས་པ་སྟེ། <br /> འདི་ཡི་ཀུན་དུ་སྦྱོར་བ་གསུམ་པོ་ཐམས་ཅད་སྤངས་པར་གྱུར། །<br /> བྱང་ཆུབ་སེམས་དཔའ་དེ་ནི་དགའ་བ་མཆོག་ཏུ་གྱུར་འཆང་ཞིང། །<br /> འཇིག་རྟེན་ཁམས་བརྒྱ་ཀུན་ནས་གཡོ་བར་ནུས་པར་གྱུར་པའང་ཡིན། །<br /> སོ་སོའི་སྐྱེ་བོ་དང། ཉན་ཐོས་དང་རང་སངས་རྒྱས་ཀྱི་ས་ཐམས་ཅད་ལས་འདས་པའི་ཕྱིར་དང། དེ་བཞིན་གཤེགས་པའི་ས་ཀུན་དུ་འོད་ཅེས་བྱ་བའི་རྗེས་སུ་འགྲོ་བའི་ལམ་སྐྱེས་པའི་ཕྱིར་ན་བྱང་ཆུབ་སེམས་དཔའ་དེ་དེ་བཞིན་གཤེགས་པའི་རིགས་སུ་སྐྱེས་པ་ཡིན་ནོ། །དེའི་ཚེ་གང་ཟག་གི་བདག་མེད་པ་མངོན་སུམ་དུ་མཐོང་བས་འདི་ནི་འཇིག་ཚོགས་ལ་ལྟ་བ་དང་ཐེ་ཚོམ་དང་ཚུལ་ཁྲིམས་དང་བརྟུལ་ཞུགས་མཆོག་ཏུ་འཛིན་པ་ཞེས་བྱ་བ་ཀུན་དུ་སྦྱོར་བ་གསུམ་དང་ཡང་བྲལ་བ་ཡིན་ཏེ། སླར་མི་སྐྱེ་བའི་ཕྱིར་རོ། །དེ་ཁོ་ན་ཉིད་མ་མཐོང་བ་ནི་བདག་ཏུ་སྒྲོ་བཏགས་པ་ལས་འཇིག་ཚོགས་སུ་ལྟ་བར་འགྱུར་ཞིང། དེ་བཞིན་དུ་ཐེ་ཚོམ་གྱིས་དེ་ལམ་གཞན་དུ་འང་འགྲོ་བ་སྲིད་པ་ཞིག་ན་གཞན་ནི་མ་ཡིན་ནོ། །ངེས་པ་ལ་ཞུགས་པས་དེའི་རྒྱུ་ཅན་གྱི་ཡོན་ཏན་ཐོབ་པ་དང། སའི་མི་མཐུན་པའི་ཕྱོགས་ཀྱི་སྐྱོན་དང་བྲལ་བས་ཐུན་མོང་མ་ཡིན་པའི་དགའ་བའི་ཁྱད་པར་སྐྱེས་པས་རབ་ཏུ་དགའ་བ་མང་བ་ཉིད་ཀྱི་ཕྱིར་ན་བྱང་ཆུབ་སེམས་དཔའ་དེ་ནི་དགའ་བ་མཆོག་ཏུ་གྱུར་པ་སྲེལ་བ་ཡང་ཡིན་ནོ། །རབ་ཏུ་དགའ་བ་ཁྱད་པར་འཕགས་པ་ཡོད་པའི་ཕྱིར་ན་ས་འདིས་ནི་རབ་ཏུ་དགའ་བ་ཞེས་བྱ་བའི་མིང་ཡང་རྙེད་པར་འགྱུར་རོ། །འཇིག་རྟེན་གྱི་ཁམས་བརྒྱ་བསྐྱོད་པར་ཡང་ནུས་སོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646459bi' class='verse'>
+							<p>And when gaining the mind of awakening thus described, not only are they solely referred to by the term <em>bodhisattva</em>, but also:</p> <p style="padding-left: 30px;"><strong>They’ve taken birth as kin of the tathāgatas;</strong><br /><strong>Their fetters three have thus been utterly dispelled.</strong><br /><strong>These bodhisattvas now endowed with utmost joy</strong><br /><strong>Are able to make hundred world systems vibrate. (1.6)</strong></p> <p>The bodhisattva has <em>taken birth as kin of the tathāgatas</em>, since they now transcend all the levels of ordinary beings, hearers and solitary buddhas, and have begun to follow the path leading to the ground of the tathāgatas, <em>Fully Illumined</em>. Seeing at this point directly the lack of a personal self, <em>their fetters three have thus been utterly dispelled</em> – the view of identity, doubt and the thought that moral discipline and religious observance is the most excellent thing – since these will not now reappear. When one does not see the actual reality of things, one imputes a self, adopting the identity view; and one entertains doubt, considering the possibility of taking others paths. Not otherwise. Arriving at certainty<a class='fotnote rn' name='FN5550rn18' href='#N5550rn18'><sup>18</sup></a>
+ (<em>niścayapraveśa</em>) they gain the accompanying qualities and are free from faults that conflict with the grounds. With that, an extraordinary sense of delight is born, and with this increasing joyous experience the most <em>supreme joy becomes theirs</em>. And it is because this exceptional joy rises up that this ground receives the name <em>Joyous</em>. They are able <em>to shake a hundred world-systems</em>.</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641323bi' class='verse'>
+							ས་ནས་སར་གནོན་བྱེད་ཅིང་གོང་མར་རབ་ཏུ་འགྲོ་བར་འགྱུར། །<br />དེ་ཚེ་འདི་ཡི་ངན་འགྲོའི་ལམ་རྣམས་མཐའ་དག་འགག་པར་འགྱུར། །<br />དེ་ཚེ་འདི་ཡི་སོ་སོ་སྐྱེ་བོའི་ས་རྣམས་ཐམས་ཅད་ཟད། །<br />འདི་ནི་འཕགས་པ་བརྒྱད་པ་ཇི་ལྟ་དེ་ལྟར་ཉེ་བར་བསྟན། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641777bi' class='verse'>
+							As they’re progressing ever higher, ground to ground,<br />The paths to lower states have now been fully barred,<br />All ordinary states of being brought to close,<br />And they are now akin to the eighth noble one. (1.7)&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645996bi' class='verse'>
+							ས་ནས་སར་གནོན་བྱེད་ཅིང་གོང་བར་རབ་ཏུ་འགྲོ་བར་འགྱུར། །<br /> དེ་ཚེ་འདི་ཡི་ངན་འགྲོའི་ལམ་རྣམས་མཐའ་དག་འགགས་པར་གྱུར། །<br /> དེ་ཚེ་འདི་ཡི་སོ་སོའི་སྐྱེ་བོའི་ས་རྣམས་ཐམས་ཅད་ཟད། །<br /> འདི་ནི་འཕགས་པ་བརྒྱད་པ་ཇི་ལྟ་དེ་ལྟར་ཉེ་བར་བསྟན། །<br /> ཞེས་བྱ་བ་ལ་འདི་ནི་ཇི་ལྟར་ཁོང་དུ་ཆུད་པའི་ཆོས་ལ་གོམས་པའི་ཕྱིར་དང། ས་གཉིས་པ་ལ་སོགས་པ་ལ་གནོན་པ་ལ་སྤྲོ་བ་ཆེ་བའི་ཕྱིར་ས་ནས་སར་གནོན་པ་ན་གོང་དུ་རབ་ཏུ་འགྲོ་བར་འགྱུར་རོ། །མདོར་ན་ཇི་ལྟར་འཕགས་པ་རྒྱུན་དུ་ཞུགས་པ་ལ་རང་དང་རྗེས་སུ་མཐུན་པའི་འཕགས་པའི་ཆོས་རྟོགས་པ་ལས་སྐྱོན་དང་བྲལ་ཞིང། ཡོན་ཏན་འབྱུང་བར་གྱུར་པ་དེ་བཞིན་དུ་བྱང་ཆུབ་སེམས་དཔའ་འདི་ལ་ཡང་ས་རྟོགས་པ་ལས་རང་དང་འཚམ་པའི་ཡོན་ཏན་འབྱུང་བ་དང། སྐྱོན་ཟད་པར་རྒྱུན་དུ་ཞུགས་པའི་དཔེའི་སྒོ་ནས་ཡོངས་སུ་གསལ་བར་བྱས་པ་ཡིན་ནོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646460bi' class='verse'>
+							<p style="padding-left: 30px;"><strong>As they&rsquo;re progressing ever higher, ground to ground,</strong><br /><strong>The paths to lower states have now been fully barred,</strong><br /><strong>All ordinary states of being brought to close,</strong><br /><strong>And they are now akin to the eighth noble one. (1.7)</strong></p> <p>As they gain familiarity with the Dharma thus realised, and are greatly inspired as they progress to the second ground and further, <em>they are progressing ever higher, ground to ground</em>. In short, just as noble stream-enterers are free from faults and gain qualities when realising the noble Dharma that agrees with them, the bodhisattvas realising the grounds gain the accompanying qualities and eliminate faults. The example of the stream-enterer is here employed to clarify this.</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641324bi' class='verse'>
+							རྫོགས་པའི་བྱང་ཆུབ་སེམས་ལྟ་དང་པོ་ལ་གནས་ཀྱང་། །<br />ཐུབ་དབང་གསུང་སྐྱེས་དང་བཅས་རང་སངས་རྒྱས་རྣམས་ནི། །<br />བསོད་ནམས་དག་གི་དབང་གིས་ཕམ་བྱས་རྣམ་པར་འཕེལ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641778bi' class='verse'>
+							Though just the first taste of complete awakening,<br />In strength of merit they now conquer and surpass<br />The solitary buddhas and the Sage-speech born;&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645997bi' class='verse'>
+							བྱང་ཆུབ་སེམས་དཔའ་འདི། <br /> རྫོགས་པའི་བྱང་ཆུབ་སེམས་ལྟ་དང་པོ་ལ་གནས་ཀྱང། །<br /> ཐུབ་དབང་གསུང་སྐྱེས་དང་བཅས་རང་སངས་རྒྱས་རྣམས་ནི། །<br /> བསོད་ནམས་དག་གི་དབང་གིས་ཕམ་བྱས་རྣམ་པར་འཕེལ། །<br /> ཞེས་བྱ་བ་གང་ཡིན་པ་འདི་ནི་ཁྱད་པར་གཞན་ཡིན་ཏེ། ཇི་སྐད་དུ་འཕགས་པ་བྱམས་པའི་རྣམ་པར་ཐར་པ་ལས། རིགས་ཀྱི་བུ་འདི་ལྟ་སྟེ། དཔེར་ན་རྒྱལ་པོའི་བུ་སྐྱེས་ནས་རིང་པོར་མ་ལོན་པ་རྒྱལ་པོའི་མཚན་དང་ལྡན་པ་ནི་བློན་པོའི་ཚོགས་རྒན་པོ་གཙོ་བོར་གྱུར་པ་ཐམས་ཅད་ཀྱང་རིགས་ཀྱི་བདག་ཉིད་ཆེ་བའི་དབང་གིས་ཟིལ་གྱིས་གནོན་ཏོ། །དེ་བཞིན་དུ་བྱང་ཆུབ་སེམས་དཔའ་ལས་དང་པོ་པ་བྱང་ཆུབ་ཏུ་སེམས་བསྐྱེད་ནས་རིང་པོ་མ་ལོན་པ། དེ་བཞིན་གཤེགས་པ་ཆོས་ཀྱི་རྒྱལ་པོའི་རིགས་སུ་སྐྱེས་པས་ཀྱང་བྱང་ཆུབ་ཀྱི་སེམས་དང། སྙིང་རྗེའི་དབང་གིས་ཉན་ཐོས་དང་རང་སངས་རྒྱས་ཡུན་རིང་དུ་ཚངས་པར་སྤྱད་པ་རྣམས་ཟིལ་གྱིས་གནོན་ཏོ། །རིགས་ཀྱི་བུ་འདི་ལྟ་སྟེ། དཔེར་ན་ནམ་མཁའ་ལྡིང་གི་དབང་པོ་ཆེན་པོའི་ཕྲུ་གུ་སྐྱེས་ནས་རིང་པོ་མ་ལོན་པའི་གཤོག་པའི་རླུང་གི་ཤུགས་དང། མིག་ཡོངས་སུ་དག་པའི་ཡོན་ཏན་གང་ཡིན་པ་དེ་ནི་དེ་ལས་གཞན་པའི་བྱའི་ཚོགས་མ་ལུས་པ་རྒས་པར་གྱུར་པ་ཐམས་ཅད་ལ་ཡོད་པ་མ་ཡིན་ནོ། །དེ་བཞིན་དུ་བྱང་ཆུབ་སེམས་དཔའ་བྱང་ཆུབ་ཏུ་སེམས་དང་པོ་བསྐྱེད་པ། དེ་བཞིན་གཤེགས་པ་ནམ་མཁའ་ལྡིང་གི་དབང་པོ་ཆེན་པོའི་རིགས་ཀྱི་རྒྱུད་དུ་ཡང་དག་པར་བྱུང་བ་ནམ་མཁའ་ལྡིང་གི་དབང་པོ་ཆེན་པོའི་ཕྲུ་གུ་ཐམས་ཅད་མཁྱེན་པ་ཉིད་དུ་སེམས་བསྐྱེད་པའི་གཤོག་པའི་སྟོབས་ཀྱིས་ཕ་རོལ་གནོན་པ་དང། ལྷག་པའི་བསམ་པ་ཡོངས་སུ་དག་པའི་མིག་གི་ཡོན་ཏན་གང་ཡིན་པ་དེ་ནི་བསྐལ་པ་བརྒྱ་སྟོང་དུ་ངེས་པར་འབྱུང་བའི་ཉན་ཐོས་དང། རང་སངས་རྒྱས་ཐམས་ཅད་ལ་ཡོད་པ་མ་ཡིན་ནོ་ཞེས་པ་ལ་སོགས་པ་གསུངས་པ་ལྟ་བུའོ།  །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646461bi' class='verse'>
+							<p>Concerning these bodhisattvas:</p> <p style="padding-left: 30px;"><strong>Though just the first taste of complete awakening,</strong><br /><strong>In strength of merit they now conquer and surpass</strong><br /><strong>The solitary buddhas and the Sage-speech born;</strong></p> <p>This presents a further distinction in line with the following statements found in the noble <em>Liberation of Maitreya</em>:</p> <p style="padding-left: 30px;">O son of good family. It is like the example of a prince, who immediately after birth carries the signs of royalty, and by virtue of his supreme hereditary rank surpasses everyone even among the senior and most important ministers. Just so, as soon as the novice bodhisattva has given rise to the mind of awakening he is born into the family of tathāgatas, the kings of Dharma, and through the power of his awakening mind and compassion surpasses the hearers and solitary buddhas who have long practiced pure conduct. … O son of good family. It is like the example of a fledgling of the mighty garuḍa that soon after birth possesses a powerful wing-thrust and an immaculate eye-sight that cannot be rivalled by any mature birds belonging to other species. Just so, when the mighty garuḍa youngling bodhisattva gives rise to the initial mind of awakening and is born into the family-lineage of the powerful sky-soaring garuḍa tathāgatas, the powerful wing-thrust of his courageous mind dedicated to the state of complete omniscience and his immaculate eye-sight of altruism cannot be matched by any of the hearers or solitary buddhas who have practiced renunciation for a hundred thousand aeons.<a class='fotnote rn' name='FN5550rn19' href='#N5550rn19'><sup>19</sup></a>
+</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641325bi' class='verse'>
+							དེ་ནི་རིང་དུ་སོང་བར་བློ་ཡང་ལྷག་པར་འགྱུར། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641779bi' class='verse'>
+							Unrivalled in their insight too on Far Advanced. (1.8)&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645998bi' class='verse'>
+							དེ་ནི་རིང་དུ་སོང་བར་བློ་ཡང་ལྷག་པར་འགྱུར། །<br /> འཕགས་པ་ས་བཅུ་པ་ལས་ཀྱང། ཀྱེ་རྒྱལ་བའི་སྲས་དག་འདི་ལྟ་སྟེ། དཔེར་ན་རྒྱལ་པོའི་རིགས་སུ་སྐྱེས་པའི་རྒྱལ་པོའི་བུ་རྒྱལ་པོའི་མཚན་དང་ལྡན་པ་ནི་སྐྱེས་པ་ཙམ་གྱིས་རྒྱལ་པོའི་བྱིན་གྱིས་བློན་པོའི་ཆོགས་ཐམས་ཅད་ཟིལ་གྱིས་གནོན་གྱི། རང་གི་བློའི་སྟོབས་ཀྱིས་རྣམ་པར་དཔྱད་པས་ནི་མ་ཡིན་ནོ། །ནམ་དེ་ནར་སོན་པར་གྱུར་པ་དེའི་ཚེ་རང་གི་བློའི་སྟོབས་བསྐྱེད་པས་བློན་པོའི་བྱ་བ་ཐམས་ཅད་ལས་ཤིན་ཏུ་འདས་པ་ཡིན་ནོ། །ཀྱེ་རྒྱལ་བའི་སྲས་དག་དེ་བཞིན་དུ་བྱང་ཆུབ་སེམས་དཔའ་ཡང་སེམས་བསྐྱེད་མ་ཐག་ཏུ་ལྷག་པའི་བསམ་པའི་ཆེ་བ་ཉིད་ཀྱིས་ཉན་ཐོས་དང་རང་སངས་རྒྱས་ཐམས་ཅད་ཟིལ་གྱིས་གནོན་གྱི། རང་གི་བློའི་སྟོབས་ཀྱིས་རྣམ་པར་དཔྱད་བས་ནི་མ་ཡིན་ནོ། །བྱང་ཆུབ་སེམས་དཔའི་ས་བདུན་པ་འདི་ལ་གནས་པའི་བྱང་ཆུབ་སེམས་དཔའ་ནི་རང་གི་ཡུལ་ཤེས་པའི་ཆེ་བ་ལ་གནས་པས་ཉན་ཐོས་དང་རང་སངས་རྒྱས་ཀྱི་བྱ་བ་ཐམས་ཅད་ལས་ཤིན་ཏུ་འདས་པ་ཡིན་ནོ་ཞེས་ཇི་སྐད་གསུངས་པ་ལྟ་བུའོ། །དེའི་ཕྱིར་དེ་ལྟར་ན་རིང་དུ་སོང་བ་ཁོ་ན་ནས་བཟུང་ནས་ནི་བྱང་ཆུབ་སེམས་དཔས་རང་གི་བློའི་སྟོབས་བསྐྱེད་པས་ཀྱང་ཉན་ཐོས་དང་རང་སངས་རྒྱས་དག་ཟིལ་གྱིས་གནོན་པར་འགྱུར་གྱི། ས་འོག་མ་རྣམས་སུ་ནི་མ་ཡིན་ནོ་ཞེས་བྱ་བར་ཤེས་པར་བྱའོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646462bi' class='verse'>
+							<p style="padding-left: 30px;"><strong>Unrivalled in their insight too on Far Advanced. (1.8)</strong></p> <p>As stated in the noble <em>Ten Grounds</em>:</p> <p style="padding-left: 30px;">O victor-heirs. Take as example the prince who once born into the royal family holds royal characteristics. The status of royalty is such that his birth alone is enough to surpass the whole assembly of ministers, even though he does not do so in terms of analytical ability. But once he has come of age and developed his analytical abilities, he will completely surpass the ministers in every way. O victor-heirs. The same is the case for bodhisattvas. Once they have developed this resolve they surpass the hearers and solitary buddhas in terms of their altruistic determination, even though they do not do so in terms of analytical ability. But bodhisattvas dwelling on the seventh bodhisattva-ground completely surpass the hearers and solitary buddhas in every way due to the exalted nature of their wisdom’s range.<a class='fotnote rn' name='FN5550rn20' href='#N5550rn20'><sup>20</sup></a>
+</p> <p>One should take this as saying that it is only once having reached Far Advanced that bodhisattvas surpass hearers and solitary buddhas also in terms of analytical ability. Those on the lower grounds do not.</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641326bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641780bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7645999bi' class='verse'>
+							ལུང་འདི་ལས་ནི་ཉན་ཐོས་དང་རང་སངས་རྒྱས་རྣམས་ལ་ཡང་ཆོས་ཐམས་ཅད་རང་བཞིན་མེད་པར་ཤེས་པ་ཡང་ཡོད་དོ་ཞེས་བྱ་བར་གསལ་བར་ངེས་ཏེ། དེ་ལྟར་མ་ཡིན་ན་དངོས་པོ་རང་བཞིན་མེད་པར་ཡོངས་སུ་ཤེས་པ་དང་བྲལ་བའི་ཕྱིར། །འཇིག་རྟེན་པའི་འདོད་ཆགས་དང་བྲལ་བ་ལྟར་དེ་དག་ཀྱང་སེམས་དང་པོ་བསྐྱེད་པའི་བྱང་ཆུབ་སེམས་དཔས་ཀྱང་རང་གི་བློས་རྣམ་པར་དཔྱད་པས་ཀྱང་ཟིལ་གྱིས་གནོན་པར་འགྱུར་ལ། ཕྱི་རོལ་པ་བཞིན་དུ་འདི་དག་གིས་ཁམས་གསུམ་ན་སྤྱོད་པའི་ཕྲ་རྒྱས་ཐམས་ཅད་སྤངས་པར་ཡང་མི་འགྱུར་རོ། །གཟུགས་ལ་སོགས་པའི་རང་གི་ངོ་བོ་ལ་དམིགས་པས་ཕྱིན་ཅི་ལོག་ཏུ་གྱུར་པའི་ཕྱིར་གང་ཟག་གི་བདག་མེད་པར་རྟོགས་པར་ཡང་མི་འགྱུར་ཏེ། བདག་ཏུ་གདགས་པའི་རྒྱུ་ཕུང་པོ་ལ་དམིགས་པའི་ཕྱིར་རོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646463bi' class='verse'>
+							<p>This scriptural citation clearly states that hearers and solitary buddhas too understand the lack of intrinsic nature of all dharmas. If this was not the case, and they did not have the realisation of the absence of intrinsic nature of things, they would be surpassed in terms of analytical abilities by the bodhisattva with the initial resolve just as is the case for those free from worldly desires; just like non-Buddhists, they would not abandon all subtle propensities (<em>anuśaya</em>) that perpetuate the three realms, because of still mistakenly perceiving that forms and so forth have intrinsic nature; and they would not even realise the selflessness of the person, because imputation of a self relies on observing the aggregates.</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641327bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641781bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7646000bi' class='verse'>
+							ཇི་སྐད་དུ་རིན་པོ་ཆེའི་ཕྲེང་བ་ལས། ཇི་སྲིད་ཕུང་པོར་འཛིན་ཡོད་པ། །དེ་སྲིད་དེ་ལ་ངར་འཛིན་ཉིད། །ངར་འཛིན་ཡོད་ན་ཡང་ལས་ཏེ། །དེ་ལས་ཡང་ནི་སྐྱེ་བ་ཡི། །ལམ་གསུམ་ཐོག་མཐའ་དབུས་མེད་པ། །འཁོར་བའི་དཀྱིལ་འཁོར་མགལ་མེ་ཡི། དཀྱིལ་འཁོར་ལྟ་བུ་ཕན་ཚུན་གྱི། །རྒྱུ་ཅན་འདི་ནི་འཁོར་བར་འགྱུར། །དེ་ནི་རང་གཞན་གཉིས་ཀ་དང། །དུས་གསུམ་ཉིད་དུའང་མ་ཐོབ་ཕྱིར། །ངར་འཛིན་པ་ནི་ཟད་པར་འགྱུར། །དེ་ནས་ལས་དང་སྐྱེ་བ་དང། །ཞེས་གསུངས་སོ། །ཡང་ཇི་ལྟར་མིག་ནི་འཁྲུལ་པ་ཡིས། མགལ་མེའི་འཁོར་ལོ་འཛིན་བྱེད་པ། །དེ་བཞིན་དབང་པོ་རྣམས་ཀྱིས་ནི། །དེ་ལྟའི་ཡུལ་དག་འཛིན་པར་བྱེད། །དབང་པོ་དང་ནི་དབང་དོན་རྣམས། །འབྱུང་བ་ལྔ་ཡི་རང་བཞིན་འདོད། །འབྱུང་བ་སོ་སོར་དོན་མེད་པས། །འདི་དག་དོན་དུ་དོན་མེད་དོ། །འབྱུང་རྣམས་སོ་སོར་ཐ་དད་ན། །བུད་ཤིང་མེད་པའི་མེར་ཐལ་འགྱུར། །འདུས་ན་མཚན་ཉིད་མེད་འགྱུར་ཏེ། །ལྷག་མ་ལ་ཡང་དེ་ལྟར་ངེས། །དེ་ལྟར་འབྱུང་རྣམས་རྣམ་གཉིས་སུའང། །དོན་མེད་པས་ན་འདུས་དོན་མེད། །འདུས་པ་དོན་མེད་ཉིད་ཀྱི་ཕྱིར། གཟུགས་ཀྱང་དོན་དུ་དོན་མེད་དོ། །རྣམ་ཤེས་ཚོར་དང་འདུ་ཤེས་དང། །འདུ་བྱེད་རྣམས་ཀྱང་ཐམས་ཅད་དུ། །སོ་སོར་བདག་ཉིད་དོན་མེད་ཕྱིར། །དམ་པའི་དོན་དུ་དོན་མེད་དོ། །ཇི་ལྟར་སྡུག་བསྔལ་ཕྱིར་བཅོས་ལ། །དོན་དུ་བདེ་བར་ང་རྒྱལ་བྱེད། །དེ་བཞིན་བདེ་འཇོམས་བྱུང་བ་ལ། །སྡུག་བསྔལ་དུ་ཡང་ང་རྒྱལ་བྱེད། །དེ་ལྟར་ངོ་བོ་ཉིད་མེད་ཕྱིར། །བདེ་དང་ཕྲད་པའི་སྲེད་པ་དང། །སྡུག་བསྔལ་བྲལ་བའི་སྲེད་པ་སྤོང། །དེ་ཕྱིར་དེ་ལྟར་མཐོང་བ་གྲོལ། །གང་གིས་མཐོང་བར་འགྱུར་ཞེ་ན། །ཐ་སྙད་དུ་ནི་སེམས་ལ་བརྗོད། །སེམས་འབྱུང་མེད་པར་སེམས་མེད་དེ། །དོན་མེད་ཕྱིར་ན་ཡོད་མི་འདོད། །དེ་ལྟར་ཡང་དག་ཇི་བཞིན་དུ། འགྲོ་བའི་དོན་མེད་ཤེས་ནས་ནི། །རྒྱུ་མེད་པ་ཡི་མེ་བཞིན་དུ། །གནས་མེད་ལེན་མེད་མྱ་ངན་འདའ། །ཞེས་གསུངས་སོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646464bi' class='verse'>
+							<p>As stated in the <em>Precious Garland</em>:</p> <p style="padding-left: 30px;">As long as one clings to the aggregates<br />There will be clinging to an ‘I’.<br />And with clinging to ‘I’ there is karma,<br />Which leads to birth.</p> <p style="padding-left: 30px;">This threefold path has no beginning, middle or end.<br />It revolves by virtue of these reciprocal causes<br />Just like a circle created by <br />The arc of a whirling firebrand.</p> <p style="padding-left: 30px;">But when it can’t be found to come from itself,<br />From others, or both at any point in the three times,<br />This self-clinging ceases,<br />And with it karma and birth.<a class='fotnote rn' name='FN5550rn21' href='#N5550rn21'><sup>21</sup></a>
+</p> <p>It continues:</p> <p style="padding-left: 30px;">Just like the eye is mistaken<br />When it perceives the firebrand’s arc,<br />The faculties too perceive<br />The objects of the present.</p> <p style="padding-left: 30px;">The faculties and the sense-objects<br />Are held to be of the nature of the five elements,<br />But since the individual elements are unreal,<br />These are also in fact unreal.</p> <p style="padding-left: 30px;">If the elements were held to be distinct,<br />It would follow that fire could burn without fuel.<br />If they merge they lose their defining characteristics.<br />The same conclusion applies to the other elements.</p> <p style="padding-left: 30px;">Since elements are unreal in either case,<br />Their combination too is unreal.<br />And since their combination is unreal,<br />Form is also in actual fact unreal.</p> <p style="padding-left: 30px;">Since in and of themselves, consciousness, <br />Feeling, perception and formation too<br />Are in every way unreal in terms self-nature,<br />They are ultimately unreal.</p> <p style="padding-left: 30px;">Just as one assumes that it is happiness<br />When suffering is removed,<br />And when happiness is prevented<br />One has the impression of suffering,</p> <p style="padding-left: 30px;">This lack of any intrinsic nature<br />Eliminates the thirst to find happiness<br />And the desire to be free from suffering –<br />Those who see this are therefore freed.</p> <p style="padding-left: 30px;">You may ask, ‘Who sees this?’<br />Conventionally, we say it’s the mind.<br />But without mental events there is no mind.<br />Being unreal, we do not assert that it exists.</p> <p style="padding-left: 30px;">When one gains a proper understanding<br />Of the unreality of beings,<br />There is no basis, nothing to adopt, one transcends,<a class='fotnote rn' name='FN5550rn22' href='#N5550rn22'><sup>22</sup></a>
+<br />Just like a fire that has run out of fuel.<a class='fotnote rn' name='FN5550rn23' href='#N5550rn23'><sup>23</sup></a>
+</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641328bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641782bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7646001bi' class='verse'>
+							ཅི་སྟེ་བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ཁོ་ནས་དེ་ལྟར་རང་བཞིན་མེད་པར་མཐོང་བ་ཡིན་ནོ་ཞེ་ན། དེ་ཡང་ཡོད་པ་མ་ཡིན་ཏེ། ཉན་ཐོས་དང་རང་སངས་རྒྱས་རྣམས་ཀྱི་དབང་དུ་བྱས་ནས་དེ་སྐད་དུ་གསུངས་པའི་ཕྱིར་རོ།  །འདི་ཇི་ལྟར་ཤེས་ཤེ་ན། བརྗོད་པར་བྱ་སྟེ། མཇུག་ཐོགས་ཁོ་ནར་བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ཀྱི་དབང་དུ་མཛད་ནས། དེ་ལྟར་བྱང་ཆུབ་སེམས་དཔས་ཀྱང། །མཐོང་ནས་བྱང་ཆུབ་ངས་པར་འདོད། །འོན་ཀྱང་དེ་ནི་སྙིང་རྗེ་ཡིས། །བྱང་ཆུབ་བར་དུ་སྲིད་མཚམས་སྦྱོར། །ཞེས་བྱ་བ་ལ་སོགས་པ་གསུངས་པའི་ཕྱིར་རོ། །ཉན་ཐོས་ལ་བསྟན་པའི་མདོ་དག་ལས་ཀྱང། ཉན་ཐོས་རྣམས་ཀྱི་ཉོན་མོངས་པའི་སྒྲིབ་པ་སྤང་བར་བྱ་བའི་ཕྱིར། གཟུགས་ནི་དབུ་བརྡོས་པ་འདྲ། །ཚོར་བ་ཆུ་ཡི་ཆུ་བུར་བཞིན། །འདུ་ཤེས་སྨིག་རྒྱུ་ལྟ་བུ་སྟེ། །འདུ་བྱེད་རྣམས་ནི་ཆུ་ཤིང་བཞིན། །རྣམ་པར་ཤེས་པ་སྒྱུ་མ་ལྟར། །ཉི་མའི་གཉེན་གྱིས་བཀའ་སྩལ་ཏོ། །ཞེས་བྱ་བ་ལ་སོགས་པས་དབུ་བརྡོས་པ་དང། ཆུ་ཡི་ཆུ་བུར་དང། སྨིག་རྒྱུའི་ཆུ་དང། །ཆུ་ཤིང་གི་ཕུང་པོ་དང་སྒྱུ་མ་ལ་སོགས་པའི་དཔེ་དག་གིས་འདུ་བྱེད་རྣམས་ངེས་པར་དཔྱད་པ་ཡིན་ནོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646465bi' class='verse'>
+							<p>One may ask, ‘Is it just the bodhisattvas who see this lack of intrinsic nature?’ It is not so, because these statements were made with respect to hearers and solitary buddhas. How can one deduce that? Because it is only after these statements that the bodhisattvas are spoken of, starting with:</p> <p style="padding-left: 30px;">The bodhisattva also sees this,<br />And is determined to reach awakening.<br />It is only because of his compassion<br />That he remains in existence until awakening.</p> <p>And in the sutras that were taught to the hearers it is stated among other things that:</p> <p style="padding-left: 30px;">Form is like a mass of foam,<br />Feeling as a water-bubble,<br />Perception similar to a mirage,<br />Formations are like plantain trees,<br />Consciousness like an illusion –<br />Thus spoke The Sun’s Kinsman.<a class='fotnote rn' name='FN5550rn24' href='#N5550rn24'><sup>24</sup></a>
+</p> <p>In this way, compounded phenomena (<em>saṃskāra</em>) are scrutinised by means of examples such as a mass of foam, water-bubbles, a mirage, the plantain tree’s trunk and an illusion.</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641329bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641783bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7646002bi' class='verse'>
+							དོན་འདི་ཉིད་སྟོན་པར་མཛད་པ་ནི། སློབ་དཔོན་གྱི་ཞལ་སྔ་ནས་ཀྱིས། ཐེག་པ་ཆེ་ལས་སྐྱེ་མེད་བསྟན། །གཞན་གྱི་ཟད་པ་སྟོང་པ་ཉིད། །ཟད་དང་མི་སྐྱེ་དོན་དུ་ནི། །གཅིག་པ་དེ་ཕྱིར་བཟོད་པར་གྱིས། །ཞེས་བྱ་བ་དང། དེ་བཞིན་དུ། བཅོམ་ལྡན་དངོས་དང་དངོས་མེད་པ། །མཁྱེན་པས་ཀཱ་ཏཱ་ཡ་ན་ཡི། །གདམས་ངག་ལས་ནི་ཡོད་པ་དང། །མེད་པ་གཉིས་ཀ་དགག་པ་མཛད། །ཅེས་གསུངས་སོ། །གང་ཞིག་གལ་ཏེ་ཉན་ཐོས་ཀྱི་ཐེག་པ་ལས་ཀྱང་ཆོས་ལ་བདག་མེད་པ་བསྟན་ན་དེའི་ཚེ་ཐེག་པ་ཆེན་པོ་བསྟན་པ་དོན་མེད་པར་འགྱུར་རོ་སྙམ་དུ་སེམས་པ་དེའི་ལུགས་དེ་ཡང་འདི་ལྟར་རིགས་པ་དང་ལུང་དང་འགལ་བར་རྟོགས་སོ། །ཐེག་པ་ཆེན་པོ་བསྟན་པས་ནི་ཆོས་ལ་བདག་མེད་པ་ཙམ་འབའ་ཞིག་སྟོན་པར་བྱེད་པ་མ་ཡིན་གྱི། །འོ་ན་ཅི་ཞེ་ན། བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ཀྱི་ས་དང་ཕ་རོལ་ཏུ་ཕྱིན་པ་དང། སྨོན་ལམ་དང་སྙིང་རྗེ་ཆེན་པོ་ལ་སོགས་པ་དང་ཡོངས་སུ་བསྔོ་བ་དང་ཚོགས་གཉིས་དང་བསམ་གྱིས་མི་ཁྱབ་པའི་ཆོས་ཉིད་ཀྱང་ཡིན་ནོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646466bi' class='verse'>
+							<p>Explaining exactly this point, the master said:</p> <p style="padding-left: 30px;">According to the Greater Vehicle, <br />Emptiness is non-arising; for the others it’s destruction.<br />But destruction and non-arising<br />Should in fact be considered the same.<a class='fotnote rn' name='FN5550rn25' href='#N5550rn25'><sup>25</sup></a>
+</p> <p>Similarly:</p> <p style="padding-left: 30px;">In the <em>Instructions to Kātyāyana</em><br />The Illustrious One refuted<br />Both existence and non-existence<br />Through his knowledge of entities and non-entities.<a class='fotnote rn' name='FN5550rn26' href='#N5550rn26'><sup>26</sup></a>
+</p> <p>Some might think, ‘If the selflessness of dharmas is also taught in the vehicle of the hearers, then the teachings of the Greater Vehicle are redundant.’ Such a way of thinking is seen to contradict both reasoning and scripture. The teachings of the Greater Vehicle are not solely concerned with the selflessness of dharmas, but also with the bodhisattvas’ grounds, perfections, aspirations, great compassion and so forth, with dedication, the two accumulations and the inconceivable nature of reality (<em>dharmatā</em>).</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641330bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641784bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7646003bi' class='verse'>
+							ཇི་སྐད་དུ་རིན་པོ་ཆེའི་ཕྲེང་བ་ལས། ཉན་ཐོས་ཐེག་པ་དེ་ལས་ནི། །བྱང་ཆུབ་སེམས་དཔའི་སྨོན་ལམ་དང། །སྤྱོད་པ་ཡོངས་བསྔོ་མ་བཤད་དེས། །བྱང་ཆུབ་སེམས་དཔར་ག་ལ་འགྱུར། །བྱང་ཆུབ་སྤྱོད་ལ་གནས་པའི་དོན། །མདོ་སྡེ་ལས་ནི་བཀའ་མ་སྩལ། །ཐེག་པ་ཆེ་ལས་བཀའ་སྩལ་པ། །དེ་ཕྱིར་མཁས་པ་རྣམས་ཀྱིས་གཟུང། །ཞེས་གསུངས་སོ། །ཆོས་ཀྱི་བདག་མེད་པ་གསལ་བར་བྱ་བའི་ཕྱིར་ཐེག་པ་ཆེན་པོ་བསྟན་པ་ཡང་རིགས་པ་ཉིད་དེ། རྒྱས་པར་བསྟན་པ་བརྗོད་པར་འདོད་པའི་ཕྱིར་རོ། །ཉན་ཐོས་ཀྱི་ཐེག་པ་ལས་ནི་ཆོས་ཀྱི་བདག་མེད་པ་མདོར་མཚོན་པ་ཙམ་ཞིག་ཏུ་ཟད་དོ། །ཇི་སྐད་དུ་སློབ་དཔོན་གྱི་ཞལ་སྔ་ནས་ཀྱིས། མཚན་མ་མེད་པ་མ་རྟོགས་པར། །ཁྱོད་ཀྱིས་ཐར་པ་མེད་པར་གསུངས། །དེ་ཕྱིར་ཁྱོད་ཀྱིས་ཐེག་ཆེན་ལས། །དེ་ནི་ཚང་པར་བསྟན་པ་ལགས། །ཞེས་གསུངས་སོ། །ཞར་ལ་འོངས་པས་ཆོག་གོ །དེ་ཉིད་ཀྱི་ཕྱིར་བློ་མ་དཀྲུགས་པ་རྣམས་ཀྱིས་རང་ཉིད་ཀྱི་དོན་གྱི་དེ་ཁོ་ན་ཉིད་ཁོང་དུ་ཆུད་པར་ནུས་པས་དཀྱུས་མ་ཉིད་བརྗོད་པར་བྱའོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646467bi' class='verse'>
+							<p>As stated in the <em>Precious Garland</em>:</p> <p style="padding-left: 30px;">In the vehicle of the hearers there is no mention <br />Of the aspiration of the bodhisattva,<br />Nor of dedicating one’s activities –<br />How could one then become a bodhisattva?<br />…<br />In the sutras there is no mention<br />Of following the bodhisattva conduct.<br />But this is explained in the Greater Vehicle,<br />Which should therefore be accepted by the wise.<a class='fotnote rn' name='FN5550rn27' href='#N5550rn27'><sup>27</sup></a>
+</p> <p>Also, as they clarify the selflessness of dharmas, there is good reason for the teachings of the Greater Vehicle, since this is taught there extensively. In the hearer vehicle the selflessness of dharmas receives only a very succinct treatment. As in the words of the master:</p> <p style="padding-left: 30px;">If featurelessness is not realised,<br />You taught there will be no liberation.<br />And thus, in the Greater Vehicle<br />You taught this exhaustively.<a class='fotnote rn' name='FN5550rn28' href='#N5550rn28'><sup>28</sup></a>
+</p> <p>We will digress no further. Those whose minds are not very disturbed should be able to gain recognition of the actual reality through this by themselves, and we therefore continue with the general explanation.</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641331bi' class='verse'>
+							དེ་ཚེ་དེ་ལ་རྫོགས་སངས་བྱང་ཆུབ་རྒྱུ། །<br />དང་པོ་སྦྱིན་པ་ཉིད་ནི་ལྷག་པར་འགྱུར། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641785bi' class='verse'>
+							To bring the realisation of full buddhahood,<br />The first which now is stressed is generosity.&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7646004bi' class='verse'>
+							དེ་ཚེ་དེ་ལ་རྫོགས་སངས་བྱང་ཆུབ་རྒྱུར། །<br /> དང་པོ་སྦྱིན་པ་ཉིད་ནི་ལྷག་པར་འགྱུར། །<br /> བྱང་ཆུབ་སེམས་དཔའ་ས་རབ་ཏུ་དགའ་བ་ཐོབ་པ་དེ་ལ། སྦྱིན་པ་དང་ཚུལ་ཁྲིམས་དང་བཟོད་པ་དང་བརྩོན་འགྲུས་དང་བསམ་གཏན་དང་ཤེས་རབ་དང། ཐབས་དང་སྨོན་ལམ་དང། སྟོབས་དང་ཡེ་ཤེས་ཞེས་བྱ་བ་བཅུ་པོ་དག་ལས་སྦྱིན་པའི་ཕ་རོལ་ཏུ་ཕྱིན་པ་ཁོ་ནས་ཆེས་ལྷག་པར་ཡོད་པར་འགྱུར་ཏེ། དེ་ལས་གཞན་རྣམས་མེད་པ་ནི་མ་ཡིན་ནོ། །སྦྱིན་པ་དེ་ཡང་རྣམ་པ་ཐམས་ཅད་མཁྱེན་པ་ཉིད་ཀྱི་རྒྱུ་དང་པོ་ཡིན་ནོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646468bi' class='verse'>
+							<p style="padding-left: 30px;"><strong>To bring the realisation of full buddhahood,</strong><br /><strong>The first which now is stressed is generosity.</strong></p> <p>Among the ten named generosity, moral discipline, tolerance, diligence, meditative absorption, intelligence, skilful means, aspirations, powers and wisdom, for the bodhisattva on the Joyous ground it is the perfection of generosity which is mainly emphasised; but this does not mean that the others are absent. Generosity is the initial cause of omniscience.</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641332bi' class='verse'>
+							རང་ཤ་སྟེར་ལའང་གུས་པར་བྱས་པ་ཡིས། །<br />སྣང་དུ་མི་རུང་དཔོག་པའི་རྒྱུར་ཡང་འགྱུར། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641786bi' class='verse'>
+							And when they even give their own flesh graciously,<br />From that one may infer what cannot be perceived. (1.9)&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7646005bi' class='verse'>
+							རང་ཤ་སྟེར་ལའང་གུས་པར་བྱས་པ་ཡི། །<br /> སྣང་དུ་མི་རུང་དཔོག་པའི་རྒྱུར་ཡང་གྱུར། །<br /> དེའི་ཚེ་བྱང་ཆུབ་སེམས་དཔའ་དེའི་ཡོན་ཏན་སྣང་རུང་མ་ཡིན་པས་རྟོགས་པ་ལ་སོགས་པ་གང་དག་ཡིན་པ་དེ་དག་ཀྱང་ཕྱི་དང་ནང་གི་བདག་ཉིད་ཀྱི་དངོས་པོ་སྟོང་པའི་ཁྱད་པར་གྱི་རྗེས་སུ་དཔག་པ་ཉིད་ལས་གསལ་བར་དཔོག་པར་བྱེད་པ་ཡིན་ཏེ། དུ་བ་ལ་སོགས་པ་ལས་མེ་ལ་སོགས་པ་དག་བཞིན་ནོ། །&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646469bi' class='verse'>
+							<p style="padding-left: 30px;"><strong>And when they even give their own flesh graciously,</strong><br /><strong>From that one may infer what cannot be perceived. (1.9)</strong></p> <p>Although the qualities of the bodhisattva may not now be apparent, their realisation and so forth may be readily inferred through observing their extraordinary willingness to give away both external and internal possessions, just as for instance fire is inferred from smoke.</p>&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7641333bi' class='verse'>
+							སྐྱེ་བོ་འདི་ཀུན་བདེ་བ་མངོན་འདོད་ཅིང་། །<br />མི་རྣམས་བདེ་བའང་ལོངས་སྤྱོད་མེད་མིན་ལ། །<br />ལོངས་སྤྱོད་ཀྱང་ནི་སྦྱིན་ལས་འབྱུང་མཁྱེན་ནས། །<br />ཐུབ་པས་དང་པོར་སྦྱིན་པའི་གཏམ་མཛད་དོ། །&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7641317";
+							kilderef = "Ma Tib: Tg, dbu ma, ’a  - Tib: Tg, dbu ma, ’a 202a2";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7641787bi' class='verse'>
+							All beings long for only happiness,<br />But people will not be content when poor.<br />And seeing that it is what fosters wealth<br />The Sage would first teach generosity. (1.10)&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7641771";
+							kilderef = "Ma Eng: Liland (2019) 201b4 - Eng: Liland (2019) ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7646006bi' class='verse'>
+							ཇི་ལྟར་བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ཀྱི་སྦྱིན་པ་སངས་རྒྱས་ཉིད་ཀྱི་རྒྱུ་དང་པོ་དང། མངོན་སུམ་མ་ཡིན་པའི་ཡོན་ཏན་ངེས་པའི་རྟགས་ཡིན་པ་དེ་བཞིན་དུ། སོ་སོའི་སྐྱེ་བོ་དང་ཉན་ཐོས་དང་རང་སངས་རྒྱས་རྣམས་ཀྱི་ཡང་སྡུག་བསྔལ་ཕྱིར་བཅོས་པ་དང། གཏན་དུ་བའི་བདེ་བ་ཐོབ་པའི་རྒྱུ་ཡིན་ནོ་ཞེས་བསྟན་པར་འདོད་པས།<br /> སྐྱེ་བོ་འདི་ཀུན་བདེ་བ་མངོན་འདོད་ཅིང། །<br /> མི་རྣམས་བདེ་བ་འང་ལོངས་སྤྱོད་མེད་མིན་ལ། །<br /> ལོངས་སྤྱོད་ཀྱང་ནི་སྦྱིན་ལས་འབྱུང་མཁྱེན་ནས། །<br /> ཐུབ་པས་དང་པོར་སྦྱིན་པའི་གཏམ་མཛད་དོ། །<br /> ཞེས་བྱ་བ་སྨོས་པ་ལ། བཀྲེས་པ་དང་སྐོམ་པ་དང་ནད་དང་གྲང་བ་ལ་སོགས་པའི་གཉེན་པོ། །སྡུག་བསྔལ་ཕྱིར་བཅོས་པ་ཙམ་སྲིད་པའི་བདེ་བ་འབྱུང་བའི་རྒྱུ་འཆིང་བ་ཕྱིན་ཅི་ལོག་ཙམ་གྱིས་བདག་ཉིད་ཀྱི་རྒྱུན་ཉེ་བར་བརྟགས་པས། ཉེ་བར་འཚེ་བ་བསལ་བ་བདེ་བའི་བདག་ཉིད་མ་ཡིན་པ་ཉིད་ལ་འཇིག་རྟེན་ཤིན་ཏུ་ཆེས་མངོན་པར་ཞེན་ལ། དེ་ལྟ་བུའི་བདེ་བ་མངོན་པར་འདོད་པ་དེའི་བདེ་བ་སྡུག་བསྔལ་ཕྱིར་བཅོས་པ་ཙམ་གྱི་རང་བཞིན་གང་ཡིན་པ་དེ་ནི། མངོན་པར་འདོད་པའི་ཡུལ་ལོངས་སྤྱོད་སྡུག་བསྔལ་གྱི་གཉེན་པོར་གྱུར་པ། ཕྱིན་ཅི་ལོག་གི་བདག་ཉིད་ཅན་ལོངས་སྤྱད་པ་མེད་པར་སྐྱེ་བར་མ་དམིགས་སོ། །སྡུག་བསྔལ་ཕྱིར་བཅོས་པའི་རྒྱུར་གྱུར་པའི་ཡུལ་དེ་དག་ཀྱང་སྦྱིན་པ་ལས་བྱུང་བའི་བསོད་ནམས་བྱ་བའི་དངོས་པོ་མ་བསགས་པ་རྣམས་ལ་མི་འབྱུང་ངོ་སྙམ་དུ་མཁྱེན་ནས། བཅོམ་ལྡན་འདས་འགྲོ་བ་མ་ལུས་པའི་བསམ་པའི་རང་བཞིན་མཁྱེན་པས་ཚུལ་ཁྲིམས་ལ་སོགས་པའི་གཏམ་རྣམས་པས་ཆེས་ཐོག་མར་སྦྱིན་པའི་གཏམ་ཉིད་མཛད་དོ། །&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7645980";
+							kilderef = "Ma Tib: Tg, dbu ma, ’a  223b - Tib: Tg, dbu ma, ’a 228a";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7646470bi' class='verse'>
+							<p>Just as the generosity of bodhisattvas is the initial cause of buddhahood and an indication of qualities that are not apparent, it is also said to alleviate the suffering of ordinary beings, hearers and solitary buddhas, and be the cause for the attainment of lasting happiness. In order to express this, it was said that:</p> <p style="padding-left: 30px;"><strong>All beings long for only happiness,</strong><br /><strong>But people will not be content when poor.</strong><br /><strong>And seeing that it is what fosters wealth</strong><br /><strong>The Sage would first teach generosity. (1.10)</strong></p> <p>To the extent that remedies for hunger, thirst, sickness, cold and so forth alleviate suffering, they bring about worldly happiness. But as long as there is mistaken clinging to and concepts of a continuous identity, this is not a type of happiness free from distress, and one remains fully entangled within the world. Any happiness connected with this type of craving for happiness is by its very nature merely an alleviation of suffering, and it is the coveted resources that act as this suffering&rsquo;s remedy; without such fundamentally mistaken resources it will not be experienced. Seeing how the objects that cause for the alleviation of suffering do not come about in the absence of an accumulation of merit connected with generosity, the Illustrious One, knowing perfectly the basic sentiment of every single being, gave the teachings on generosity as the very first, before all the teachings on moral discipline and so forth.</p>&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7646444";
+							kilderef = "Ma Eng: Liland (2019)  - Eng: Liland (2019) ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'><div style='' id='3' class='note rn'>1.<a class="internt" name='N5550rn1' href='#FN5550rn1'> Āryadeva, <em>Four Hundred Verses</em> (<em>Catuḥśatakaśāstrakārikā</em>), Toh 3846, Tengur, dbu ma, <em>tsha</em> 10a2.</a>&nbsp; <br>2.<a class="internt" name='N5550rn2' href='#FN5550rn2'> Nāgārjuna, <em>Intelligence: Root Verses on the Middle Way</em> (<em>Prajñānāmamūlamadhyamakakārika</em>), Toh 3824, Tengyur, dbu ma, <em>tsa</em> 11a5.</a>&nbsp; <br>3.<a class="internt" name='N5550rn3' href='#FN5550rn3'> <i>White Lotus of Sacred Dharma Sutra</i> (<i>Saddharmapuṇḍarīkasūtra</i>), Toh 113, mdo sde, <i>ja</i> ༵46a.</a>&nbsp; <br>4.<a class="internt" name='N5550rn4' href='#FN5550rn4'> <i>Kāśyapa’s Chapter Sutra</i> (<i>Kāśyapaparivartasūtra</i>), Toh 87, dkon brtsegs, <i>cha</i> 137a (text no. 87 in the <i>Heap of Jewels collection</i>).</a>&nbsp; <br>5.<a class="internt" name='N5550rn5' href='#FN5550rn5'> Quoted in Nāgārjuna’s <em>Compendium of Sutras</em> (<em>Sūtrasamuccaya</em>), Toh 3934, Tengyur, dbu ma, <em>ki</em> 155b7.</a>&nbsp; <br>6.<a class="internt" name='N5550rn6' href='#FN5550rn6'> Nāgārjuna, <em>Precious Garland: Advice to the King</em> (<em>Rājaparikathā Ratnāvalī</em>), Toh 4158, spring yig, <em>ge</em> 113b1.</a>&nbsp; <br>7.<a class="internt" name='N5550rn7' href='#FN5550rn7'> Nāgārjuna, <em>Precious Garland: Advice to the King</em> (<em>rājaparikathā ratnāvalī</em>), Toh 4158, spring yig, <em>ge</em> 121a4.</a>&nbsp; <br>8.<a class="internt" name='N5550rn8' href='#FN5550rn8'> All available editions of the Tibetan include what appears to be a scribal error, repeating the words མ་རིག་པའི་ཆོས་ཀྱི་བདུད་རྩིའི་ཕུལ་དུ་བྱུང་བ་འབྱུང་བའི་རྒྱུ། ཕྱིན་ཅི་ལོག་རྟོག་པ་མཐའ་དག་པའི་མཚན་ཉིད། འགྲོ་བ་ཡོངས་ཀྱི་ also in the description of the ocean, which does not seem to make sense.</a>&nbsp; <br>9.<a class="internt" name='N5550rn9' href='#FN5550rn9'> <em>Daśabhūmikasūtra</em>; chapter 31 of the <em>Avataṃsakasūtra</em>, Toh 44.</a>&nbsp; <br>10.<a class="internt" name='N5550rn10' href='#FN5550rn10'> The stage of entry and abidance of the stream-enterer, once-returner, non-returner and arhat.</a>&nbsp; <br>11.<a class="internt" name='N5550rn11' href='#FN5550rn11'> To have <em>propensity for definite separation</em> refers to being on the path of joining. <em>Definite separation</em> itself refers to the path of seeing and the śrāvaka attainment of the stream-enterer.</a>&nbsp; <br>12.<a class="internt" name='N5550rn12' href='#FN5550rn12'> <i>Ratnameghasūtra</i>, Toh 231.</a>&nbsp; <br>13.<a class="internt" name='N5550rn13' href='#FN5550rn13'> Ibid.</a>&nbsp; <br>14.<a class="internt" name='N5550rn14' href='#FN5550rn14'> ie ‘beings’ or ‘courageous ones’.</a>&nbsp; <br>15.<a class="internt" name='N5550rn15' href='#FN5550rn15'> The Tibetan of the auto-commentary has <em>‘de dag ni skye bar sems dpa' zhes bya’o’</em>, which seems to be saying ‘they are called “generating sattvas”’, while in Jayānanda’s commentary (Jayānanda, 64b) it is translated as <em>‘de dag gis sems dpa’ skye ba zhe bya’o’</em>, which could mean ‘[they are] called “those for whom <em>sattva</em> (a courageous attitude) is generated”’.</a>&nbsp; <br>16.<a class="internt" name='N5550rn16' href='#FN5550rn16'> <em>Suvikrāntavikramiparipṛcchā-prajñāpāramitānirdeśa</em>, Toh 14, Kangyur, shes phyin sna tshogs, <em>ka</em> 30b6.</a>&nbsp; <br>17.<a class="internt" name='N5550rn17' href='#FN5550rn17'> <em>Suvikrāntavikramiparipṛcchā-praj&ntilde;āpāramitānirdeśa</em>, Toh 14, Kangyur, shes phyin sna tshogs, <em>ka</em> 29a6.</a>&nbsp; <br>18.<a class="internt" name='N5550rn18' href='#FN5550rn18'> This is another name for the attainment of the first ground.</a>&nbsp; <br>19.<a class="internt" name='N5550rn19' href='#FN5550rn19'> <em>Gaṇḍavyūhasūtra</em>, chapter 45 of the <em>Buddhāvataṃsakasūtra</em>, Toh 44, 234a.</a>&nbsp; <br>20.<a class="internt" name='N5550rn20' href='#FN5550rn20'> <em>Daśabhūmikasūtra</em>; chapter 31 of the <em>Avataṃsakaūtra</em>, Toh 44, Kangyur, phal chen, kha 234a.</a>&nbsp; <br>21.<a class="internt" name='N5550rn21' href='#FN5550rn21'> Nāgārjuna, <em>Rājaparikathā Ratnāvalī</em> vv 1:35&ndash;37, Toh 4158, Tengyur, spring yig, <em>ge</em> 108a5.</a>&nbsp; <br>22.<a class="internt" name='N5550rn22' href='#FN5550rn22'> <em>Nirvāti</em>; the Sanskrit root <em>nir-vā-</em> (with prefix <em>nir-</em>), from which the term <em>nirvāṇa</em> (&lsquo;transcendence&rsquo;) is derived, means &lsquo;to be extinguished/blown out&rsquo;, which is why Nāgārjuna here illustrates nirvana with a fire being extinguished due to a lack of fuel.</a>&nbsp; <br>23.<a class="internt" name='N5550rn23' href='#FN5550rn23'> Nāgārjuna, <em>Rājaparikathā Ratnāvalī</em> vv 4:57&ndash;65, Toh 4158, Tengyur, spring yig, <em>ge</em> 120a7.</a>&nbsp; <br>24.<a class="internt" name='N5550rn24' href='#FN5550rn24'> This verse is found in the <em>Saṃyutta Nikāya</em> (<em>The Connected Discourses of the Buddha</em>), and seems not to have been translated into Tibetan (see Bhikkhu Bodhi, 2000: 952). The quotation is also found in Guṇaprabha&rsquo;s Exposition on the <em>Five Aggregates</em> (<em>Pa&ntilde;caskandhavivaraṇa</em>), Toh 4067, sems tsam, <em>si</em> 11b2. &lsquo;The Sun&rsquo;s Kinsman&rsquo; (<em>ādityabandhu</em>) is an epithet for the Buddha.</a>&nbsp; <br>25.<a class="internt" name='N5550rn25' href='#FN5550rn25'> Nāgārjuna, <em>Rājaparikathā Ratnāvalī</em> v 4:86, Toh 4158, Tengyur, spring yig, <em>ge</em> 121b1.</a>&nbsp; <br>26.<a class="internt" name='N5550rn26' href='#FN5550rn26'> Nāgārjuna, <em>Praj&ntilde;ānāma-Mūlamadhyamakakārika</em> v 15:7, Toh 3824, dbu ma, <em>tsa</em> 9a1.</a>&nbsp; <br>27.<a class="internt" name='N5550rn27' href='#FN5550rn27'> Nāgārjuna, <em>Rājaparikathā Ratnāvalī</em> v 4:90, 93, Toh 4158, Tengyur, spring yig, <em>ge</em> 121b5.</a>&nbsp; <br>28.<a class="internt" name='N5550rn28' href='#FN5550rn28'> Nāgārjuna, <em>Lokātītastava</em>, Toh 1120, Tengyur, bstod tshogs, <em>ka</em> 69b3.</a>&nbsp; <br></div><div class='clear'></div></div></div><div class='clear'></div><div class="fontboks"><a onClick=onOffdiv('permlink') name="permlink" href="#permlink">Permanent link</a></div><div class='clear'></div><div class='perm_felt' id='permlink'>http://www2.hf.uio.no/common/apps/permlink/permlink.php?app=polyglotta&amp;context=ctext&amp;uid=ace105ef-71c7-11e9-8a71-0050569f23b2</div></div></div><!-- infofelt --></div><!-- divControl --><div class="clear"></div>
+<div style="clear:both"></div><div class="signatur"><div class="signatur_left">
+		<a href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation">Go to Wiki Documentation</a></br>Enhet: <a HREF=http://www.hf.uio.no>Det humanistiske fakultet</a> &nbsp; Utviklet av: <a href="http://www.hf.uio.no/tjenester/it">IT-seksjonen ved HF</a></div><!--signatur_left -->
+		<div class="signatur_right"><a href="/polyglotta/admin/index.php">Login</a></div>
+		<div style="clear:both"></div></div>
+</body></html><SCRIPT LANGUAGE="JAVASCRIPT">
+	
+	$("#tr_IA").click(function(){
+	    if ($("#toggle_container_IA").is(':hidden'))
+	    	$("#toggle_container_IA").show();
+	    else{
+	        $("#toggle_container_IA").hide();
+	    }
+	    return false;
+		});
+
+	$("#tr_lang").click(function(){
+	    if ($("#toggle_container_lan").is(':hidden'))
+	    	$("#toggle_container_lan").show();
+	    else{
+	        $("#toggle_container_lan").hide();
+	    }
+	    return false;
+	});
+
+	$("#tr_img").click(function(){
+	    if ($("#toggle_container_img").is(':hidden'))
+	    	$("#toggle_container_img").show();
+	    else{
+	        $("#toggle_container_img").hide();
+	    }
+	    return false;
+	});
+
+	$("#diac2button").click(function(){
+	   if ($("#ex3a").is(':hidden')){
+		   $("#ex3a").show();
+	       $("#diac2button").html("Hide&#32Diacritica-help");
+	   }else{
+	       $("#ex3a").hide();
+	       $("#diac2button").html("Diacritica-help");
+	   }
+	   return false;
+	});
+
+	$("#diacbutton").click(function(){
+	   if ($("#diacritical_sign").is(':hidden')){
+		   	$("#diacritical_sign").show();
+	      	$("#diacbutton").html("Hide&#32diacritica");
+	   }else{
+	        $("#diacritical_sign").hide();
+	        $("#diacbutton").html("Diacritica");
+	   }
+	   return false;
+    });
+
+	$('#toggle_container_IA').click(function(e) {
+	   e.stopPropagation();
+	});
+
+	$('#toggle_container_lan').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#toggle_container_img').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#ex3a').click(function(e) {
+	    e.stopPropagation();
+	});
+
+	$('#diacritical_sign').click(function(e) {
+        e.stopPropagation();
+    });
+
+	//Kode for å sette inn diakritiske tegn
+	$('#diacritical > tbody > tr > td').click(function() {
+	  	//alert('red');
+		$("#sokeboks").val($("#sokeboks").val() + $(this).text());
+	});
+
+	$('.diac2button').text(($('.diacbutton').text() == 'Diacritica-help') ? 'Hide Diacritica-help' : 'Diacritica-help');
+	
+	//Lukker alle åpnede pop'uper ved klikk på siden
+	$(document).click(function() {
+		$('#toggle_container_IA').hide();
+	    
+        $('#toggle_container_lan').hide();
+    
+        $('#toggle_container_img').hide();
+   
+   		$('#diacritical_sign').hide();
+   		$("#diacbutton").html("Diacritica");
+   
+       	$('#ex3a').hide();
+       	$("#diac2button").html("Diacritica-help");
+   });
+	</SCRIPT>
